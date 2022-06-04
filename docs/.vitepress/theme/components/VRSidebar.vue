@@ -1,5 +1,5 @@
 <template>
-  <div class="noFound">404</div>
+  <div class="VRSidebar"></div>
 </template>
 
 <script setup lang="ts"></script>

@@ -1,31 +1,16 @@
-<script setup lang="ts">
-import { provide } from 'vue'
-import { useSidebar, useCloseSidebarOnEscape } from './composables/sidebar'
-import VPSkipLink from './components/VPSkipLink.vue'
-import VPBackdrop from './components/VPBackdrop.vue'
-import VPNav from './components/VPNav.vue'
-import VPLocalNav from './components/VPLocalNav.vue'
-import VPSidebar from './components/VPSidebar.vue'
-import VPContent from './components/VPContent.vue'
-import VPFooter from './components/VPFooter.vue'
-
-const { isOpen: isSidebarOpen, open: openSidebar, close: closeSidebar } = useSidebar()
-
-useCloseSidebarOnEscape(isSidebarOpen, closeSidebar)
-
-provide('close-sidebar', closeSidebar)
-</script>
-
 <template>
   <div class="Layout">
-    <VPSkipLink />
-    <VPBackdrop class="backdrop" :show="isSidebarOpen" @click="closeSidebar" />
-    <VPNav />
-    <VPLocalNav :open="isSidebarOpen" @open-menu="openSidebar" />
-    <VPSidebar :open="isSidebarOpen" />
+    <!-- 导航栏 -->
+    <VRNav />
+    <!-- 功能栏 -->
+    <VRToolNav />
+    <!-- 侧边栏 -->
+    <VRSidebar />
 
-    <VPContent>
-      <template #home-hero-before><slot name="home-hero-before" /></template>
+    <!-- 主体内容 -->
+    <VRContent>
+      HELLO
+      <!-- <template #home-hero-before><slot name="home-hero-before" /></template>
       <template #home-hero-after><slot name="home-hero-after" /></template>
       <template #home-features-before><slot name="home-features-before" /></template>
       <template #home-features-after><slot name="home-features-after" /></template>
@@ -35,14 +20,23 @@ provide('close-sidebar', closeSidebar)
       <template #aside-outline-before><slot name="aside-outline-before" /></template>
       <template #aside-outline-after><slot name="aside-outline-after" /></template>
       <template #aside-ads-before><slot name="aside-ads-before" /></template>
-      <template #aside-ads-after><slot name="aside-ads-after" /></template>
-    </VPContent>
+      <template #aside-ads-after><slot name="aside-ads-after" /></template> -->
+    </VRContent>
 
-    <VPFooter />
+    <!-- 页脚 -->
+    <VRFooter />
   </div>
 </template>
 
-<style scoped>
+<script setup lang="ts">
+import VRContent from './components/VRContent.vue'
+import VRFooter from './components/VRFooter.vue'
+import VRNav from './components/nav/VRNav.vue'
+import VRSidebar from './components/VRSidebar.vue';
+import VRToolNav from './components/VRToolNav.vue'
+</script>
+
+<style lang="scss">
 .Layout {
   display: flex;
   flex-direction: column;
