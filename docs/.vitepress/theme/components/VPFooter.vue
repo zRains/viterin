@@ -48,6 +48,10 @@ const { hasSidebar } = useSidebar()
   color: var(--vp-c-text-2);
 }
 
-.message   { order: 2; }
-.copyright { order: 1; }
+.message {
+  order: 2;
+}
+.copyright {
+  order: 1;
+}
 </style>

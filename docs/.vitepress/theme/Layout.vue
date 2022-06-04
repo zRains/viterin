@@ -9,11 +9,7 @@ import VPSidebar from './components/VPSidebar.vue'
 import VPContent from './components/VPContent.vue'
 import VPFooter from './components/VPFooter.vue'
 
-const {
-  isOpen: isSidebarOpen,
-  open: openSidebar,
-  close: closeSidebar
-} = useSidebar()
+const { isOpen: isSidebarOpen, open: openSidebar, close: closeSidebar } = useSidebar()
 
 useCloseSidebarOnEscape(isSidebarOpen, closeSidebar)
 

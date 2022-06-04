@@ -1,11 +1,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue'
 import { useData } from 'vitepress'
-import {
-  resolveHeaders,
-  useOutline,
-  useActiveAnchor
-} from '../composables/outline'
+import { resolveHeaders, useOutline, useActiveAnchor } from '../composables/outline'
 
 const { page, frontmatter } = useData()
 
@@ -35,15 +31,10 @@ function handleClick({ target: el }: Event) {
       <div class="outline-title">On this page</div>
 
       <nav aria-labelledby="doc-outline-aria-label">
-        <span class="visually-hidden" id="doc-outline-aria-label">
-          Table of Contents for current page
-        </span>
+        <span class="visually-hidden" id="doc-outline-aria-label"> Table of Contents for current page </span>
 
         <ul class="root">
-          <li
-            v-for="{ text, link, children, hidden } in resolvedHeaders"
-            v-show="!hidden"
-          >
+          <li v-for="{ text, link, children, hidden } in resolvedHeaders" v-show="!hidden">
             <a class="outline-link" :href="link" @click="handleClick">
               {{ text }}
             </a>

@@ -14,9 +14,7 @@ const { site } = useData()
     </blockquote>
 
     <div class="action">
-      <a class="link" :href="site.base" aria-label="go to home">
-        Take me home
-      </a>
+      <a class="link" :href="site.base" aria-label="go to home"> Take me home </a>
     </div>
   </div>
 </template>
@@ -51,7 +49,7 @@ const { site } = useData()
   margin: 24px auto 18px;
   width: 64px;
   height: 1px;
-  background-color: var(--vp-c-divider)
+  background-color: var(--vp-c-divider);
 }
 
 .quote {
@@ -74,7 +72,7 @@ const { site } = useData()
   font-size: 14px;
   font-weight: 500;
   color: var(--vp-c-brand);
-  transition: border-color 0.25s, color .25s;
+  transition: border-color 0.25s, color 0.25s;
 }
 
 .link:hover {

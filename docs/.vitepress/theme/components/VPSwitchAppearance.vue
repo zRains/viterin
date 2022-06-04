@@ -12,9 +12,7 @@ function useAppearance() {
 
   let userPreference = localStorage.getItem(APPEARANCE_KEY) || 'auto'
 
-  let isDark = userPreference === 'auto'
-    ? query.matches
-    : userPreference === 'dark'
+  let isDark = userPreference === 'auto' ? query.matches : userPreference === 'dark'
 
   query.onchange = (e) => {
     if (userPreference === 'auto') {
@@ -25,9 +23,7 @@ function useAppearance() {
   function toggle() {
     setClass((isDark = !isDark))
 
-    userPreference = isDark
-      ? query.matches ? 'auto' : 'dark'
-      : query.matches ? 'light' : 'auto'
+    userPreference = isDark ? (query.matches ? 'auto' : 'dark') : query.matches ? 'light' : 'auto'
 
     localStorage.setItem(APPEARANCE_KEY, userPreference)
   }
@@ -41,11 +37,7 @@ function useAppearance() {
 </script>
 
 <template>
-  <VPSwitch
-    class="VPSwitchAppearance"
-    aria-label="toggle dark mode"
-    @click="toggle"
-  >
+  <VPSwitch class="VPSwitchAppearance" aria-label="toggle dark mode" @click="toggle">
     <VPIconSun class="sun" />
     <VPIconMoon class="moon" />
   </VPSwitch>

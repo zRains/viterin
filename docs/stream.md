@@ -57,7 +57,7 @@ const eventEmitter = new EventEmitter()
 
 eventEmitter.on('eventB', () => console.log('eventB invoke'))
 eventEmitter.once('eventA', () => console.log('eventA invoke'))
-eventEmitter.on('removeListener', event => console.log('removeListener', event))
+eventEmitter.on('removeListener', (event) => console.log('removeListener', event))
 
 eventEmitter.emit('eventB') // 触发 eventB
 eventEmitter.emit('eventB') // 再次触发 eventB
@@ -148,10 +148,7 @@ interface ReadableStream extends EventEmitter {
   pause(): this
   resume(): this
   isPaused(): boolean
-  pipe<T extends WritableStream>(
-    destination: T,
-    options?: { end?: boolean | undefined }
-  ): T
+  pipe<T extends WritableStream>(destination: T, options?: { end?: boolean | undefined }): T
   unpipe(destination?: WritableStream): this
   unshift(chunk: string | Uint8Array, encoding?: BufferEncoding): void
   wrap(oldStream: ReadableStream): this
@@ -161,11 +158,7 @@ interface ReadableStream extends EventEmitter {
 interface WritableStream extends EventEmitter {
   writable: boolean
   write(buffer: Uint8Array | string, cb?: (err?: Error | null) => void): boolean
-  write(
-    str: string,
-    encoding?: BufferEncoding,
-    cb?: (err?: Error | null) => void
-  ): boolean
+  write(str: string, encoding?: BufferEncoding, cb?: (err?: Error | null) => void): boolean
   end(cb?: () => void): this
   end(data: string | Uint8Array, cb?: () => void): this
   end(str: string, encoding?: BufferEncoding, cb?: () => void): this
@@ -233,7 +226,7 @@ readStreams.on('readable', () => {
   console.log(readStreams.read())
 })
 
-readStreams.on('data', data => {
+readStreams.on('data', (data) => {
   console.log(data)
 })
 
@@ -303,7 +296,7 @@ let data = ''
 let readStreams = fs.createReadStream('./string.txt', { highWaterMark: 2 })
 
 // 或者使用readStreams.pipe(process.stdout)，pipe和data会将暂停模式的流切换到流动模式
-readStreams.on('data', data => {
+readStreams.on('data', (data) => {
   console.log(data)
 })
 
@@ -330,7 +323,7 @@ const outStream = new Writable({
   write(chunk, encoding, callback) {
     console.log(chunk)
     callback()
-  },
+  }
 })
 
 process.stdin.pipe(outStream)
@@ -358,7 +351,7 @@ const myWritable = new Writable({
       console.log('消费', chunk.toString())
       callback() // 写入结束后调用
     }, 100)
-  },
+  }
 })
 
 myWritable.on('close', () => {
@@ -435,7 +428,7 @@ const inoutStream = new Duplex({
     if (this.currentCharCode > 90) {
       this.push(null)
     }
-  },
+  }
 })
 
 inoutStream.currentCharCode = 65
@@ -460,7 +453,7 @@ const upperCaseTr = new Transform({
   transform(chunk, encoding, callback) {
     this.push(chunk.toString().toUpperCase())
     callback()
-  },
+  }
 })
 
 process.stdin.pipe(upperCaseTr).pipe(process.stdout)

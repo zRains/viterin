@@ -84,11 +84,19 @@ function toggle() {
   fill: currentColor;
 }
 
-.icon.minus { opacity: 1; }
-.icon.plus  { opacity: 0; }
+.icon.minus {
+  opacity: 1;
+}
+.icon.plus {
+  opacity: 0;
+}
 
-.VPSidebarGroup.collapsed .icon.minus { opacity: 0; }
-.VPSidebarGroup.collapsed .icon.plus  { opacity: 1; }
+.VPSidebarGroup.collapsed .icon.minus {
+  opacity: 0;
+}
+.VPSidebarGroup.collapsed .icon.plus {
+  opacity: 1;
+}
 
 .items {
   overflow: hidden;

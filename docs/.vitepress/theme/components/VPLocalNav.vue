@@ -19,19 +19,12 @@ function scrollToTop() {
 
 <template>
   <div v-if="hasSidebar" class="VPLocalNav">
-    <button
-      class="menu"
-      :aria-expanded="open"
-      aria-controls="VPSidebarNav"
-      @click="$emit('open-menu')"
-    >
+    <button class="menu" :aria-expanded="open" aria-controls="VPSidebarNav" @click="$emit('open-menu')">
       <VPIconAlignLeft class="menu-icon" />
       <span class="menu-text">Menu</span>
     </button>
 
-    <a class="top-link" href="#" @click="scrollToTop">
-      Return to top
-    </a>
+    <a class="top-link" href="#" @click="scrollToTop"> Return to top </a>
   </div>
 </template>
 

@@ -48,19 +48,40 @@ defineEmits<{
   overflow: hidden;
 }
 
-.container:hover .top    { top: 0; left: 0; transform: translateX(4px); }
-.container:hover .middle { top: 6; left: 0; transform: translateX(0); }
-.container:hover .bottom { top: 12px; left: 0; transform: translateX(8px); }
+.container:hover .top {
+  top: 0;
+  left: 0;
+  transform: translateX(4px);
+}
+.container:hover .middle {
+  top: 6;
+  left: 0;
+  transform: translateX(0);
+}
+.container:hover .bottom {
+  top: 12px;
+  left: 0;
+  transform: translateX(8px);
+}
 
-.container.active .top    { top: 6px; transform: translateX(0) rotate(225deg); }
-.container.active .middle { top: 6px; transform: translateX(16px); }
-.container.active .bottom { top: 6px; transform: translateX(0) rotate(135deg); }
+.container.active .top {
+  top: 6px;
+  transform: translateX(0) rotate(225deg);
+}
+.container.active .middle {
+  top: 6px;
+  transform: translateX(16px);
+}
+.container.active .bottom {
+  top: 6px;
+  transform: translateX(0) rotate(135deg);
+}
 
 .container.active:hover .top,
 .container.active:hover .middle,
 .container.active:hover .bottom {
   background-color: var(--vt-c-text-2);
-  transition: top .25s, background-color .25s, transform .25s;
+  transition: top 0.25s, background-color 0.25s, transform 0.25s;
 }
 
 .top,
@@ -70,10 +91,22 @@ defineEmits<{
   width: 16px;
   height: 2px;
   background-color: var(--vp-c-text-1);
-  transition: top .25s, background-color .5s, transform .25s;
+  transition: top 0.25s, background-color 0.5s, transform 0.25s;
 }
 
-.top    { top: 0; left: 0; transform: translateX(0); }
-.middle { top: 6px; left: 0; transform: translateX(8px); }
-.bottom { top: 12px; left: 0; transform: translateX(4px); }
+.top {
+  top: 0;
+  left: 0;
+  transform: translateX(0);
+}
+.middle {
+  top: 6px;
+  left: 0;
+  transform: translateX(8px);
+}
+.bottom {
+  top: 12px;
+  left: 0;
+  transform: translateX(4px);
+}
 </style>

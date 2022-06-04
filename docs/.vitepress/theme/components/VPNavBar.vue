@@ -21,7 +21,7 @@ const { hasSidebar } = useSidebar()
 </script>
 
 <template>
-  <div class="VPNavBar" :class="{ 'has-sidebar' : hasSidebar }">
+  <div class="VPNavBar" :class="{ 'has-sidebar': hasSidebar }">
     <div class="container">
       <VPNavBarTitle />
 
@@ -32,11 +32,7 @@ const { hasSidebar } = useSidebar()
         <VPNavBarAppearance class="appearance" />
         <VPNavBarSocialLinks class="social-links" />
         <VPNavBarExtra class="extra" />
-        <VPNavBarHamburger
-          class="hamburger"
-          :active="isScreenOpen"
-          @click="$emit('toggle-screen')"
-        />
+        <VPNavBarHamburger class="hamburger" :active="isScreenOpen" @click="$emit('toggle-screen')" />
       </div>
     </div>
   </div>
@@ -104,7 +100,7 @@ const { hasSidebar } = useSidebar()
   width: 1px;
   height: 24px;
   background-color: var(--vp-c-divider-light);
-  content: "";
+  content: '';
 }
 
 .menu + .appearance::before,

@@ -22,11 +22,7 @@ function unlockBodyScroll() {
 </script>
 
 <template>
-  <transition
-    name="fade"
-    @enter="lockBodyScroll"
-    @after-leave="unlockBodyScroll"
-  >
+  <transition name="fade" @enter="lockBodyScroll" @after-leave="unlockBodyScroll">
     <div v-if="open" class="VPNavScreen" ref="screen">
       <div class="container">
         <VPNavScreenMenu class="menu" />

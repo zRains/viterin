@@ -15,11 +15,7 @@ const { page } = useData()
   <VPLink
     :class="{
       VPNavBarMenuLink: true,
-      active: isActive(
-        page.relativePath,
-        item.activeMatch || item.link,
-        !!item.activeMatch
-      )
+      active: isActive(page.relativePath, item.activeMatch || item.link, !!item.activeMatch)
     }"
     :href="item.link"
     :noIcon="true"

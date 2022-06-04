@@ -25,19 +25,15 @@ defineProps<{
   <div class="VPHero" :class="{ 'has-image': image }">
     <div class="container">
       <div class="main">
-        <p v-if="name" class="name"><span class="clip">{{ name }}</span></p>
+        <p v-if="name" class="name">
+          <span class="clip">{{ name }}</span>
+        </p>
         <h1 v-if="text" class="text">{{ text }}</h1>
         <p v-if="tagline" class="tagline">{{ tagline }}</p>
 
         <div v-if="actions" class="actions">
           <div v-for="action in actions" :key="action.link" class="action">
-            <VPButton
-              tag="a"
-              size="medium"
-              :theme="action.theme"
-              :text="action.text"
-              :href="action.link"
-            />
+            <VPButton tag="a" size="medium" :theme="action.theme" :text="action.text" :href="action.link" />
           </div>
         </div>
       </div>
@@ -45,7 +41,7 @@ defineProps<{
       <div v-if="image" class="image">
         <div class="image-container">
           <div class="image-bg" />
-          <img class="image-src" :src="image.src" :alt="image.alt">
+          <img class="image-src" :src="image.src" :alt="image.alt" />
         </div>
       </div>
     </div>

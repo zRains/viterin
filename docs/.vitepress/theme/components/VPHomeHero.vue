@@ -7,12 +7,6 @@ const { frontmatter: fm } = useData()
 
 <template>
   <div v-if="fm.hero" class="VPHomeHero">
-    <VPHero
-      :name="fm.hero.name"
-      :text="fm.hero.text"
-      :tagline="fm.hero.tagline"
-      :image="fm.hero.image"
-      :actions="fm.hero.actions"
-    />
+    <VPHero :name="fm.hero.name" :text="fm.hero.text" :tagline="fm.hero.tagline" :image="fm.hero.image" :actions="fm.hero.actions" />
   </div>
 </template>

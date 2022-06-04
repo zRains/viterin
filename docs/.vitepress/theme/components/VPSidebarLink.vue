@@ -14,12 +14,7 @@ const closeSideBar = inject('close-sidebar') as () => void
 </script>
 
 <template>
-  <a
-    class="link"
-    :class="{ active: isActive(page.relativePath, item.link) }"
-    :href="normalizeLink(item.link)"
-    @click="closeSideBar"
-  >
+  <a class="link" :class="{ active: isActive(page.relativePath, item.link) }" :href="normalizeLink(item.link)" @click="closeSideBar">
     <p class="link-text">{{ item.text }}</p>
   </a>
 </template>

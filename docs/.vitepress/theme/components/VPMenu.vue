@@ -65,7 +65,7 @@ defineProps<{
   font-size: 12px;
   font-weight: 500;
   color: var(--vp-c-text-2);
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
 .VPMenu :deep(.action) {

@@ -21,25 +21,12 @@ watchPostEffect(async () => {
 </script>
 
 <template>
-  <aside
-    v-if="hasSidebar"
-    class="VPSidebar"
-    :class="{ open }"
-    ref="navEl"
-    @click.stop
-  >
+  <aside v-if="hasSidebar" class="VPSidebar" :class="{ open }" ref="navEl" @click.stop>
     <nav class="nav" id="VPSidebarNav" aria-labelledby="sidebar-aria-label" tabindex="-1">
-      <span class="visually-hidden" id="sidebar-aria-label">
-        Sidebar Navigation
-      </span>
+      <span class="visually-hidden" id="sidebar-aria-label"> Sidebar Navigation </span>
 
       <div v-for="group in sidebar" :key="group.text" class="group">
-        <VPSidebarGroup
-          :text="group.text"
-          :items="group.items"
-          :collapsible="group.collapsible"
-          :collapsed="group.collapsed"
-        />
+        <VPSidebarGroup :text="group.text" :items="group.items" :collapsible="group.collapsible" :collapsed="group.collapsed" />
       </div>
     </nav>
   </aside>
@@ -68,9 +55,7 @@ watchPostEffect(async () => {
   opacity: 1;
   visibility: visible;
   transform: translateX(0);
-  transition: background-color 0.5s,
-              opacity 0.25s,
-              transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  transition: background-color 0.5s, opacity 0.25s, transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
 }
 
 .dark .VPSidebar {

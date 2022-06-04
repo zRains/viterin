@@ -9,16 +9,8 @@ const { theme } = useData()
 <template>
   <nav v-if="theme.nav" class="VPNavScreenMenu">
     <template v-for="item in theme.nav" :key="item.text">
-      <VPNavScreenMenuLink
-        v-if="'link' in item"
-        :text="item.text"
-        :link="item.link"
-      />
-      <VPNavScreenMenuGroup
-        v-else
-        :text="item.text || ''"
-        :items="item.items"
-      />
+      <VPNavScreenMenuLink v-if="'link' in item" :text="item.text" :link="item.link" />
+      <VPNavScreenMenuGroup v-else :text="item.text || ''" :items="item.items" />
     </template>
   </nav>
 </template>

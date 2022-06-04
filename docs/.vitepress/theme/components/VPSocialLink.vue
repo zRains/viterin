@@ -27,13 +27,7 @@ const icons = {
 </script>
 
 <template>
-  <a
-    class="VPSocialLink"
-    :href="link"
-    :title="icon"
-    target="_blank"
-    rel="noopener noreferrer"
-  >
+  <a class="VPSocialLink" :href="link" :title="icon" target="_blank" rel="noopener noreferrer">
     <component :is="icons[icon]" class="icon" />
     <span class="visually-hidden">{{ icon }}</span>
   </a>
@@ -47,12 +41,12 @@ const icons = {
   width: 36px;
   height: 36px;
   color: var(--vp-c-text-2);
-  transition: color .5s;
+  transition: color 0.5s;
 }
 
 .VPSocialLink:hover {
   color: var(--vp-c-text-1);
-  transition: color .25s;
+  transition: color 0.25s;
 }
 
 .icon {

@@ -7,15 +7,13 @@ export default defineConfig({
   lastUpdated: true,
 
   markdown: {
-    lineNumbers: true,
+    lineNumbers: true
   },
 
   themeConfig: {
     siteTitle: false,
     logo: 'https://zrain.fun/images/avatar.png',
     nav: [{ text: 'Home', link: '...' }],
-    socialLinks: [
-      { icon: 'github', link: 'https://github.com/vuejs/vitepress' },
-    ]
-  },
+    socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }]
+  }
 })

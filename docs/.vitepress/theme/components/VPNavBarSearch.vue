@@ -3,9 +3,7 @@ import '@docsearch/css'
 import { defineAsyncComponent, ref, onMounted, onUnmounted } from 'vue'
 import { useData } from 'vitepress'
 
-const VPAlgoliaSearchBox = __ALGOLIA__
-  ? defineAsyncComponent(() => import('./VPAlgoliaSearchBox.vue'))
-  : () => null
+const VPAlgoliaSearchBox = __ALGOLIA__ ? defineAsyncComponent(() => import('./VPAlgoliaSearchBox.vue')) : () => null
 
 const { theme } = useData()
 
@@ -22,9 +20,7 @@ onMounted(() => {
   }
 
   // meta key detect (same logic as in @docsearch/js)
-  metaKey.value.textContent = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform)
-    ? '⌘'
-    : 'Ctrl'
+  metaKey.value.textContent = /(Mac|iPhone|iPod|iPad)/i.test(navigator.platform) ? '⌘' : 'Ctrl'
 
   const handleSearchHotKey = (e: KeyboardEvent) => {
     if (e.key === 'k' && (e.ctrlKey || e.metaKey)) {
@@ -55,18 +51,9 @@ function load() {
     <VPAlgoliaSearchBox v-if="loaded" />
 
     <div v-else id="docsearch" @click="load">
-      <button
-        type="button"
-        class="DocSearch DocSearch-Button"
-        aria-label="Search"
-      >
+      <button type="button" class="DocSearch DocSearch-Button" aria-label="Search">
         <span class="DocSearch-Button-Container">
-          <svg
-            class="DocSearch-Search-Icon"
-            width="20"
-            height="20"
-            viewBox="0 0 20 20"
-          >
+          <svg class="DocSearch-Search-Icon" width="20" height="20" viewBox="0 0 20 20">
             <path
               d="M14.386 14.386l4.0877 4.0877-4.0877-4.0877c-2.9418 2.9419-7.7115 2.9419-10.6533 0-2.9419-2.9418-2.9419-7.7115 0-10.6533 2.9418-2.9419 7.7115-2.9419 10.6533 0 2.9419 2.9418 2.9419 7.7115 0 10.6533z"
               stroke="currentColor"

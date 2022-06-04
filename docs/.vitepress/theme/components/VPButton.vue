@@ -9,10 +9,7 @@ const props = defineProps<{
   href?: string
 }>()
 
-const classes = computed(() => [
-  props.size ?? 'medium',
-  props.theme ?? 'brand'
-])
+const classes = computed(() => [props.size ?? 'medium', props.theme ?? 'brand'])
 
 const isExternal = computed(() => props.href && /^[a-z]+:/i.test(props.href))
 

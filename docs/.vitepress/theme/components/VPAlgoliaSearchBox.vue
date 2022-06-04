@@ -38,9 +38,7 @@ function initialize(userOptions: DefaultTheme.AlgoliaSearchOptions) {
 
     navigator: {
       navigate({ itemUrl }: { itemUrl: string }) {
-        const { pathname: hitPathname } = new URL(
-          window.location.origin + itemUrl
-        )
+        const { pathname: hitPathname } = new URL(window.location.origin + itemUrl)
 
         // router doesn't handle same-page navigation so we use the native
         // browser location API for anchor navigation
@@ -60,10 +58,8 @@ function initialize(userOptions: DefaultTheme.AlgoliaSearchOptions) {
       })
     },
 
-    hitComponent({ hit, children }: { hit: DocSearchHit, children: any }) {
-      const relativeHit = hit.url.startsWith('http')
-        ? getRelativePath(hit.url as string)
-        : hit.url
+    hitComponent({ hit, children }: { hit: DocSearchHit; children: any }) {
+      const relativeHit = hit.url.startsWith('http') ? getRelativePath(hit.url as string) : hit.url
 
       return {
         __v: null,
@@ -106,13 +102,7 @@ function initialize(userOptions: DefaultTheme.AlgoliaSearchOptions) {
 }
 
 function isSpecialClick(event: MouseEvent) {
-  return (
-    event.button === 1 ||
-    event.altKey ||
-    event.ctrlKey ||
-    event.metaKey ||
-    event.shiftKey
-  )
+  return event.button === 1 || event.altKey || event.ctrlKey || event.metaKey || event.shiftKey
 }
 
 function getRelativePath(absoluteUrl: string) {

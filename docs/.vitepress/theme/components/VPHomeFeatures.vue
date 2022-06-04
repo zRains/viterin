@@ -29,11 +29,7 @@ const grid = computed(() => {
     <div class="container">
       <div class="items">
         <div v-for="feature in fm.features" :key="feature.title" class="item" :class="[grid]">
-          <VPBox
-            :icon="feature.icon"
-            :title="feature.title"
-            :details="feature.details"
-          />
+          <VPBox :icon="feature.icon" :title="feature.title" :details="feature.details" />
         </div>
       </div>
     </div>
@@ -93,5 +89,4 @@ const grid = computed(() => {
     width: calc(100% / 4);
   }
 }
-
 </style>

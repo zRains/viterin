@@ -36,11 +36,7 @@ defineProps<{
       </div>
 
       <div v-if="actionLink" class="action">
-        <VPButton
-          theme="sponsor"
-          :text="actionText ?? 'Become a sponsor'"
-          :href="actionLink"
-        />
+        <VPButton theme="sponsor" :text="actionText ?? 'Become a sponsor'" :href="actionLink" />
       </div>
     </div>
   </section>
