@@ -1,0 +1,22 @@
+{
+  "name": "viterin",
+  "version": "0.1.0",
+  "description": "personal blog",
+  "main": "index.js",
+  "scripts": {
+    "dev": "vitepress dev docs",
+    "build": "vitepress build docs",
+    "serve": "vitepress serve docs"
+  },
+  "keywords": [
+    "blog"
+  ],
+  "author": "zrain",
+  "license": "MIT",
+  "dependencies": {
+    "vitepress": "^1.0.0-alpha.1"
+  },
+  "devDependencies": {
+    "sass": "^1.52.2"
+  }
+}
