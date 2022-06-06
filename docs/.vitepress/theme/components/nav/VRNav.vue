@@ -3,13 +3,14 @@
     <!-- PC端Nav展示 -->
     <VRNavBar />
     <!-- 移动端Nav展示 -->
-    <VRNavScreen />
+    <!-- <VRNavScreen :open="isScreenOpen" /> -->
   </header>
 </template>
 
 <script setup lang="ts">
 import VRNavBar from './VRNavBar.vue'
 import VRNavScreen from './VRNavScreen.vue'
+import { isScreenOpen } from '../../composables/nav'
 </script>
 
 <style lang="scss">

@@ -2,7 +2,7 @@
   <nav v-if="theme.nav" class="VPNavBarMenu">
     <template v-for="item in theme.nav" :key="item.text">
       <VRNavBarMenuLink v-if="'link' in item" :item="item" />
-      <!-- <VRNavBarMenuGroup v-else :item="item" /> -->
+      <VRNavBarMenuGroup v-else :item="item" />
     </template>
   </nav>
 </template>
@@ -20,7 +20,13 @@ const { theme } = useData<Config>()
 @import '../../styles/vars.scss';
 
 .VPNavBarMenu {
-  display: flex;
-  z-index: $z-index-nav + 4;
+  display: none;
+}
+
+// 适配移动端
+@media only screen and (min-width: $b-md) {
+  .VPNavBarMenu {
+    display: flex;
+  }
 }
 </style>

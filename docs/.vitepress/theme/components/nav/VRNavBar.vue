@@ -8,7 +8,11 @@
       <!-- 链接部分 -->
       <VRNavBarMenu />
       <!-- 暗/亮切换 -->
-      <VRSwitchAppearance />
+      <VRNavBarAppearance />
+      <!-- 额外空间 -->
+      <VRNavBarExtra />
+      <!-- 汉堡 -->
+      <VRNavBarHamburger />
     </div>
   </div>
 </template>
@@ -17,7 +21,9 @@
 import VRNavTitle from './VRNavTitle.vue'
 import VRUtils from './VRUtils.vue'
 import VRNavBarMenu from './VRNavBarMenu.vue'
-import VRSwitchAppearance from './VRSwitchAppearance.vue'
+import VRNavBarAppearance from './VRNavBarAppearance.vue'
+import VRNavBarExtra from './VRNavBarExtra.vue'
+import VRNavBarHamburger from './VRNavBarHamburger.vue'
 </script>
 
 <style lang="scss">
@@ -26,7 +32,7 @@ import VRSwitchAppearance from './VRSwitchAppearance.vue'
 .VRNavBar {
   position: relative;
   display: flex;
-  padding: 0 24px;
+  padding: 0 10px 0 24px;
   height: $nav-height-mobile;
   border-bottom: 1px solid var(--c-divider-light);
 
@@ -40,6 +46,7 @@ import VRSwitchAppearance from './VRSwitchAppearance.vue'
 // 适配移动端
 @media only screen and (min-width: $b-md) {
   .VRNavBar {
+    padding: 0 24px;
     height: $nav-height-desktop;
     border-bottom: none;
   }

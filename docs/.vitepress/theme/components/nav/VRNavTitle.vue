@@ -25,8 +25,8 @@ const { site, theme } = useData<Config>()
     height: $nav-height-mobile - 1px;
     font-size: 1rem;
     img {
-      height: ($nav-height-mobile - 1px) * 0.72;
-      width: ($nav-height-mobile - 1px) * 0.72;
+      height: ($nav-height-mobile - 1px) * 0.65;
+      width: ($nav-height-mobile - 1px) * 0.65;
     }
   }
 
@@ -35,8 +35,8 @@ const { site, theme } = useData<Config>()
     .title {
       height: $nav-height-desktop;
       img {
-        height: $nav-height-desktop * 0.72;
-        width: $nav-height-desktop * 0.72;
+        height: $nav-height-desktop * 0.65;
+        width: $nav-height-desktop * 0.65;
       }
     }
   }

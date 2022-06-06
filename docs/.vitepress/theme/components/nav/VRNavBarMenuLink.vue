@@ -21,8 +21,9 @@ defineProps<{
   padding: 0 12px;
 
   span {
+    line-height: $nav-height-mobile - 1px;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 14px;
     border-width: 2.5px 0 2.5px 0;
     border-style: solid;
     border-color: transparent;

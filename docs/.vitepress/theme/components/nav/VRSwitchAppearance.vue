@@ -18,9 +18,6 @@ function setAppearance(mode: 'light' | 'dark') {
 $appearance-width: 20px;
 
 .VRSwitchAppearance {
-  padding-left: 20px;
-  margin-left: 10px;
-  border-left: 1px solid var(--c-gray);
   .toggle {
     box-sizing: content-box;
     position: relative;

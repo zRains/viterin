@@ -73,12 +73,14 @@ export type NavItemWithLink = {
   activeMatch?: string
 }
 
+export type NavItemChildren = {
+  text?: string
+  items: NavItemWithLink[]
+}
+
 export interface NavItemWithChildren {
   text?: string
-  items: {
-    text?: string
-    items: NavItemWithLink[]
-  }[]
+  items: NavItemChildren[]
 }
 
 // sidebar -------------------------------------------------------------------

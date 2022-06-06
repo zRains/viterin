@@ -36,7 +36,7 @@
   --c-divider-dark-1: rgba(84, 84, 84, 0.65);
   --c-divider-dark-2: rgba(84, 84, 84, 0.48);
 
-  --c-text-light-1: --c-indigo;
+  --c-text-light-1: var(--c-indigo);
   --c-text-light-2: rgba(60, 60, 60, 0.7);
   --c-text-light-3: rgba(60, 60, 60, 0.33);
   --c-text-light-4: rgba(60, 60, 60, 0.18);
