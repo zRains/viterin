@@ -1,6 +1,6 @@
 <template>
-  <VRSwitch :class="{ VRSwitchAppearance: true }" :on-active="toggle" :on-disable="toggle" :init-status="isDark">
-    <template #default="{ isActivated }"><div :class="{ toggle: true, isActivated }"></div></template>
+  <VRSwitch :class="{ VRSwitchAppearance: true }" :on-toggle="toggle" :init-status="isDark">
+    <template #default="{ status }"><div :class="{ toggle: true, isActivated: status }"></div></template>
   </VRSwitch>
 </template>
 

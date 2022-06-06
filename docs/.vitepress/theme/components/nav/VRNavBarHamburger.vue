@@ -1,7 +1,7 @@
 <template>
-  <VRSwitch class="VRNavBarHamburger" :on-active="openScreen" :on-disable="closeScreen">
-    <template #default="{ isActivated }">
-      <svg :class="{ hamburger: true, isActivated }" viewBox="0 0 100 100" height="35" width="35">
+  <VRSwitch class="VRNavBarHamburger" :on-toggle="toggleScreen" :init-status="isScreenOpen">
+    <template #default="{ status }">
+      <svg :class="{ hamburger: true, isActivated: status }" viewBox="0 0 100 100" height="35" width="35">
         <path
           class="line top"
           d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"
@@ -18,7 +18,7 @@
 
 <script setup lang="ts">
 import VRSwitch from '../VRSwitch.vue'
-import { openScreen, closeScreen } from '../../composables/nav'
+import { toggleScreen, isScreenOpen } from '../../composables/nav'
 </script>
 
 <style lang="scss">

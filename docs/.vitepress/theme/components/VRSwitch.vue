@@ -1,6 +1,6 @@
 <template>
-  <div class="VRSwitch" @click="isActivated = !isActivated">
-    <slot :isActivated="isActivated"></slot>
+  <div class="VRSwitch" @click="onToggle">
+    <slot :status="initStatus"></slot>
   </div>
 </template>
 
@@ -8,14 +8,9 @@
 import { ref, watch } from 'vue'
 
 const props = defineProps<{
-  initStatus?: boolean
-  onActive?: () => void
-  onDisable?: () => void
+  initStatus: boolean
+  onToggle: () => void
 }>()
-
-const isActivated = ref(typeof props.initStatus === 'undefined' ? false : props.initStatus!)
-
-watch(isActivated, (n) => (n ? props.onActive?.call(null) : props.onDisable?.call(null)))
 </script>
 
 <style lang="scss"></style>
