@@ -80,7 +80,7 @@ export type NavItemChildren = {
 
 export interface NavItemWithChildren {
   text?: string
-  items: NavItemChildren[]
+  items: (NavItemChildren | NavItemWithLink)[]
 }
 
 // sidebar -------------------------------------------------------------------

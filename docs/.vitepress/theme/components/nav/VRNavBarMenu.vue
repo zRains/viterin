@@ -1,5 +1,5 @@
 <template>
-  <nav v-if="theme.nav" class="VPNavBarMenu">
+  <nav v-if="theme.nav" class="VRNavBarMenu">
     <template v-for="item in theme.nav" :key="item.text">
       <VRNavBarMenuLink v-if="'link' in item" :item="item" />
       <VRNavBarMenuGroup v-else :item="item" />
@@ -19,13 +19,13 @@ const { theme } = useData<Config>()
 <style lang="scss">
 @import '../../styles/vars.scss';
 
-.VPNavBarMenu {
+.VRNavBarMenu {
   display: none;
 }
 
 // 适配移动端
 @media only screen and (min-width: $b-md) {
-  .VPNavBarMenu {
+  .VRNavBarMenu {
     display: flex;
   }
 }

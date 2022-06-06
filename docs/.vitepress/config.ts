@@ -18,36 +18,41 @@ export default defineConfig({
       { text: 'Post', link: '/post' },
       { text: 'Wrap', link: '/wrap' },
       { text: 'Note', link: '/note' },
-      // {
-      //   text: 'Dropdown Menu',
-      //   items: [
-      //     {
-      //       // Title for the section.
-      //       text: 'Section A Title',
-      //       items: [
-      //         { text: 'Section A Item A', link: '...' },
-      //         { text: 'Section B Item B', link: '...' }
-      //       ]
-      //     }
-      //   ]
-      // },
-      // {
-      //   text: 'Dropdown Menu',
-      //   items: [
-      //     {
-      //       // You may also omit the title.
-      //       items: [
-      //         { text: 'Section A Item A', link: '...' },
-      //         { text: 'Section B Item B', link: '...' }
-      //       ]
-      //     }
-      //   ]
-      // }
       {
         text: 'Tool',
         items: [
-          { text: 'Graduators', link: '/tools/graduators' },
-          { text: 'ASCII', link: '/tools/ASCII' }
+          {
+            text: 'web',
+            items: [
+              {
+                text: '渐变色调制',
+                link: '...'
+              },
+              {
+                text: 'Ascii',
+                link: '...'
+              }
+            ]
+          },
+          {
+            text: 'fun',
+            items: [
+              {
+                text: 'Game',
+                link: '...'
+              },
+              {
+                text: 'Videos',
+                link: '...'
+              },
+              {
+                text: 'Song',
+                link: '...'
+              }
+            ]
+          },
+          { text: 'AA', link: '...' },
+          { text: 'BB', link: '...' }
         ]
       }
     ],

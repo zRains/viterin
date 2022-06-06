@@ -75,7 +75,7 @@ import { openScreen, closeScreen } from '../../composables/nav'
 
 // 移动端适配
 @media (min-width: 768px) {
-  .VPNavBarHamburger {
+  .VRNavBarHamburger {
     display: none;
   }
 }

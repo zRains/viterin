@@ -1,20 +1,22 @@
 <template>
   <div class="VRMenuPop">
-    <div v-if="items" class="items">
+    <template v-if="items">
       <template v-for="item in items" :key="item.text">
-        <VPMenuLink v-if="'link' in item" :item="item" />
-        <!-- <VPMenuGroup v-else :text="item.text" :items="item.items" /> -->
+        <VRMenuLink :class="{ group: true }" v-if="'link' in item" :item="item" />
+        <VRMenuGroup :class="{ group: true }" v-else :text="item.text" :items="item.items" />
       </template>
-    </div>
+    </template>
     <slot />
   </div>
 </template>
 
 <script setup lang="ts">
-import type { NavItemChildren } from '../../types/theme'
+import type { NavItemChildren, NavItemWithLink } from '../../types/theme'
+import VRMenuLink from './VRMenuLink.vue'
+import VRMenuGroup from './VRMenuGroup.vue'
 
 defineProps<{
-  items?: NavItemChildren[]
+  items?: (NavItemChildren | NavItemWithLink)[]
 }>()
 </script>
 
@@ -22,9 +24,10 @@ defineProps<{
 .VRMenuPop {
   min-width: 130px;
   border: 1px solid var(--c-divider-light);
+  background-color: var(--c-bg);
 
-  .group {
-    padding: 10px;
+  .group:not(:first-child) {
+    border-top: 1px solid var(--c-divider-light);
   }
 }
 </style>

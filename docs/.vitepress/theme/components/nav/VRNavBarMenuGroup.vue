@@ -13,7 +13,6 @@ defineProps<{
 
 <style lang="scss">
 .VRNavBarMenuGroup {
-  padding: 0 10px;
-  cursor: pointer;
+  padding: 0 12px;
 }
 </style>

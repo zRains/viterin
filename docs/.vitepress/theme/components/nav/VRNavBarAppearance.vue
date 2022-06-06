@@ -1,12 +1,12 @@
 <template>
   <div v-if="site.appearance" class="VRNavBarAppearance">
-    <VPSwitchAppearance />
+    <VRSwitchAppearance />
   </div>
 </template>
 
 <script setup lang="ts">
 import { useData } from 'vitepress'
-import VPSwitchAppearance from './VRSwitchAppearance.vue'
+import VRSwitchAppearance from './VRSwitchAppearance.vue'
 
 const { site } = useData()
 </script>

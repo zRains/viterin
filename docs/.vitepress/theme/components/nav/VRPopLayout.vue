@@ -5,7 +5,6 @@
         {{ button }}
         <VRIDropdown :class="{ icon: true, textIcon: true }" />
       </template>
-
       <VRIMore :class="{ icon: true }" v-else />
     </div>
 
@@ -18,7 +17,7 @@
 </template>
 
 <script setup lang="ts">
-import type { NavItemChildren } from '../../types/theme'
+import type { NavItemChildren, NavItemWithLink } from '../../types/theme'
 import { ref } from 'vue'
 import VRIMore from '../icon/VRIMore.vue'
 import VRIDropdown from '../icon/VRIDropdown.vue'
@@ -28,7 +27,7 @@ defineProps<{
   icon?: any
   button?: string
   label?: string
-  items?: NavItemChildren[]
+  items?: (NavItemChildren | NavItemWithLink)[]
 }>()
 
 const isActivated = ref(false)
@@ -49,6 +48,7 @@ $icon-width: 22px;
     align-items: center;
     font-size: 14px;
     transition: color $u-duration ease;
+    cursor: pointer;
 
     .icon {
       width: $icon-width;
@@ -65,6 +65,12 @@ $icon-width: 22px;
       .icon {
         fill: var(--c-brand);
       }
+
+      & + .menuPop {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+      }
     }
   }
 
@@ -75,14 +81,6 @@ $icon-width: 22px;
     opacity: 0;
     visibility: hidden;
     transition: opacity $u-duration, visibility 0.25s, transform $u-duration;
-  }
-
-  &:hover {
-    .menuPop {
-      opacity: 1;
-      visibility: visible;
-      transform: translateY(0);
-    }
   }
 }
 </style>

@@ -1,12 +1,5 @@
 <template>
   <VRPopLayout :class="{ VRNavBarExtra: true }" label="extra navigation">
-    <!-- <div v-if="theme.localeLinks" class="group">
-      <p class="trans-title">{{ theme.localeLinks.text }}</p>
-
-      <template v-for="locale in theme.localeLinks.items" :key="locale.link">
-        <VPMenuLink :item="locale" />
-      </template>
-    </div> -->
     <div v-if="site.appearance" class="appearance group">
       <div class="label">Theme</div>
       <VRSwitchAppearance />
@@ -19,7 +12,7 @@ import { useData } from 'vitepress'
 import VRPopLayout from './VRPopLayout.vue'
 import VRSwitchAppearance from './VRSwitchAppearance.vue'
 
-const { site, theme } = useData()
+const { site } = useData()
 </script>
 
 <style lang="scss">
@@ -33,6 +26,8 @@ const { site, theme } = useData()
   .appearance {
     display: flex;
     align-items: center;
+    padding: 10px;
+    
     .label {
       margin-right: auto;
       font-size: 13px;

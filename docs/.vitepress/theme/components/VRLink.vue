@@ -1,7 +1,7 @@
 <template>
   <component
     :is="href ? 'a' : 'span'"
-    class="VPLink"
+    class="VRLink"
     :href="href ? normalizeLink(href) : undefined"
     :target="isExternalLink ? '_blank' : undefined"
     :rel="isExternalLink ? 'noopener noreferrer' : undefined"
@@ -24,7 +24,8 @@ const isExternalLink = computed(() => props.href && isExternal(props.href))
 <style lang="scss">
 @import '../styles/vars.scss';
 
-.VPLink {
+.VRLink {
+  display: block;
   color: var(--c-text-1);
   text-decoration: none;
 }
