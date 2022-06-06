@@ -1,15 +1,14 @@
 <template>
-  <VRSwitch :class="{ VRSwitchAppearance: true }" :on-active="() => setAppearance('dark')" :on-disable="() => setAppearance('light')">
+  <VRSwitch :class="{ VRSwitchAppearance: true }" :on-active="toggle" :on-disable="toggle" :init-status="isDark">
     <template #default="{ isActivated }"><div :class="{ toggle: true, isActivated }"></div></template>
   </VRSwitch>
 </template>
 
 <script setup lang="ts">
 import VRSwitch from '../VRSwitch.vue'
+import useAppearance from '../../composables/appearance'
 
-function setAppearance(mode: 'light' | 'dark') {
-  document.documentElement.setAttribute('data-theme', mode)
-}
+const { toggle, isDark } = useAppearance()
 </script>
 
 <style lang="scss">
