@@ -1,201 +1,59 @@
 /**
- * Colors Base
- * -------------------------------------------------------------------------- */
-
-$c-white: #ffffff;
-$c-white-soft: #f9f9f9;
-$c-white-mute: #f1f1f1;
-
-$c-black: #1a1a1a;
-$c-black-pure: #000000;
-$c-black-soft: #242424;
-$c-black-mute: #2f2f2f;
-
-$c-gray: #8e8e8e;
-$c-gray-light-1: #aeaeae;
-$c-gray-light-2: #c7c7c7;
-$c-gray-light-3: #d1d1d1;
-$c-gray-light-4: #e5e5e5;
-$c-gray-light-5: #f2f2f2;
-$c-gray-dark-1: #636363;
-$c-gray-dark-2: #484848;
-$c-gray-dark-3: #3a3a3a;
-$c-gray-dark-4: #282828;
-$c-gray-dark-5: #202020;
-
-$c-indigo: #213547;
-$c-indigo-soft: #476582;
-$c-indigo-light: #aac8e4;
-$c-indigo-lighter: #c9def1;
-$c-indigo-dark: #1d2f3f;
-$c-indigo-darker: #14212e;
-
-$c-divider-light-1: rgba(60, 60, 60, 0.29);
-$c-divider-light-2: rgba(60, 60, 60, 0.12);
-$c-divider-dark-1: rgba(84, 84, 84, 0.65);
-$c-divider-dark-2: rgba(84, 84, 84, 0.48);
-
-$c-text-light-1: $c-indigo;
-$c-text-light-2: rgba(60, 60, 60, 0.7);
-$c-text-light-3: rgba(60, 60, 60, 0.33);
-$c-text-light-4: rgba(60, 60, 60, 0.18);
-
-$c-text-dark-1: rgba(255, 255, 255, 0.87);
-$c-text-dark-2: rgba(235, 235, 235, 0.6);
-$c-text-dark-3: rgba(235, 235, 235, 0.38);
-$c-text-dark-4: rgba(235, 235, 235, 0.18);
-
-$c-green: #42b883;
-$c-green-light: #42d392;
-$c-green-lighter: #35eb9a;
-$c-green-dark: #33a06f;
-$c-green-darker: #155f3e;
-$c-green-dimm-1: rgba(66, 184, 131, 0.5);
-$c-green-dimm-2: rgba(66, 184, 131, 0.25);
-$c-green-dimm-3: rgba(66, 184, 131, 0.05);
-
-$c-yellow: #ffc517;
-$c-yellow-light: #fcd253;
-$c-yellow-lighter: #fcfc7c;
-$c-yellow-dark: #e0ad15;
-$c-yellow-darker: #ad850e;
-$c-yellow-dimm-1: rgba(255, 197, 23, 0.5);
-$c-yellow-dimm-2: rgba(255, 197, 23, 0.25);
-$c-yellow-dimm-3: rgba(255, 197, 23, 0.05);
-
-$c-red: #ed3c50;
-$c-red-light: #f54e82;
-$c-red-lighter: #fd1d7c;
-$c-red-dark: #cd2d3f;
-$c-red-darker: #ab2131;
-$c-red-dimm-1: rgba(237, 60, 80, 0.5);
-$c-red-dimm-2: rgba(237, 60, 80, 0.25);
-$c-red-dimm-3: rgba(237, 60, 80, 0.05);
-
-/**
-   * Colors Theme
+   * Global Effects
    * -------------------------------------------------------------------------- */
 
-$c-bg: $c-white;
-$c-bg-soft: $c-white-soft;
-$c-bg-mute: $c-white-mute;
-$c-bg-alt: $c-white-soft;
-
-$c-divider: $c-divider-light-1;
-$c-divider-light: $c-divider-light-2;
-
-$c-divider-inverse: $c-divider-dark-1;
-$c-divider-inverse-light: $c-divider-dark-2;
-
-$c-text-1: $c-text-light-1;
-$c-text-2: $c-text-light-2;
-$c-text-3: $c-text-light-3;
-$c-text-4: $c-text-light-4;
-
-$c-text-inverse-1: $c-text-dark-1;
-$c-text-inverse-2: $c-text-dark-2;
-$c-text-inverse-3: $c-text-dark-3;
-$c-text-inverse-4: $c-text-dark-4;
-
-$c-text-code: $c-indigo-soft;
-
-$c-brand: $c-green;
-$c-brand-light: $c-green-light;
-$c-brand-lighter: $c-green-lighter;
-$c-brand-dark: $c-green-dark;
-$c-brand-darker: $c-green-darker;
-
-$c-sponsor: #fd1d7c;
-
-.dark {
-  $c-bg: $c-black-soft;
-  $c-bg-soft: $c-black-mute;
-  $c-bg-mute: $c-gray-dark-3;
-  $c-bg-alt: $c-black;
-
-  $c-divider: $c-divider-dark-1;
-  $c-divider-light: $c-divider-dark-2;
-
-  $c-divider-inverse: $c-divider-light-1;
-  $c-divider-inverse-light: $c-divider-light-2;
-
-  $c-text-1: $c-text-dark-1;
-  $c-text-2: $c-text-dark-2;
-  $c-text-3: $c-text-dark-3;
-  $c-text-4: $c-text-dark-4;
-
-  $c-text-inverse-1: $c-text-light-1;
-  $c-text-inverse-2: $c-text-light-2;
-  $c-text-inverse-3: $c-text-light-3;
-  $c-text-inverse-4: $c-text-light-4;
-
-  $c-text-code: $c-indigo-lighter;
-}
-
-/**
-   * Typography
-   * -------------------------------------------------------------------------- */
-
-$font-family-base: Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans',
-  'Helvetica Neue', serif;
+// Typography
+$font-family-base: JetBrains, -apple-system, 'Helvetica Neue', serif;
 $font-family-mono: Menlo, Monaco, Consolas, 'Courier New', monospace;
 
-/**
-   * Shadows
-   * -------------------------------------------------------------------------- */
-
+// Shadows
 $shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
 $shadow-2: 0 3px 12px rgba(0, 0, 0, 0.07), 0 1px 4px rgba(0, 0, 0, 0.07);
 $shadow-3: 0 12px 32px rgba(0, 0, 0, 0.1), 0 2px 6px rgba(0, 0, 0, 0.08);
 $shadow-4: 0 14px 44px rgba(0, 0, 0, 0.12), 0 3px 9px rgba(0, 0, 0, 0.12);
 $shadow-5: 0 18px 56px rgba(0, 0, 0, 0.16), 0 4px 12px rgba(0, 0, 0, 0.16);
 
-/**
-   * Z-indexes
-   * -------------------------------------------------------------------------- */
-
+// Z-indexes
 $z-index-local-nav: 10;
 $z-index-nav: 20;
 $z-index-backdrop: 30;
 $z-index-sidebar: 40;
 $z-index-footer: 50;
 
-/**
-   * Icons
-   * -------------------------------------------------------------------------- */
+// Icons
+// ...
+
+// Layouts
+$b-sm: 640px;
+$b-md: 768px;
+$b-lg: 1024px;
+$b-xl: 1280px;
+$font-break-points: (
+  $b-sm: 13px,
+  $b-md: 15px,
+  $b-lg: 16px,
+  $b-xl: 18px
+);
+
+// Utils
+$u-duration: 0.2s;
 
 /**
-   * Layouts
+   * Component
    * -------------------------------------------------------------------------- */
 
-/**
-   * Component: Code
-   * -------------------------------------------------------------------------- */
+// Button
+// ...
 
-/**
-   * Component: Button
-   * -------------------------------------------------------------------------- */
+// Custom Block
+// ...
 
-/**
-   * Component: Custom Block
-   * -------------------------------------------------------------------------- */
+// Nav
+$nav-height-mobile: 57px;
+$nav-height-desktop: 65px;
 
-/**
-   * Component: Nav
-   * -------------------------------------------------------------------------- */
+// Sidebar
+// ...
 
-$nav-height-mobile: 60px;
-$nav-height: $nav-height-mobile;
-$nav-height-desktop: 70px;
-
-@media (min-width: 960px) {
-  $nav-height: $nav-height-desktop;
-}
-
-/**
-   * Component: Sidebar
-   * -------------------------------------------------------------------------- */
-
-/**
-   * Component: Home
-   * -------------------------------------------------------------------------- */
+// Home
+// ...

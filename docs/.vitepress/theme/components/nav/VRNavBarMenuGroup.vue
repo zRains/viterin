@@ -1,5 +1,5 @@
 <template>
-  <div class="VRContent"></div>
+  <div class="VRNavBarMenuGroup"></div>
 </template>
 
 <script setup lang="ts"></script>

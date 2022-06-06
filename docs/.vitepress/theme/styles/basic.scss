@@ -1,4 +1,27 @@
 @import './vars.scss';
+@import './fonts.scss';
+
+@font-face {
+  font-family: JetBrains;
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url(../fonts/JetBrainsMono-Bold.woff2) format('woff2');
+}
+@font-face {
+  font-family: JetBrains;
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url(../fonts/JetBrainsMono-SemiBold.woff2) format('woff2');
+}
+@font-face {
+  font-family: JetBrains;
+  font-style: normal;
+  font-weight: 200;
+  font-display: swap;
+  src: url(../fonts/JetBrainsMono-Light.woff2) format('woff2');
+}
 
 *,
 ::before,
@@ -7,23 +30,30 @@
 }
 
 html {
+  font-size: 14px;
+  font-family: $font-family-base;
+  font-weight: 400;
+  color: var(--c-text-1);
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  direction: ltr;
   -webkit-text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@each $break-point, $font-size in $font-break-points {
+  @media screen and (min-width: $break-point) {
+    html {
+      font-size: $font-size;
+    }
+  }
 }
 
 body {
   margin: 0;
   width: 100%;
-  min-width: 320px;
   min-height: 100vh;
-  line-height: 24px;
-  font-family: $font-family-base;
-  font-size: 16px;
-  font-weight: 400;
-  color: $c-text-1;
-  background-color: $c-bg;
-  direction: ltr;
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--c-bg);
+  transition: background-color 0.2s ease;
 }

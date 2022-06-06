@@ -4,6 +4,7 @@ import NotFound from './NotFound.vue'
 
 // 样式
 import './styles/basic.scss'
+import './styles/colors.scss'
 
 const theme: Theme = {
   Layout,

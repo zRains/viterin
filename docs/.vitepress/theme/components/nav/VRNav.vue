@@ -1,5 +1,5 @@
 <template>
-  <header class="VPNav">
+  <header class="VRNav">
     <!-- PC端Nav展示 -->
     <VRNavBar />
     <!-- 移动端Nav展示 -->
@@ -12,4 +12,14 @@ import VRNavBar from './VRNavBar.vue'
 import VRNavScreen from './VRNavScreen.vue'
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import '../../styles/vars.scss';
+
+.VRNav {
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: $z-index-nav;
+  width: 100%;
+}
+</style>

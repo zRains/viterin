@@ -1,0 +1,45 @@
+<template>
+  <VRLink :class="{ VRNavBarMenuLink: true }" :href="item.link"
+    ><span>{{ item.text }}</span></VRLink
+  >
+</template>
+
+<script setup lang="ts">
+import type { NavItemWithLink } from '../../types/theme'
+import VRLink from '../VRLink.vue'
+
+defineProps<{
+  item: NavItemWithLink
+}>()
+</script>
+
+<style lang="scss">
+@import '../../styles/vars.scss';
+
+.VRNavBarMenuLink {
+  display: block;
+  padding: 0 12px;
+
+  span {
+    font-weight: 400;
+    font-size: 15px;
+    border-width: 2.5px 0 2.5px 0;
+    border-style: solid;
+    border-color: transparent;
+    transition-property: color, border-bottom-color;
+    transition-duration: $u-duration;
+  }
+
+  &:hover span {
+    color: var(--c-brand);
+    border-bottom-color: var(--c-brand);
+  }
+}
+
+// 移动端适配
+@media only screen and (min-width: $b-md) {
+  .VRNavBarMenuLink {
+    line-height: $nav-height-desktop;
+  }
+}
+</style>

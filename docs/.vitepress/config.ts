@@ -13,7 +13,12 @@ export default defineConfig({
   themeConfig: {
     siteTitle: false,
     logo: 'https://zrain.fun/images/avatar.png',
-    nav: [{ text: 'Home', link: '...' }],
+    nav: [
+      { text: 'Home', link: '/home' },
+      { text: 'Post', link: '/post' },
+      { text: 'Wrap', link: '/wrap' },
+      { text: 'Note', link: '/note' }
+    ],
     socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }]
   }
 })
