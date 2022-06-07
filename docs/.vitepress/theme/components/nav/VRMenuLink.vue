@@ -1,16 +1,20 @@
 <template>
   <div class="VRMenuLink">
-    <VRLink :href="item.link">{{ item.text }}</VRLink>
+    <VRLink :href="item.link" :class="{ isActive: isActive(page.relativePath, item.activeMatch || item.link) }">{{ item.text }}</VRLink>
   </div>
 </template>
 
 <script setup lang="ts">
-import type { NavItemWithLink } from '../../types/theme'
+import type { NavItemWithLink, Config } from '../../types/theme'
+import { useData } from 'vitepress'
+import { isActive } from '../../utils/helper'
 import VRLink from '../VRLink.vue'
 
 defineProps<{
   item: NavItemWithLink
 }>()
+
+const { page } = useData<Config>()
 </script>
 
 <style lang="scss">
@@ -19,7 +23,8 @@ defineProps<{
   font-size: 14px;
   cursor: pointer;
 
-  &:hover {
+  &:hover,
+  &.isActive {
     background-color: var(--c-bg-mute);
 
     .VRLink {

@@ -1,5 +1,7 @@
 <template>
-  <div class="VRContent"></div>
+  <div class="VRContent">
+    <Content />
+  </div>
 </template>
 
 <script setup lang="ts"></script>

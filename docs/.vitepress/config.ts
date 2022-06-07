@@ -14,7 +14,6 @@ export default defineConfig({
     siteTitle: false,
     logo: 'https://zrain.fun/images/avatar.png',
     nav: [
-      { text: 'Home', link: '/home' },
       { text: 'Post', link: '/post' },
       { text: 'Wrap', link: '/wrap' },
       { text: 'Note', link: '/note' },

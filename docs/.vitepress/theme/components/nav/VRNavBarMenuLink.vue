@@ -1,16 +1,24 @@
 <template>
-  <VRLink :class="{ VRNavBarMenuLink: true }" :href="item.link"
+  <VRLink
+    :class="{ VRNavBarMenuLink: true, isActive: isActive(page.relativePath, item.activeMatch || item.link, !!item.activeMatch) }"
+    :href="item.link"
     ><span>{{ item.text }}</span></VRLink
   >
 </template>
 
 <script setup lang="ts">
-import type { NavItemWithLink } from '../../types/theme'
+import type { NavItemWithLink, Config } from '../../types/theme'
+import { useData } from 'vitepress'
+import { isActive } from '../../utils/helper'
 import VRLink from '../VRLink.vue'
 
 defineProps<{
   item: NavItemWithLink
 }>()
+
+const { page } = useData<Config>()
+
+// console.log(page)
 </script>
 
 <style lang="scss">
@@ -31,9 +39,12 @@ defineProps<{
     transition-duration: $u-duration;
   }
 
-  &:hover span {
-    color: var(--c-brand);
-    border-bottom-color: var(--c-brand);
+  &:hover,
+  &.isActive {
+    span {
+      color: var(--c-brand);
+      border-bottom-color: var(--c-brand);
+    }
   }
 }
 
