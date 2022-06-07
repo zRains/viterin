@@ -22,7 +22,7 @@ defineProps<{
 
 .VRMenuGroup {
   .title {
-    padding: 10px 10px 5px 10px;
+    padding: 10px 10px 5px 15px;
     font-size: 14px;
     font-weight: 600;
     color: var(--c-text-2);

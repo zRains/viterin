@@ -1,51 +1,53 @@
-#### BroadCast Channel
+---
+title: 'Home / 主页'
+---
 
-BroadCast Channel 可以帮我们创建一个用于广播的通信频道。当所有页面都监听同一频道的消息时，其中某一个页面通过它发送的消息就会被其他所有页面收到。它的 API 和用法都非常简单。
+# Hi 👋, I'm zRain
 
-创建一个标识为`Test`的频道：
+### 一个以前端为兴趣的学生党。路漫漫其修远兮，吾将上下而~~摸鱼~~求索。
 
-```js
-const bc = new BroadcastChannel('Test')
-```
+---
 
-各个页面可以通过`onmessage`来监听被广播的消息：
+👨‍💻 所有开源项目均在 [**Github**](https://github.com/zRains)
 
-```js
-bc.onmessage = function (e) {
-  const data = e.data
-  const text = '[receive] ' + data + ' —— tab ' + data
-  console.log('[BroadcastChannel] receive message:', text)
-}
-```
+🌱 当前正在 **React and Rust** 中摸鱼
 
-发送页面不会触发`onmessage`。
+💬 略知一二： [**Vue**](https://vuejs.org/)、**ECMAScript**
 
-要发送消息时只需要调用实例上的`postMessage`方法即可：
+#### 常在这些地方混:
 
-```js
-bc.postMessage(mydata)
-```
+<a href="https://codepen.io/pocket-gad" target="_blank" class="iconLink" rel="noreferrer" title="codepen" ><Icon icon="akar-icons:codepen-fill" height="28" width="40"/></a>
+<a href="https://stackoverflow.com/users/14792586" target="_blank" rel="noreferrer" title="stackoverflow" ><Icon icon="logos:stackoverflow-icon" height="28" width="40"/></a>
+<a href="https://leetcode-cn.com/u/zrains/" target="_blank" class="iconLink" rel="noreferrer" title="leetcode" ><Icon icon="cib:leetcode" height="28" width="40"/></a>
 
-#### Service Worker
+#### 编程语言:
 
-待详细了解。
+<a href="https://www.cprogramming.com/" target="_blank" rel="noreferrer" title="clang" ><Icon icon="logos:c" height="30" width="40"/></a>
+<a href="https://www.w3.org/html/" target="_blank" rel="noreferrer" title="html" ><Icon icon="vscode-icons:file-type-html" height="30" width="40"/></a>
+<a href="https://www.w3schools.com/css/" target="_blank" rel="noreferrer" title="css" ><Icon icon="vscode-icons:file-type-css" height="30" width="40"/></a>
+<a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noreferrer" title="javascript" ><Icon icon="vscode-icons:file-type-js-official" height="30" width="40"/></a>
+<a href="https://www.typescriptlang.org/" target="_blank" rel="noreferrer" title="typescript" ><Icon icon="vscode-icons:file-type-typescript-official" height="30" width="40"/></a>
+<a href="https://www.rust-lang.org" target="_blank" rel="noreferrer" title="rust" ><Icon icon="vscode-icons:file-type-light-rust" height="30" width="40"/></a>
+<a href="https://www.python.org" target="_blank" rel="noreferrer" title="python" ><Icon icon="vscode-icons:file-type-python" height="30" width="40"/></a>
+<a href="https://www.java.com" target="_blank" rel="noreferrer" title="java" ><Icon icon="vscode-icons:file-type-java" height="30" width="40"/></a>
 
-#### LocalStorage
+#### 前端框架：
 
-当 LocalStorage 变化时，会触发`storage`事件。利用这个特性，我们可以在发送消息时，把消息写入到某个 LocalStorage 中；然后在各个页面内，通过监听`storage`事件即可收到通知。
+<a href="https://reactjs.org/" target="_blank" rel="noreferrer" title="react.js" ><Icon icon="vscode-icons:file-type-reactts" height="30" width="40"/></a>
+<a href="https://vuejs.org/" target="_blank" rel="noreferrer" title="vue.js" ><Icon icon="vscode-icons:file-type-vue" height="30" width="40"/></a>
+<a href="https://alpinejs.dev/" target="_blank" rel="noreferrer" title="alpinejs" ><img src="https://alpinejs.dev/alpine_long.svg" alt="AlpineJS" width="120" height="30"/></a>
 
-在各个页面添加如上的代码，即可监听到 LocalStorage 的变化。当某个页面需要发送消息时，只需要使用我们熟悉的`setItem`方法即可：
+#### 数据库 & 持续集成 & 工具:
 
-```js
-mydata.st = +new Date()
-window.localStorage.setItem('ctc-msg', JSON.stringify(mydata))
-```
+<a href="https://www.mysql.com/" target="_blank" rel="noreferrer" title="mysql" ><Icon icon="vscode-icons:file-type-mysql" height="30" width="40"/></a>
+<a href="https://www.mongodb.com/" target="_blank" rel="noreferrer" title="mongodb" ><Icon icon="vscode-icons:file-type-mongo" height="30" width="40"/></a>
+<a href="https://redis.io" target="_blank" rel="noreferrer" title="redis" ><Icon icon="logos:redis" height="30" width="40"/></a>
+<a href="https://www.jenkins.io" target="_blank" rel="noreferrer" title="jenkins" ><Icon icon="vscode-icons:file-type-jenkins" height="30" width="40"/></a>
+<a href="https://git-scm.com/" target="_blank" rel="noreferrer" title="git" ><Icon icon="bi:git" color="#f03c2e" height="30" width="40"/></a>
+<a href="https://www.docker.com/" target="_blank" rel="noreferrer" title="docker" ><Icon icon="vscode-icons:file-type-docker" height="30" width="40"/></a>
+<a href="https://circleci.com" target="_blank" rel="noreferrer" title="circleci" ><Icon icon="vscode-icons:file-type-light-circleci" color="#f03c2e" height="30" width="40"/></a>
+<a href="https://concourse-ci.org" target="_blank" rel="noreferrer" title="concourse" ><Icon icon="logos:concourse" color="#f03c2e" width="40" height="30" /></a>
 
-注意，这里有一个细节：我们在 mydata 上添加了一个取当前毫秒时间戳的`.st`属性。这是因为，`storage`事件只有在值真正改变时才会触发。举个例子：
+#### 友链：
 
-```js
-window.localStorage.setItem('test', '123')
-window.localStorage.setItem('test', '123')
-```
-
-由于第二次的值`'123'`与第一次的值相同，所以以上的代码只会在第一次`setItem`时触发`storage`事件。因此我们通过设置`st`来保证每次调用时一定会触发`storage`事件。
+<!-- <Sponsor/> -->

@@ -9,7 +9,6 @@
 
     <!-- 主体内容 -->
     <VRContent>
-      HELLO
       <!-- <template #home-hero-before><slot name="home-hero-before" /></template>
       <template #home-hero-after><slot name="home-hero-after" /></template>
       <template #home-features-before><slot name="home-features-before" /></template>

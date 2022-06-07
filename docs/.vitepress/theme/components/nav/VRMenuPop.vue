@@ -21,10 +21,13 @@ defineProps<{
 </script>
 
 <style lang="scss">
+@import '../../styles/vars.scss';
+
 .VRMenuPop {
-  min-width: 130px;
+  min-width: 150px;
   border: 1px solid var(--c-divider-light);
   background-color: var(--c-bg);
+  box-shadow: $shadow-3;
 
   .group:not(:first-child) {
     border-top: 1px solid var(--c-divider-light);

@@ -19,7 +19,7 @@ const { page } = useData<Config>()
 
 <style lang="scss">
 .VRMenuLink {
-  padding: 8px 10px;
+  padding: 8px 15px;
   font-size: 14px;
   cursor: pointer;
 

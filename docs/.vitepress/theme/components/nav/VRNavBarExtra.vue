@@ -26,7 +26,7 @@ const { site } = useData()
   .appearance {
     display: flex;
     align-items: center;
-    padding: 10px;
+    padding: 10px 15px;
     
     .label {
       margin-right: auto;
