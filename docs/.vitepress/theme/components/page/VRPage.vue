@@ -1,6 +1,6 @@
 <template>
   <div class="VRPage">
-    <Content :class="{ VRPageContent: true }" />
+    <Content :class="{ VRMarkdown: true }" />
   </div>
 </template>
 

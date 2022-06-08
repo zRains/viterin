@@ -1,236 +1,517 @@
-.VRPageContent {
+@import './vars.scss';
+
+/**
+   * Code Colors
+   * -------------------------------------------------------------------------- */
+
+:root {
+  --code-line-height: 1.7;
+  --code-font-size: 13.6px;
+
+  --code-block-color: var(--c-text-dark-1);
+  --code-block-bg: #f6f8fa;
+
+  --code-line-highlight-color: rgba(0, 0, 0, 0.5);
+  --code-line-number-color: var(--c-text-dark-3);
+
+  --code-copy-code-hover-bg: rgba(255, 255, 255, 0.05);
+  --code-copy-code-active-text: var(--c-text-dark-2);
+}
+
+html[data-theme='dark'] {
+  --code-block-bg: var(--c-bg-alt);
+}
+
+.VRMarkdown {
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
-  color: #24292e;
+  line-height: 24px;
+}
+
+.VRMarkdown > div > *:first-child {
+  margin-top: 0;
+}
+
+/**
+ * Headings
+ * -------------------------------------------------------------------------- */
+
+.VRMarkdown h1,
+.VRMarkdown h2,
+.VRMarkdown h3,
+.VRMarkdown h4,
+.VRMarkdown h5,
+.VRMarkdown h6 {
+  margin-top: 24px;
+  margin-bottom: 16px;
+  font-weight: 600;
+  line-height: 1.25;
+}
+
+.VRMarkdown h1 {
+  font-size: 2rem;
+}
+
+.VRMarkdown h2 {
+  font-size: 1.5rem;
+}
+
+.VRMarkdown h3 {
+  font-size: 1.25rem;
+}
+
+.VRMarkdown h4 {
+  font-size: 1rem;
+}
+
+.VRMarkdown h5 {
+  font-size: 0.875rem;
+}
+
+.VRMarkdown h6 {
+  font-size: 0.85rem;
+}
+
+.VRMarkdown .header-anchor {
+  float: left;
+  margin-left: -0.87em;
+  padding-right: 0.23em;
+  font-weight: 500;
+  opacity: 0;
+  transition: color 0.25s, opacity 0.25s;
+}
+
+.VRMarkdown h1:hover .header-anchor,
+.VRMarkdown h1 .header-anchor:focus,
+.VRMarkdown h2:hover .header-anchor,
+.VRMarkdown h2 .header-anchor:focus,
+.VRMarkdown h3:hover .header-anchor,
+.VRMarkdown h3 .header-anchor:focus,
+.VRMarkdown h4:hover .header-anchor,
+.VRMarkdown h4 .header-anchor:focus,
+.VRMarkdown h5:hover .header-anchor,
+.VRMarkdown h5 .header-anchor:focus,
+.VRMarkdown h6:hover .header-anchor,
+.VRMarkdown h6 .header-anchor:focus {
+  opacity: 1;
+}
+
+/**
+  * Paragraph and inline elements
+  * -------------------------------------------------------------------------- */
+
+.VRMarkdown p,
+.VRMarkdown summary {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+.VRMarkdown blockquote {
+  margin: 0 0 16px 0;
+  border-left: 2px solid var(--c-divider);
+  padding-left: 16px;
+  transition: border-color $u-duration ease;
+}
+
+.VRMarkdown blockquote > p {
+  margin: 0;
   font-size: 16px;
-  line-height: 26px;
-  word-wrap: break-word;
+  color: var(--c-text-2);
+  transition: color $u-duration ease;
+}
 
-  a {
-    color: var(--c-brand);
-    &.iconLink {
-      display: inline-block;
-      color: unset;
-    }
-    &:hover {
-      text-decoration: underline;
-    }
-  }
+.VRMarkdown a {
+  font-weight: 600;
+  color: var(--c-brand);
+  transition: color 0.25s;
+}
 
-  blockquote {
-    margin: 0;
-    padding: 0 1em;
-    color: #6a737d;
-    border-left: 0.25em solid #dfe2e5;
-    > :first-child {
-      margin-top: 0;
-    }
-    > :last-child {
-      margin-bottom: 0;
-    }
-  }
+.VRMarkdown a:hover {
+  color: var(--c-brand-dark);
+}
 
-  ol,
-  ul {
-    padding-left: 2em;
-  }
+.VRMarkdown strong {
+  font-weight: 600;
+}
 
-  ol ol,
-  ul ol {
-    list-style-type: lower-roman;
-  }
+.VRMarkdown img {
+  width: 100%;
+}
 
-  ol ol ol,
-  ol ul ol,
-  ul ol ol,
-  ul ul ol {
-    list-style-type: lower-alpha;
-  }
+/**
+  * Lists
+  * -------------------------------------------------------------------------- */
 
-  code,
-  pre {
-    font-family: 'JetBrains Mono', monospace;
-    font-size: 12px;
-  }
+.VRMarkdown ul,
+.VRMarkdown ol {
+  padding-left: 1.25rem;
+  margin: 16px 0;
+}
 
-  pre {
-    position: relative;
-    overflow: auto;
-    font-size: 85%;
-    line-height: 1.45;
-    background-color: #f6f8fa;
-    border-radius: 3px;
-    word-wrap: normal;
-    & > code {
-      position: relative;
-      display: inline;
-      padding: 0;
-      margin: 0;
-      font-size: 100%;
-      word-break: normal;
-      word-wrap: normal;
-      white-space: pre;
-      background-color: initial;
-      overflow: visible;
-      line-height: inherit;
-      border: none;
-    }
-  }
+.VRMarkdown ul {
+  list-style: disc;
+}
 
-  code {
-    padding: 0.15em 0.3em;
-    margin: 0;
-    font-size: 0.9em;
-    background-color: rgba(27, 31, 35, 0.06);
-    border-radius: 3px;
-  }
+.VRMarkdown ol {
+  list-style: decimal;
+}
 
-  dd {
-    margin-left: 0;
-  }
+.VRMarkdown li + li {
+  margin-top: 8px;
+}
 
-  hr {
-    height: 0;
-    margin: 15px 0;
-    overflow: hidden;
-    background: transparent;
-    border: 0;
-    border-bottom: 1px solid #dfe2e5;
-    &::after,
-    &::before {
-      display: table;
-      content: '';
-    }
-    &::after {
-      clear: both;
-    }
-  }
+.VRMarkdown li > ol,
+.VRMarkdown li > ul {
+  margin: 8px 0 0;
+}
 
-  table {
-    display: block;
-    border-spacing: 0;
-    border-collapse: collapse;
-    width: 100%;
-    overflow: auto;
-    th,
-    td {
-      padding: 0;
-      padding: 6px 13px;
-      border: 1px solid #dfe2e5;
-    }
-    th {
-      font-weight: 600;
-    }
-    tr {
-      background-color: #fff;
-      border-top: 1px solid #c6cbd1;
-      &:nth-child(2n) {
-        background-color: #f6f8fa;
-      }
-    }
-  }
+/**
+  * Table
+  * -------------------------------------------------------------------------- */
 
-  strong {
-    font-weight: 600;
-  }
+.VRMarkdown table {
+  margin-bottom: 16px;
+  border-spacing: 0;
+  border-collapse: collapse;
+  display: block;
+  width: max-content;
+  width: 100%;
+  line-height: 20px;
+  overflow: auto;
+}
 
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 24px;
-    margin-bottom: 16px;
-    line-height: 1.25;
-    font-weight: 600;
-  }
+.VRMarkdown tr {
+  border-top: 1px solid var(--c-divider);
+  transition: background-color $u-duration ease;
+}
 
-  h1 {
-    font-size: 32px;
-  }
+.VRMarkdown tr:nth-child(2n) {
+  background-color: var(--c-bg-soft);
+}
 
-  h2 {
-    font-size: 24px;
-  }
+.VRMarkdown th,
+.VRMarkdown td {
+  padding: 8px 13px;
+  border: 1px solid var(--c-divider);
+}
 
-  h3 {
-    font-size: 20px;
-  }
+.VRMarkdown th {
+  font-weight: 600;
+}
 
-  h4 {
-    font-size: 16px;
-  }
+.dark .VRMarkdown th {
+  background-color: var(--c-black);
+}
 
-  h5 {
-    font-size: 14px;
-  }
+/**
+  * Decorational elements
+  * -------------------------------------------------------------------------- */
 
-  h6 {
-    font-size: 12px;
-  }
+.VRMarkdown hr {
+  margin: 16px 0;
+  border: none;
+  border-top: 1px solid var(--c-divider-light);
+}
 
-  details summary {
-    cursor: pointer;
-  }
+/**
+  * Custom Block
+  * -------------------------------------------------------------------------- */
 
-  details {
-    display: block;
-  }
+.VRMarkdown .custom-block {
+  margin: 16px 0;
+}
 
-  input {
-    font: inherit;
-    margin: 0;
-    overflow: visible;
-    font-size: inherit;
-    line-height: inherit;
-  }
+.VRMarkdown .custom-block p {
+  margin: 8px 0;
+  line-height: 24px;
+}
 
-  img {
-    max-width: 100%;
-    background-color: #fff;
-    &[align='right'] {
-      padding-left: 20px;
-    }
-    &[align='left'] {
-      padding-right: 20px;
-    }
-  }
+.VRMarkdown .custom-block p:first-child {
+  margin: 0;
+}
 
-  blockquote,
-  details,
-  dl,
-  ol,
-  p,
-  pre,
-  table,
-  ul {
-    margin-top: 0;
-    margin-bottom: 16px;
-  }
+.VRMarkdown .custom-block a {
+  color: inherit;
+  font-weight: 600;
+  text-decoration: underline;
+  transition: opacity 0.25s;
+}
 
-  * {
-    box-sizing: border-box;
-  }
+.VRMarkdown .custom-block a:hover {
+  opacity: 0.6;
+}
 
-  .footnotes {
-    margin-top: 30px;
-    font-size: 13.5px;
-    color: #57606a;
-    border-top: 1px solid #dfe2e5;
-    padding-top: 10px;
-  }
+.VRMarkdown .custom-block code {
+  font-size: var(--custom-block-code-font-size);
+  font-weight: 700;
+  color: inherit;
+}
 
-  /* Hide the section label for visual users. */
-  .sr-only {
-    display: none;
-  }
+.VRMarkdown .custom-block div[class*='language-'] {
+  margin: 8px 0;
+}
 
-  [data-footnote-ref]::before {
-    content: '[';
-  }
+.VRMarkdown .custom-block div[class*='language-'] code {
+  font-weight: 400;
+  background-color: var(--code-block-bg);
+}
 
-  [data-footnote-ref]::after {
-    content: ']';
-  }
+/**
+  * Code
+  * -------------------------------------------------------------------------- */
+
+.VRMarkdown code {
+  font-family: $font-family-base;
+}
+
+/* inline code */
+.VRMarkdown :not(pre, h1, h2, h3, h4, h5, h6) > code {
+  font-size: var(--code-font-size);
+}
+
+.VRMarkdown :not(pre) > code {
+  padding: 3px 6px;
+  color: var(--c-text-code);
+  background-color: var(--c-bg-mute);
+  transition: color $u-duration ease, background-color $u-duration ease;
+}
+
+.VRMarkdown h1 > code,
+.VRMarkdown h2 > code,
+.VRMarkdown h3 > code {
+  font-size: 0.86em;
+}
+
+.VRMarkdown a > code {
+  color: var(--c-brand);
+}
+
+.VRMarkdown a:hover > code {
+  color: var(--c-brand-dark);
+}
+
+.VRMarkdown div[class*='language-'] {
+  position: relative;
+  margin-bottom: 16px;
+  padding: 16px;
+  background-color: var(--code-block-bg);
+  overflow-x: auto;
+  transition: background-color $u-duration ease;
+}
+
+.VRMarkdown div[class*='language-'] + div[class*='language-'],
+.VRMarkdown div[class$='-api'] + div[class*='language-'],
+.VRMarkdown div[class*='language-'] + div[class$='-api'] > div[class*='language-'] {
+  margin-top: -8px;
+}
+
+.VRMarkdown [class*='language-'] pre {
+  position: relative;
+  margin: 0;
+  background: transparent;
+}
+
+.VRMarkdown [class*='language-'] code {
+  line-height: var(--code-line-height);
+  font-family: $font-family-mono;
+  font-size: var(--code-font-size);
+  color: var(--code-block-color);
+  transition: color $u-duration ease;
+}
+
+.VRMarkdown .highlight-lines {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  padding-top: 16px;
+  width: 100%;
+  line-height: var(--code-line-height);
+  font-family: $font-family-mono;
+  font-size: var(--code-font-size);
+  user-select: none;
+  overflow: hidden;
+}
+
+.VRMarkdown .highlight-lines .highlighted {
+  background-color: var(--code-line-highlight-color);
+  transition: background-color $u-duration ease;
+}
+
+.VRMarkdown div[class*='language-'].line-numbers-mode {
+  padding-left: 32px;
+}
+
+.VRMarkdown div[class*='language-'].line-numbers-mode pre {
+  padding-left: 16px;
+}
+
+.VRMarkdown .line-numbers-wrapper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 3;
+  border-right: 1px solid var(--c-divider-dark-2);
+  padding-top: 16px;
+  width: 32px;
+  text-align: center;
+  font-family: $font-family-mono;
+  line-height: var(--code-line-height);
+  font-size: var(--code-font-size);
+  color: var(--code-line-number-color);
+  transition: border-color $u-duration ease, color $u-duration ease;
+}
+
+.VRMarkdown [class*='language-'] > span.copy {
+  position: absolute;
+  top: 8px;
+  right: 8px;
+  z-index: 2;
+  display: block;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: var(--code-block-bg);
+  opacity: 0;
+  cursor: pointer;
+  background-image: var(--icon-copy);
+  background-position: 50%;
+  background-size: 20px;
+  background-repeat: no-repeat;
+  transition: opacity 0.25s;
+}
+
+.VRMarkdown [class*='language-']:hover > span.copy {
+  opacity: 1;
+}
+
+.VRMarkdown [class*='language-'] > span.copy:hover {
+  background-color: var(--code-copy-code-hover-bg);
+}
+
+.VRMarkdown [class*='language-'] > span.copy.copied,
+.VRMarkdown [class*='language-'] > span.copy:hover.copied {
+  background-color: var(--code-copy-code-hover-bg);
+  background-image: var(--icon-copied);
+}
+
+.VRMarkdown [class*='language-'] > span.copy.copied::before,
+.VRMarkdown [class*='language-'] > span.copy:hover.copied::before {
+  position: relative;
+  left: -65px;
+  display: block;
+  padding-top: 8px;
+  width: 64px;
+  height: 40px;
+  text-align: center;
+  font-size: 12px;
+  font-weight: 500;
+  color: var(--code-copy-code-active-text);
+  background-color: var(--code-copy-code-hover-bg);
+  white-space: nowrap;
+  content: 'Copied';
+}
+
+.VRMarkdown [class*='language-']:before {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 2;
+  font-size: 0.9em;
+  color: var(--c-text-1);
+  transition: color $u-duration ease, opacity $u-duration ease;
+}
+
+.VRMarkdown [class*='language-']:hover:before {
+  opacity: 0;
+}
+
+.VRMarkdown [class~='language-c']:before {
+  content: 'c';
+}
+.VRMarkdown [class~='language-css']:before {
+  content: 'css';
+}
+.VRMarkdown [class~='language-go']:before {
+  content: 'go';
+}
+.VRMarkdown [class~='language-html']:before {
+  content: 'html';
+}
+.VRMarkdown [class~='language-java']:before {
+  content: 'java';
+}
+.VRMarkdown [class~='language-javascript']:before {
+  content: 'js';
+}
+.VRMarkdown [class~='language-js']:before {
+  content: 'js';
+}
+.VRMarkdown [class~='language-json']:before {
+  content: 'json';
+}
+.VRMarkdown [class~='language-jsx']:before {
+  content: 'jsx';
+}
+.VRMarkdown [class~='language-less']:before {
+  content: 'less';
+}
+.VRMarkdown [class~='language-markdown']:before {
+  content: 'md';
+}
+.VRMarkdown [class~='language-md']:before {
+  content: 'md';
+}
+.VRMarkdown [class~='language-php']:before {
+  content: 'php';
+}
+.VRMarkdown [class~='language-python']:before {
+  content: 'py';
+}
+.VRMarkdown [class~='language-py']:before {
+  content: 'py';
+}
+.VRMarkdown [class~='language-rb']:before {
+  content: 'rb';
+}
+.VRMarkdown [class~='language-ruby']:before {
+  content: 'rb';
+}
+.VRMarkdown [class~='language-rust']:before {
+  content: 'rust';
+}
+.VRMarkdown [class~='language-sass']:before {
+  content: 'sass';
+}
+.VRMarkdown [class~='language-scss']:before {
+  content: 'scss';
+}
+.VRMarkdown [class~='language-sh']:before {
+  content: 'sh';
+}
+.VRMarkdown [class~='language-bash']:before {
+  content: 'sh';
+}
+.VRMarkdown [class~='language-stylus']:before {
+  content: 'styl';
+}
+.VRMarkdown [class~='language-vue-html']:before {
+  content: 'template';
+}
+.VRMarkdown [class~='language-typescript']:before {
+  content: 'ts';
+}
+.VRMarkdown [class~='language-ts']:before {
+  content: 'ts';
+}
+.VRMarkdown [class~='language-tsx']:before {
+  content: 'tsx';
+}
+.VRMarkdown [class~='language-vue']:before {
+  content: 'vue';
+}
+.VRMarkdown [class~='language-yaml']:before {
+  content: 'yaml';
 }

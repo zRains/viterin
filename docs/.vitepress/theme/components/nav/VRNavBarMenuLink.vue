@@ -30,7 +30,7 @@ const { page } = useData<Config>()
 
   span {
     line-height: $nav-height-mobile - 1px;
-    font-weight: 400;
+    font-weight: 600;
     font-size: 14px;
     border-width: 2.5px 0 2.5px 0;
     border-style: solid;

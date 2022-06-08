@@ -1,28 +1,6 @@
 @import './vars.scss';
 @import './fonts.scss';
 
-@font-face {
-  font-family: JetBrains;
-  font-style: normal;
-  font-weight: 600;
-  font-display: swap;
-  src: url(../fonts/JetBrainsMono-Bold.woff2) format('woff2');
-}
-@font-face {
-  font-family: JetBrains;
-  font-style: normal;
-  font-weight: 400;
-  font-display: swap;
-  src: url(../fonts/JetBrainsMono-SemiBold.woff2) format('woff2');
-}
-@font-face {
-  font-family: JetBrains;
-  font-style: normal;
-  font-weight: 200;
-  font-display: swap;
-  src: url(../fonts/JetBrainsMono-Light.woff2) format('woff2');
-}
-
 *,
 ::before,
 ::after {
@@ -56,4 +34,12 @@ body {
   min-height: 100vh;
   background-color: var(--c-bg);
   transition: background-color 0.2s ease;
+}
+
+[data-theme='light'] .vp-code-dark {
+  display: none;
+}
+
+[data-theme='dark'] .vp-code-light {
+  display: none;
 }

@@ -3,8 +3,8 @@
    * -------------------------------------------------------------------------- */
 
 // Typography
-$font-family-base: JetBrains, -apple-system, 'Helvetica Neue', serif;
-$font-family-mono: Menlo, Monaco, Consolas, 'Courier New', monospace;
+$font-family-base: Merriweather, -apple-system, 'Helvetica Neue', serif;
+$font-family-mono: Consolas, 'Courier New', monospace;
 
 // Shadows
 $shadow-1: 0 1px 2px rgba(0, 0, 0, 0.04), 0 1px 2px rgba(0, 0, 0, 0.06);
@@ -29,10 +29,10 @@ $b-md: 768px;
 $b-lg: 1024px;
 $b-xl: 1280px;
 $font-break-points: (
-  $b-sm: 13px,
-  $b-md: 15px,
+  $b-sm: 15px,
+  $b-md: 15.5px,
   $b-lg: 16px,
-  $b-xl: 18px
+  $b-xl: 16px
 );
 
 // Utils
@@ -44,6 +44,7 @@ $u-duration: 0.2s;
 
 // Content
 $max-content-width: 800px;
+$aside-width: 200px;
 
 // Custom Block
 // ...

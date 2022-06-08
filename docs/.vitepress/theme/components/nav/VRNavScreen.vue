@@ -1,5 +1,5 @@
 <template>
-  <div class="VRNavScreen">123124142</div>
+  <div class="VRNavScreen"></div>
 </template>
 
 <script setup lang="ts"></script>

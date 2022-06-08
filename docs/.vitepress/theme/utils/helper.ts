@@ -50,8 +50,6 @@ export function isActive(currentPath: string, matchPath?: string, asRegex: boole
     return new RegExp(matchPath).test(currentPath)
   }
 
-  console.log(normalize(matchPath), currentPath)
-
   if (normalize(matchPath) !== currentPath) {
     return false
   }

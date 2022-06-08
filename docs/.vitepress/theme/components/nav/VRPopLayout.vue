@@ -47,8 +47,9 @@ $icon-width: 22px;
     display: flex;
     align-items: center;
     font-size: 14px;
-    transition: color $u-duration ease;
+    font-weight: 600;
     cursor: pointer;
+    transition: color $u-duration ease;
 
     .icon {
       width: $icon-width;

@@ -7,7 +7,10 @@ export default defineConfig({
   lastUpdated: true,
 
   markdown: {
-    lineNumbers: true
+    theme: {
+      light: 'github-light',
+      dark: 'github-dark'
+    }
   },
 
   themeConfig: {

@@ -35,7 +35,14 @@ import VRPageFooter from '../page/VRPageFooter.vue'
   width: 100%;
 
   .content {
+    width: 100%;
     max-width: $max-content-width;
+    order: 2;
+  }
+
+  .aside {
+    width: $aside-width;
+    margin-left: 20px;
   }
 }
 </style>
