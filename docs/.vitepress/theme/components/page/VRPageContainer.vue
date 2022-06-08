@@ -31,18 +31,31 @@ import VRPageFooter from '../page/VRPageFooter.vue'
 
 .VRPageContainer {
   display: flex;
-  padding: 32px 24px 96px;
-  width: 100%;
+  justify-content: center;
+  padding: 20px 15px 80px 15px;
 
   .content {
     width: 100%;
     max-width: $max-content-width;
-    order: 2;
   }
 
   .aside {
+    flex-shrink: 0;
     width: $aside-width;
     margin-left: 20px;
+  }
+}
+
+// 移动端适配
+@media only screen and (min-width: $b-sm) {
+  .VRPageContainer {
+    padding: 30px 20px 80px 20px;
+  }
+}
+
+@media only screen and (max-width: calc(#{$max-content-width} + #{$aside-width} + 60px)) {
+  .VRPageContainer .aside {
+    display: none;
   }
 }
 </style>

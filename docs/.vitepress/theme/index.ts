@@ -1,5 +1,8 @@
 import { Theme } from 'vitepress'
+
+// Global Components
 import { Icon } from '@iconify/vue'
+import CenterImg from './components/global/CenterImg.vue'
 
 // Layout
 import Layout from './Layout.vue'
@@ -14,6 +17,7 @@ const theme: Theme = {
   NotFound,
   enhanceApp({ app }) {
     app.component('Icon', Icon)
+    app.component('CenterImg', CenterImg)
   }
 }
 

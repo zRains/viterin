@@ -49,6 +49,7 @@ $icon-width: 22px;
     font-size: 14px;
     font-weight: 600;
     cursor: pointer;
+    user-select: none;
     transition: color $u-duration ease;
 
     .icon {

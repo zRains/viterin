@@ -22,6 +22,7 @@ const { page } = useData<Config>()
   padding: 12px 15px;
   font-size: 14px;
   cursor: pointer;
+  user-select: none;
 
   &:hover,
   &.isActive {

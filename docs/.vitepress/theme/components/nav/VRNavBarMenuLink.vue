@@ -27,6 +27,7 @@ const { page } = useData<Config>()
 .VRNavBarMenuLink {
   display: block;
   padding: 0 12px;
+  user-select: none;
 
   span {
     line-height: $nav-height-mobile - 1px;

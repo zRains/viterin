@@ -27,6 +27,7 @@ defineProps<{
     font-weight: 600;
     color: var(--c-text-2);
     transition: color $u-duration ease;
+    user-select: none;
   }
 }
 </style>

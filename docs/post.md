@@ -1,249 +1,371 @@
 ---
-title: Markdown Demo
+title: Docker容器统一编排部署
 layout: page
 ---
 
-#### 最近有点闲，弄点算法之类的东西。听说排序这东西很有讲究，记录几种较为人熟知的 Js 排序算法。改正了参考文章的几处小错误。
+本次工程实践课题为 Docker 容器统一编排部署。借此机会了解一下容器编排技术。
 
-[TO]
+## 课题方向
 
-**相关说明**
+容器虚拟化技术应用，解决当前云原生开发、微服务开发到统一微服务编排（容器编排）问题解决，巩固所学的开发技术、云技术、容器技术等知识。
 
-| 术语       | 说明                                                                         |
-| ---------- | ---------------------------------------------------------------------------- |
-| 稳定       | 如果 a 原本在 b 前面，而 a=b，排序之后 a 仍然在 b 的前面。                   |
-| 不稳定     | 如果 a 原本在 b 的前面，而 a=b，排序之后 a 可能会出现在 b 的后面。           |
-| 内排序     | 所有排序操作都在内存中完成。                                                 |
-| 外排序     | 由于数据太大，因此把数据放在磁盘中，而排序通过磁盘和内存的数据传输才能进行。 |
-| 时间复杂度 | 一个算法执行所耗费的时间。                                                   |
-| 空间复杂度 | 运行完一个程序所需内存的大小。                                               |
+## 内容要求
 
-**算法分类**
+1. 了解 Docker 容器主流的编排技术。
 
-- **比较类排序**：通过比较来决定元素间的相对次序，由于其时间复杂度不能突破 O(nlogn)，因此也称为非线性时间比较类排序。
-- **非比较类排序**：不通过比较来决定元素间的相对次序，它可以突破基于比较排序的时间下界，以线性时间运行，因此也称为线性时间非比较类排序。
+2. 掌握 Docker Swarm 的部署和基本使用。
 
-**各类比较**
+3. 掌握 Docker Compose 的部署和基本使用（选读内容）。
 
-有的因为涉及到数据结构，便没有在下面记录了。
+4. 掌握 Docker 的图形化管理工具 Portainer 或其他工具。
 
-已记录：:heavy_check_mark: 非比较类排序：:star: 稳定：:large_blue_circle: 不稳定：:red_circle:
+5. 部署一个 httpd 服务作为应用验证编排服务或其他 K8S 等管理的统一编排技术。
 
-| 排序方法                    | 时间复杂度（平均） | 时间复杂度（最坏） | 时间复杂度（最好） | 空间复杂度 |       稳定性        | 排序方式 |
-| --------------------------- | :----------------: | ------------------ | ------------------ | ---------- | :-----------------: | -------- |
-| :heavy_check_mark: 插入排序 |       O(n²)        | O(n²)              | O(n)               | O(1)       | :large_blue_circle: | 内排序   |
-| :heavy_check_mark:希尔排序  |      O(n^1.3)      | O(n²)              | O(n)               | O(1)       |    :red_circle:     | 内排序   |
-| :heavy_check_mark:选择排序  |       O(n²)        | O(n²)              | O(n²)              | O(1)       |    :red_circle:     | 内排序   |
-| 堆排序                      |      O(n㏒₂n)      | O(n㏒₂n)           | O(n㏒₂n)           | O(1)       |    :red_circle:     | 内排序   |
-| :heavy_check_mark:冒泡排序  |       O(n²)        | O(n²)              | O(n)               | O(1)       | :large_blue_circle: | 内排序   |
-| :heavy_check_mark:快速排序  |      O(n㏒₂n)      | O(n²)              | O(n㏒₂n)           | O(n㏒₂n)   |    :red_circle:     | 内排序   |
-| :heavy_check_mark:归并排序  |      O(n㏒₂n)      | O(n㏒₂n)           | O(n㏒₂n)           | O(n)       | :large_blue_circle: | 外排序   |
-| :star:计数排序              |       O(n+k)       | O(n+k)             | O(n+k)             | O(n+k)     | :large_blue_circle: | 外排序   |
-| :star:桶排序                |       O(n+k)       | O(n²)              | O(n)               | O(n+k)     | :large_blue_circle: | 外排序   |
-| :star:基数排序              |       O(n+k)       | O(n\*k)            | O(n\*k)            | O(n+k)     | :large_blue_circle: | 外排序   |
+## 准备
 
-#### 冒泡排序
+下面是我的配置：
 
-- 比较相邻的两个元素，如果前一个比后一个大，则交换位置。
+1. VMware Workstation 17 Pro。
 
-- 第一轮的时候最后一个元素应该是最大的一个。
+2. [Centos 7.9.2009](http://mirrors.aliyun.com/centos/7.9.2009/os/x86_64/images/boot.iso)，阿里云镜像。
 
-- 按照步骤一的方法进行相邻两个元素的比较，这个时候由于最后一个元素已经是最大的了，所以最后一个元素不用比较。
+3. Docker version 20.10.14, build a224086。
 
-例子：
+4. chrony version 3.4。
 
-```js
-var array = [10, 20, 9, 8, 179, 65, 100]
-// 比较轮数
-for (var i = 0; i < array.length - 1; i++) {
-  // 每轮将最大的元素向后移
-  for (var j = 0; j < array.length - 1 - i; j++) {
-    if (array[j] > array[j + 1]) {
-      let temp = array[j]
-      array[j] = array[j + 1]
-      array[j + 1] = temp
-    }
-  }
-}
-console.log(array)
+5. FinalShell（可选）。
+
+## 配置虚拟机
+
+### 前置安装
+
+这里需要注意的几个点：
+
+1. 在“INSTALLATION SOURCE”设置软件包国内源时会发现 On the network 无法编辑，其原因是网络没有设置 🤣。将“NETWORK & HOST NAME”中的网络打开就可以了。
+
+![centos7设置阿里源](https://res.zrain.fun/images/2022/04/centos7%E8%AE%BE%E7%BD%AE%E9%98%BF%E9%87%8C%E6%BA%90-3d3ec0bae87d95834c45949d78305669.png)
+
+2. 在设置“NETWORK & HOST NAME”时将 Host name 改为下面内容，以表明这是一个 Swarm 主机。
+
+```text
+master.localdomain
 ```
 
-#### 快速排序
+在“SOFTWARE SELECTION”中选择 Minimal install（最小化安装），是勇士直接安排。
 
-快速排序借用了递归操作，在大数据面前是个不错的选择。与冒泡排序差不多，都有在寻找最大的数并将其提前。
+### 安装工具
 
-- 取出中间的数值作为基准，将其余数分成两部分。一部分都比这个数小，一部分都大于或等于这个数。
-- 两边继续重复操作，最后合并。
+安装一下必要的工具：
 
-例子：
+```bash
+# 安装vim
+yum install -y vim
 
-```js
-function quickSort(array) {
-  if (array.length <= 1) return array
-  // 取出中间的数
-  let center_num = array.splice(Math.floor(array.length / 2), 1)[0]
-  let left_arr = []
-  let right_arr = []
-  for (let i = 0; i < array.length; i++) {
-    if (array[i] < center_num) {
-      left_arr.push(array[i])
-    } else {
-      right_arr.push(array[i])
-    }
-  }
-  // 连接列表并开始递归操作
-  return [...quickSort(left_arr), center_num, ...quickSort(right_arr)]
-}
+# 安装net-tools
+yum install -y net-tools
 
-var array = [2, 1000, 20, 9, 8, 179, 65, 100]
-
-console.log(quickSort(array))
+# 安装chrony
+yum install -y chrony
+# 检查chrony是否安装成功并正在运行
+systemctl status chronyd
 ```
 
-#### 插入排序
+### 关闭防火墙
 
-插入排序的原理大致是逐一选取元素放在已排好数列里的合适位置。
+防火墙会阻止 node_1 节点与 master 节点之间的时间同步，为了不影响后续操作，将防火墙关闭：
 
-- 从第一个元素开始，该元素可以认为已经被排序
+```bash
+# 查看防火墙状态，如果为 running 则为开启状态
+firewall-cmd --state
 
-- 取出下一个元素，在已经排序的元素序列中从后向前扫描
-
-- 如果该元素（已排序）大于新元素，将该元素移到下一位置
-
-- 重复步骤 3，直到找到已排序的元素小于或者等于新元素的位置
-
-- 将新元素插入到下一位置中
-
-- 重复步骤 2
-
-例子：
-
-```js
-function inSort(array) {
-  for (let i = 1; i < array.length; i++) {
-    if (array[i] < array[i - 1]) {
-      let target = array[i]
-      let index = i - 1
-      array[i] = array[index]
-      // 这里比较难懂，主要是将数列向后移一位，找到合适的位置（index+1）
-      while (index >= 0 && target < array[index]) {
-        array[index + 1] = array[index]
-        index--
-      }
-      array[index + 1] = target
-    }
-  }
-}
-
-var array = [2, 1000, 20, 9, 8, 179, 65, 100]
-inSort(array)
-console.log(array)
+# 关闭防火墙
+systemctl stop firewalld
 ```
 
-#### 选择排序
+### 安装 Docker
 
-选择排序的主要思想是将数列里面最小的数字选出来放在最前面，以此类推。
+此部分参照 [Docker Docs](https://docs.docker.com/engine/install/centos/)。
 
-- 选出最小的元素。
-- 将当前循环元素与最小元素交换位置。
-- 重复上述步骤，直到最后一个元素。
-
-例子:
-
-```js
-function selectSort(array) {
-  let min, temp
-  for (let i = 0; i < array.length; i++) {
-    min = i
-    // 从剩余元素中选取最小的元素，并记录位置(min)
-    for (let j = i + 1; j < array.length; j++) {
-      if (array[min] > array[j]) min = j
-    }
-    temp = array[i]
-    array[i] = array[min]
-    array[min] = temp
-  }
-}
-
-var array = [2, 1000, 20, 159, 8, 179, 65, 100]
-selectSort(array)
-console.log(array)
+```bash
+# 移除之前的 Docker（这部分其实是没必要的，因为我选择的最小化安装）
+yum remove docker docker-client docker-client-latest docker-common docker-latest docker-latest-logrotate docker-logrotate docker-engine
+yum install -y yum-utils
+# 添加 Docker 仓库
+yum-config-manager --add-repo https://download.docker.com/linux/centos/docker-ce.repo
+# 安装 Docker 引擎
+yum install docker-ce docker-ce-cli containerd.io
+# 检查 Docker 是否安装成功
+docker -v
 ```
 
-#### 希尔排序
+到这里就可以准备一下克隆和快照：克隆出 Node_1 节点并各自保存快照。在此列出我的克隆情况：
 
-希尔排序是简单插入排序的改进版。它与插入排序的不同之处在于，它会优先比较距离较远的元素。希尔排序又叫**缩小增量排序**。
+📀 master：192.168.30.130 2H/2G
 
-- 选择一个增量序列 t1，t2，…，tk，其中 ti>tj，tk=1；
-- 按增量序列个数 k，对序列进行 k 趟排序；
-- 每趟排序，根据对应的增量 ti，将待排序列分割成若干长度为 m 的子序列，分别对各子表进行直接插入排序。仅增量因子为 1 时，整个序列作为一个表来处理，表长度即为整个序列的长度。
+💿 node_1：192.168.30.131 2H/2G
 
-例子：
+## 配置 chrony
 
-```js
-function shellSort(arr) {
-  let len = arr.length
-  for (let gap = Math.floor(len / 2); gap > 0; gap = Math.floor(gap / 2)) {
-    // 多个分组交替执行
-    for (var i = gap; i < len; i++) {
-      let j = i
-      let current = arr[i]
-      while (j - gap >= 0 && current < arr[j - gap]) {
-        arr[j] = arr[j - gap]
-        j = j - gap
-      }
-      arr[j] = current
-    }
-  }
-  return arr
-}
+chrony 是一个开源自由的网络时间协议 NTP 的客户端和服务器软软件。它能让计算机保持系统时钟与时钟服务器（NTP）同步，因此让你的计算机保持精确的时间，Chrony 也可以作为服务端软件为其他计算机提供时间同步服务。我们既然要做容器编排管理，那就最好保证每个节点的时间保持同步。
 
-var array = [2, 1000, 20, 159, 8, 179, 65, 100]
+如果要让我们的 chrony 服务端能为互联网的所有计算机提供时间同步服务，需要将这个 chrony 服务端运行在公网服务器上，通常选用云服务器。但由于是演示作用，就将这个服务部署在 master 节点上，这样就能保证所有节点时间同步了。
 
-console.log(shellSort(array))
+先看看 node_1 节点的默认时间同步源：
+
+```bash
+chronyc sources -v
+
+210 Number of sources = 4
+
+  .-- Source mode  '^' = server, '=' = peer, '#' = local clock.
+ / .- Source state '*' = current synced, '+' = combined , '-' = not combined,
+| /   '?' = unreachable, 'x' = time may be in error, '~' = time too variable.
+||                                                 .- xxxx [ yyyy ] +/- zzzz
+||      Reachability register (octal) -.           |  xxxx = adjusted offset,
+||      Log2(Polling interval) --.      |          |  yyyy = measured offset,
+||                                \     |          |  zzzz = estimated error.
+||                                 |    |           \
+MS Name/IP address         Stratum Poll Reach LastRx Last sample
+===============================================================================
+^- time.cloudflare.com           3  10   376   41m  +2928us[+3951us] +/-  122ms
+^- 79.133.44.136                 1  10   355   41m    -20ms[  -19ms] +/-  147ms
+^* 119.28.206.193                2  10   335   38m  +3959us[+4997us] +/-   50ms
+^- ntp1.ams1.nl.leaseweb.net     2  10   371   52m  +2043us[+3018us] +/-  185ms
+
 ```
 
-#### 并归排序
+不得不说这个提示挺友好的，直接用字符画说明了每个值的含义。其中重点注意`^*`开头的，表示的是当前与之同步的时钟服务器。接下来开始修改 master 和 node_1 各自的 chrony.conf：
 
-并归排序说实话我看了好久才看懂，感觉有递归就是在刁难我，大致原理是将原数列分成几个小段分别排序，之后再整合成一个排列好的数列。
-
-- 把长度为 n 的输入序列分成两个长度为 n/2 的子序列；
-- 对这两个子序列分别采用归并排序；
-- 将两个排序好的子序列合并成一个最终的排序序列。
-
-例子：
-
-```js
-function mergeSort(arr) {
-  var len = arr.length
-  if (len < 2) {
-    return arr
-  }
-  var center_index = Math.floor(len / 2)
-  var left = arr.slice(0, center_index)
-  var right = arr.slice(center_index)
-  return merge(mergeSort(left), mergeSort(right))
-}
-
-function merge(left, right) {
-  var result = []
-  while (left.length && right.length) {
-    if (left[0] <= right[0]) {
-      result.push(left.shift())
-    } else {
-      result.push(right.shift())
-    }
-  }
-  while (right.length) {
-    result.push(right.shift())
-  }
-  while (left.length) {
-    result.push(left.shift())
-  }
-  return result
-}
-
-var array = [2, 1000, 20, 159, 8, 179, 65, 100]
-
-console.log(mergeSort(array))
+```bash
+vim /etc/chrony.conf
 ```
+
+这里主要关注一下几个参数：
+
+- server：用于指定外部时间同步服务器源地址，可以添加任意多个源地址。
+
+- pool：用于指定外部时间同步服务器池。
+
+- allow：允许特定 IP 的客户端计算机向本 chrony 服务器发送时间同步请求，如果设置成 allow all 表示允许所有网段的客户端计算机发送请求过来。
+
+- local stratum：允许在外部时间同步服务器不可用时，使用服务器本地时间作为返回值返回给发起请求的客户端计算机。
+
+```txt
+# 下面是 master 的配置
+# 既然是测试用就设置 master（也就是本机）为时间同步服务器。
+server master iburst
+
+# 这里设置 local stratum 10，允许在外部时间同步服务器不可用时，使用服务器本地时间作为返回值返回给发起请求的客户端计算机。
+local stratum 10
+
+# 为了方便测试，这里 allow 配置成 allow all，也就是允许所有网段的客户端发送请求过来。
+allow all
+
+# 下面是原本就有的设置
+driftfile /var/lib/chrony/drift
+makestep 1.0 3
+rtcsync
+logdir /var/log/chrony
+
+
+
+# 下面是 node_1 的配置
+# 将 NTP 同步服务器设置为 master
+server 192.168.30.130 minpoll 4 maxpoll 10 iburst
+
+# 下面是原本就有的设置
+driftfile /var/lib/chrony/drift
+makestep 1.0 3
+rtcsync
+logdir /var/log/chrony
+```
+
+保存后重启 chrony 服务，同时设置开机自启动：
+
+```bash
+systemctl enable chronyd && systemctl restart chronyd
+```
+
+接下来在 node_1 中验证同步是否已开启：
+
+```bash
+chronyc sources
+```
+
+如果 master（192.168.30.130）前面出现`^*`表明同步已建立连接：
+
+![chrony同步状态结果](https://res.zrain.fun/images/2022/04/image-20220421163154910-ee78989fd7cec7b2b433e7cf514eda0d.png)
+
+然后就是 chrony 客户端上的一些常用命令：
+
+```bash
+# 查看可用的时间同步源
+chronyc sources -v
+
+# 查看时间同步源的状态
+chronyc sourcestats -v
+
+# 对客户端系统时间进行强制同步
+chronyc -a makestep
+```
+
+## 配置 Docker API
+
+Docker 可以监听并处理 3 种 socket 形式的 API 请求，分别是：
+
+- unix（unix 域协议）。
+
+- tcp（tcp 协议）。
+
+- fd。
+
+一般来说，在安装好 docker 后，默认就已经开启了 unix socket，并且我们在执行需要有 root 权限或者 docker 用户组成员才有权限访问。例如查看本机 Docker 详细信息：
+
+```bash
+curl --unix-socket /var/run/docker.sock  http://docker/version
+```
+
+### 添加远程 API 访问接口
+
+编辑 docker 守护进程的配置文件，给 dockerd 命令加参数-H tcp://0.0.0.0:2375，意思是在 2375 端口开放 API 访问。
+
+```bash
+vim /lib/systemd/system/docker.service
+
+# 将
+ExecStart=/usr/bin/dockerd -H fd:// --containerd=/run/containerd/containerd.sock
+# 改为
+ExecStart=/usr/bin/dockerd -H fd:// -H tcp://0.0.0.0:2375  --containerd=/run/containerd/containerd.sock
+```
+
+然后运行下面的命令，重新加载一下：
+
+```bash
+# 重新加载守护进程配置
+systemctl daemon-reload
+
+# 重启 Docker 服务
+systemctl restart docker.service
+```
+
+通过 `netstat -tlunp` 命令可以看到 Docker API 已在 2375 端口上监听：
+
+![docker开启远程访问接口](https://res.zrain.fun/images/2022/04/docker%E5%BC%80%E5%90%AF%E8%BF%9C%E7%A8%8B%E8%AE%BF%E9%97%AE%E6%8E%A5%E5%8F%A3-23992f572a492ee8de28995ff0a0119a.png)
+
+## 初始化 Swarm 集群
+
+在 master 节点创建 Swarm 集群：
+
+```bash
+docker swarm init --advertise-addr 192.168.30.130
+```
+
+初始化命令中“--advertise-addr”选项表示管理节点公布它的 IP 是多少。其它节点必须能通过这个 IP 找到管理节点。创建成功结果如下：
+
+```text
+Swarm initialized: current node (server id) is now a manager.
+
+To add a worker to this swarm, run the following command:
+
+    docker swarm join --token TOKEN 192.168.30.130:2377
+
+To add a manager to this swarm, run 'docker swarm join-token manager' and follow the instructions.
+```
+
+> 如果初始化时没有记录下 `docker swarm init` 提示的添加 worker 的完整命令，可以通过 `docker swarm join-token worker` 命令查看。
+
+反馈内容很清楚了，在 node_1 子节点内运行（每次 Token 都不一样！）：
+
+```bash
+docker swarm join --token TOKEN 192.168.30.130:2377
+```
+
+我们在 master 节点中通过 `docker node ls` 查看子节点是否加入成功：
+
+![node成功加入了master](https://res.zrain.fun/images/2022/04/node%E6%88%90%E5%8A%9F%E5%8A%A0%E5%85%A5%E4%BA%86master-d58a23178d7c8004316c73dcc6ec44a0.png)
+
+## 安装 Portainer
+
+Portainer 是 Docker 的图形化管理工具，提供状态显示面板、应用模板快速部署、容器镜像网络数据卷的基本操作（包括上传和下载镜像、创建容器等操作）、事件日志显示、容器控制台操作、Swarm 集群和服务等集中管理和操作、登录用户管理和控制等功能。功能十分全面，基本能满足中小型企业对容器管理的全部需求。
+
+我们在 master 节点内搜索 Portainer 镜像：
+
+```bash
+docker search portainer
+```
+
+结果如下：
+
+![docker搜索Portainer镜像](https://res.zrain.fun/images/2022/04/docker%E6%90%9C%E7%B4%A2Portainer%E9%95%9C%E5%83%8F-b0125435373f0fcf26e4e51383c92af4.png)
+
+网上大多数教程都是拉取的 `portainer/portainer` 这个镜像，但我看后面描述写着已被废弃，于是选择了第二个 `portainer/portainer-ce`，也就是社区版本：
+
+```bash
+# 拉取 portainer/portainer-ce 最新镜像并启动容器
+docker run -d -p 9000:9000   -v /var/run/docker.sock:/var/run/docker.sock  --name portainer portainer/portainer-ce
+```
+
+启动成功后便可以打开 http://192.168.30.130:9000/ 。首次登陆会叫我们创建一个管理账户，这里就不做说明了。Portainer 管理界面如下：
+
+![portainer主页](https://res.zrain.fun/images/2022/04/portainer%E4%B8%BB%E9%A1%B5-ca5abcd40743ee4145c33a7aa3e46842.png)
+
+## 创建服务并运行
+
+我们现在 master 节点部署一个运行 nginx 镜像的 Service：
+
+```bash
+# 开启一个 nginx 服务容器
+docker service create --name web nginx
+
+# 查看服务是否开启
+docker service ls
+
+# 查看服务在哪个节点上运行（we是服务的id）
+docker service ps we
+```
+
+![运行一个nginx](https://res.zrain.fun/images/2022/04/%E8%BF%90%E8%A1%8C%E4%B8%80%E4%B8%AAnginx-67a838df73e593bf78a0a5667c83d2b9.png)
+
+我们可以看到刚刚创建的服务是运行在当前（master）节点上的。
+
+## 服务伸缩
+
+刚刚部署了只有一个副本的 Service，不过对于 Web 服务，通常会运行多个实例。这样可以负载均衡，同时也能提供高可用。
+
+Swarm 要实现这个目标非常简单，增加 Service 的副本数：
+
+```bash
+# 副本数增加到 5
+docker service scale web=5
+```
+
+![nginx服务扩展](https://res.zrain.fun/images/2022/04/nginx%E6%9C%8D%E5%8A%A1%E6%89%A9%E5%B1%95-3c021c1dbd71c387943b09db8b496737.png)
+
+在这里我们就可以清除的看到有些 nginx 服务被分配到了 node_1 子节点上了。
+
+![portainer服务展示](https://res.zrain.fun/images/2022/04/portainer%E6%9C%8D%E5%8A%A1%E5%B1%95%E7%A4%BA-43671e9a74b833d5a6dc85828031a727.png)
+
+## 访问服务
+
+要访问 nginx 服务，首先得保证网络通畅，其次需要知道服务的 IP。查看容器的网络配置。
+
+在 Master 上运行了一个容器，是 web 的一个副本，容器监听了 80 端口，但并没有映射到 Docker Host，所以只能通过容器的 IP 访问。但是服务并没有暴露给外部网络，只能在 Docker 主机上访问，外部无法访问。要将 Service 暴露到外部：
+
+```bash
+# 更新 nginx 容器的暴露端口为 8080
+docker service update --publish-add 8080:80 web
+```
+
+![更新nginx服务端口](https://res.zrain.fun/images/2022/04/%E6%9B%B4%E6%96%B0nginx%E6%9C%8D%E5%8A%A1%E7%AB%AF%E5%8F%A3-f1eb18c240f39d46bdaca89d04233a8b.png)
+
+通过 `netstat -tlunp` 命令可以看到 8080 端口已监听，打开 http://192.168.30.130:8080/ ：
+
+![成功运行nginx](https://res.zrain.fun/images/2022/04/%E6%88%90%E5%8A%9F%E8%BF%90%E8%A1%8Cnginx-e2de8951a60a1070fe8b4cd86384f002.png)
+
+## 参考
+
+[Docker 容器编排 - 博客园](https://www.cnblogs.com/lzp123/p/13769776.html)
+
+[在 ubuntu 上使用 chrony 进行系统时间同步的配置方法 - CSDN](https://blog.csdn.net/weixin_67155214/article/details/123785360)
+
+[Docker 开放远程 API 接口 - CSDN](https://blog.csdn.net/ic_esnow/article/details/113284475)
