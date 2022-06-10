@@ -1,0 +1,25 @@
+<template>
+  <VRPageContainer :class="{ VRPageContainer: true }" />
+</template>
+
+<script setup lang="ts">
+import VRPageContainer from '../page/VRPageContainer.vue'
+</script>
+
+<style lang="scss">
+@import '../../styles/vars.scss';
+
+.VRPageContainer {
+  padding-left: $sidebar-width + 40px;
+}
+
+// 移动端适配
+@media only screen and (max-width: calc(#{$max-content-width + $aside-width + $sidebar-width} + 60px)) {
+  .VRPageContainer {
+    padding-left: $sidebar-width + 20px;
+    .aside {
+      display: none;
+    }
+  }
+}
+</style>

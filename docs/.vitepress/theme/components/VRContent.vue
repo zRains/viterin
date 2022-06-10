@@ -10,6 +10,8 @@
       <template #home-features-before><slot name="home-features-before" /></template>
       <template #home-features-after><slot name="home-features-after" /></template>
     </VRHome>
+
+    <VRDocContainer v-else />
   </div>
 </template>
 
@@ -19,6 +21,7 @@ import { useData, useRoute } from 'vitepress'
 import NotFound from '../NotFound.vue'
 import VRPageContainer from './page/VRPageContainer.vue'
 import VRHome from './VRHome.vue'
+import VRDocContainer from './doc/VRDocContainer.vue'
 
 const { frontmatter } = useData<Config>()
 const route = useRoute()

@@ -33,6 +33,7 @@ import VRPageFooter from '../page/VRPageFooter.vue'
   display: flex;
   justify-content: center;
   padding: 20px 15px 80px 15px;
+  width: 100%;
 
   .content {
     width: 100%;
@@ -53,7 +54,7 @@ import VRPageFooter from '../page/VRPageFooter.vue'
   }
 }
 
-@media only screen and (max-width: calc(#{$max-content-width} + #{$aside-width} + 60px)) {
+@media only screen and (max-width: calc(#{$max-content-width + $aside-width} + 60px)) {
   .VRPageContainer .aside {
     display: none;
   }

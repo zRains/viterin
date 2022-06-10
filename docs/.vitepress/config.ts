@@ -58,6 +58,17 @@ export default defineConfig({
         ]
       }
     ],
+    sidebar: {
+      '/wrap/type_challenge': [
+        {
+          text: 'Type Challenge',
+          items: [
+            { text: 'Item A', link: '/item-a' },
+            { text: 'Item B', link: '/item-b' }
+          ]
+        }
+      ]
+    },
     socialLinks: [{ icon: 'github', link: 'https://github.com/vuejs/vitepress' }]
   }
 })

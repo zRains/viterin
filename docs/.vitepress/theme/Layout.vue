@@ -31,8 +31,8 @@
 import VRContent from './components/VRContent.vue'
 import VRFooter from './components/VRFooter.vue'
 import VRNav from './components/nav/VRNav.vue'
-import VRSidebar from './components/VRSidebar.vue';
-import VRToolNav from './components/VRToolNav.vue'
+import VRSidebar from './components/doc/VRSidebar.vue'
+import VRToolNav from './components/doc/VRToolNav.vue'
 </script>
 
 <style lang="scss">
