@@ -1,9 +1,11 @@
+import type { Sidebar, SidebarGroup } from '../types/theme'
 import { withBase } from 'vitepress'
 import { ref } from 'vue'
 
 export const HASH_RE = /#.*$/
 export const EXT_RE = /(index)?\.(md|html)$/
 export const OUTBOUND_RE = /^[a-z]+:/i
+export const ensureStartingSlash = (path: string) => (path.startsWith('/') ? path : `/${path}`)
 
 const hashRef = ref(typeof window !== 'undefined' ? location.hash : '')
 
@@ -61,4 +63,21 @@ export function isActive(currentPath: string, matchPath?: string, asRegex: boole
   }
 
   return true
+}
+
+// 获取当前页面的侧边栏
+export function getSidebar(sidebar: Sidebar, path: string): SidebarGroup[] {
+  if (Array.isArray(sidebar)) {
+    return sidebar
+  }
+
+  path = ensureStartingSlash(path)
+
+  for (const dir in sidebar) {
+    if (path.startsWith(ensureStartingSlash(dir))) {
+      return sidebar[dir]
+    }
+  }
+
+  return []
 }

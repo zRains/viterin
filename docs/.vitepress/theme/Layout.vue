@@ -5,7 +5,7 @@
     <!-- 功能栏 -->
     <VRToolNav />
     <!-- 侧边栏 -->
-    <VRSidebar />
+    <VRSidebar :is-open="true" />
 
     <!-- 主体内容 -->
     <VRContent>

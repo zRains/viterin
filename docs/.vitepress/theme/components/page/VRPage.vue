@@ -1,7 +1,5 @@
 <template>
-  <div class="VRPage">
-    <Content :class="{ VRMarkdown: true }" />
-  </div>
+  <Content :class="{ VRPage: true, VRMarkdown: true }" />
 </template>
 
 <script setup lang="ts"></script>

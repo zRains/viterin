@@ -61,10 +61,17 @@ export default defineConfig({
     sidebar: {
       '/wrap/type_challenge': [
         {
-          text: 'Type Challenge',
+          text: 'Type Easy',
           items: [
             { text: 'Item A', link: '/item-a' },
             { text: 'Item B', link: '/item-b' }
+          ]
+        },
+        {
+          text: 'Type Medium',
+          items: [
+            { text: 'Item C', link: '/item-c' },
+            { text: 'Item D', link: '/item-d' }
           ]
         }
       ]
