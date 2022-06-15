@@ -33,6 +33,17 @@ $content-full-width: $sidebar-width + $max-content-width + $aside-width + 60px;
   padding: $nav-height-desktop 20px 80px 20px;
   width: $sidebar-width;
   overflow-y: scroll;
+
+  .VRSidebarNav {
+    .group {
+      padding: 10px 0;
+
+      &:not(:first-child) {
+        transition: border-color $u-duration ease;
+        border-top: 1px solid var(--c-divider-light);
+      }
+    }
+  }
 }
 
 // 移动端适配

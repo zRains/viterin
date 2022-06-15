@@ -4,7 +4,6 @@
       <h2 class="title">{{ text }}</h2>
       <Icon class="expend" icon="iconoir:add-square" height="18" />
       <Icon class="collapsed" icon="iconoir:minus-square" height="18" />
-      <!-- <Icon icon="fluent:subtract-square-24-filled" height="21" /> -->
     </div>
 
     <div class="items">
