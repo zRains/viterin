@@ -14,7 +14,7 @@ import VRSidebarGroup from './VRSidebarGroup.vue'
 
 const { sidebar, hasSidebar } = useSidebar()
 
-const props = defineProps<{
+defineProps<{
   isOpen: boolean
 }>()
 </script>

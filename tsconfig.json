@@ -8,7 +8,8 @@
     "skipLibCheck": true,
     "noUnusedLocals": true,
     "resolveJsonModule": true,
-    "lib": ["ESNext", "DOM"]
+    "lib": ["ESNext", "DOM"],
+    "jsx": "preserve"
   },
-  "include": ["."]
+  "include": [".", "docs/.vitepress/theme/**/*"],
 }

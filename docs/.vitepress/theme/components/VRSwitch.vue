@@ -5,9 +5,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, watch } from 'vue'
-
-const props = defineProps<{
+defineProps<{
   initStatus: boolean
   onToggle: () => void
 }>()
