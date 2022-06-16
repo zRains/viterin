@@ -9,10 +9,10 @@
 </template>
 
 <script setup lang="ts">
-import type { Config } from '../../types/theme'
+import type { VRThemeConfig } from '../../types/theme'
 import { useData } from 'vitepress'
 
-const { site, theme } = useData<Config>()
+const { site, theme } = useData<VRThemeConfig>()
 </script>
 
 <style lang="scss">

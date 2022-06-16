@@ -1,6 +1,7 @@
-import { defineConfig } from 'vitepress'
+import { defineConfigWithTheme } from 'vitepress'
+import type { VRThemeConfig } from './theme/types/theme'
 
-export default defineConfig({
+export default defineConfigWithTheme<VRThemeConfig>({
   lang: 'zh-CN',
   title: 'zRain',
   description: 'Just playing around.',
@@ -62,6 +63,8 @@ export default defineConfig({
       '/wrap/type_challenge': [
         {
           text: 'Easy',
+          collapsible: true,
+          isCollapsed: true,
           items: [
             { text: 'Item A', link: '/item-a' },
             { text: 'Item B', link: '/item-b' }
@@ -69,6 +72,7 @@ export default defineConfig({
         },
         {
           text: 'Medium',
+          collapsible: true,
           items: [
             { text: 'Item C', link: '/item-c' },
             { text: 'Item D', link: '/item-d' }

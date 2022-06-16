@@ -17,11 +17,11 @@
 </template>
 
 <script setup lang="ts">
-import type { Config } from '../../types/theme'
+import type { VRThemeConfig } from '../../types/theme'
 import { useData } from 'vitepress'
 import VRPageToc from './VRPageToc.vue'
 
-const { page } = useData<Config>()
+const { page } = useData<VRThemeConfig>()
 </script>
 
 <style lang="scss"></style>

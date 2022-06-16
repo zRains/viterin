@@ -1,4 +1,4 @@
-import type { Config } from '../types/theme'
+import type { VRThemeConfig } from '../types/theme'
 import { ref, computed } from 'vue'
 import { getSidebar } from '../utils/helper'
 import { useRoute, useData } from 'vitepress'
@@ -19,7 +19,7 @@ function toggle() {
 
 export default function () {
   const route = useRoute()
-  const { theme, frontmatter } = useData<Config>()
+  const { theme, frontmatter } = useData<VRThemeConfig>()
   const sidebar = computed(() => {
     const sidebarConfig = theme.value.sidebar
     const relativePath = route.data.relativePath

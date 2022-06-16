@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import type { NavItemWithLink, Config } from '../../types/theme'
+import type { NavItemWithLink, VRThemeConfig } from '../../types/theme'
 import { useData } from 'vitepress'
 import { isActive } from '../../utils/helper'
 import VRLink from '../VRLink.vue'
@@ -16,7 +16,7 @@ defineProps<{
   item: NavItemWithLink
 }>()
 
-const { page } = useData<Config>()
+const { page } = useData<VRThemeConfig>()
 
 // console.log(page)
 </script>

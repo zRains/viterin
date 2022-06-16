@@ -8,12 +8,12 @@
 </template>
 
 <script setup lang="ts">
-import type { Config } from '../../types/theme'
+import type { VRThemeConfig } from '../../types/theme'
 import { useData } from 'vitepress'
 import VRNavBarMenuLink from './VRNavBarMenuLink.vue'
 import VRNavBarMenuGroup from './VRNavBarMenuGroup.vue'
 
-const { theme } = useData<Config>()
+const { theme } = useData<VRThemeConfig>()
 </script>
 
 <style lang="scss">

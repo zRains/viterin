@@ -1,11 +1,17 @@
 <template>
   <div class="VRToolNav">
-    <div class="menuBtn operationBtn"><Icon icon="heroicons-solid:menu-alt-3" height="20" width="20" /><span>Menu</span></div>
+    <div class="menuBtn operationBtn" @click="toggle">
+      <Icon icon="heroicons-solid:menu-alt-3" height="20" width="20" /><span>Menu</span>
+    </div>
     <div class="backToTopBtn operationBtn"><span>Return to top</span></div>
   </div>
 </template>
 
-<script setup lang="ts"></script>
+<script setup lang="ts">
+import useSidebar from '../../composables/sidebar'
+
+const { toggle } = useSidebar()
+</script>
 
 <style lang="scss">
 @import '../../styles/vars.scss';

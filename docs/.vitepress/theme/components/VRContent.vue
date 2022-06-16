@@ -16,14 +16,14 @@
 </template>
 
 <script setup lang="ts">
-import type { Config } from '../types/theme'
+import type { VRThemeConfig } from '../types/theme'
 import { useData, useRoute } from 'vitepress'
 import NotFound from '../NotFound.vue'
 import VRPageContainer from './page/VRPageContainer.vue'
 import VRHome from './VRHome.vue'
 import VRDocContainer from './doc/VRDocContainer.vue'
 
-const { frontmatter } = useData<Config>()
+const { frontmatter } = useData<VRThemeConfig>()
 const route = useRoute()
 </script>
 

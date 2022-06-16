@@ -1,4 +1,4 @@
-export interface Config {
+export interface VRThemeConfig {
   /**
    * The logo file of the site.
    *
@@ -107,7 +107,7 @@ export interface SidebarGroup {
    *
    * @default false
    */
-  collapsed?: boolean
+  isCollapsed?: boolean
 }
 
 export interface SidebarItem {

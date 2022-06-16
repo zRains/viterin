@@ -1,15 +1,12 @@
 <template>
-  <section class="VRSidebarGroup" :class="{ collapsible, collapsed }">
-    <div v-if="text" class="groupTitle" :role="collapsible ? 'button' : undefined" @click="toggle">
+  <section class="VRSidebarGroup" :class="{ collapsible }">
+    <div v-if="text" class="groupTitle" :role="collapsible ? 'button' : undefined" :aria-expanded="isCollapsed" @click="toggle">
       <h2 class="title">{{ text }}</h2>
-      <Icon class="expend" icon="iconoir:add-square" height="18" />
-      <Icon class="collapsed" icon="iconoir:minus-square" height="18" />
+      <Icon class="collapseBtn" :icon="isCollapsed ? 'iconoir:add-square' : 'iconoir:minus-square'" height="18" />
     </div>
 
     <div class="items">
-      <template v-for="item in items" :key="item.link">
-        <VRSidebarLink :item="item" />
-      </template>
+      <VRSidebarLink v-for="item in items" :key="item.link" :item="item" />
     </div>
   </section>
 </template>
@@ -23,14 +20,16 @@ const props = defineProps<{
   text?: string
   items: SidebarItem[]
   collapsible?: boolean
-  collapsed?: boolean
+  isCollapsed?: boolean
 }>()
 
-const collapsed = ref(props.collapsible && props.collapsed)
+console.log(props.collapsible, props.isCollapsed)
+
+const isCollapsed = ref(props.collapsible && props.isCollapsed)
 
 function toggle() {
   if (props.collapsible) {
-    collapsed.value = !collapsed.value
+    isCollapsed.value = !isCollapsed.value
   }
 }
 </script>
@@ -53,25 +52,19 @@ function toggle() {
       line-height: 20px;
       font-size: 1em;
       font-weight: 700;
-      color: var(--vp-c-text-1);
+      color: var(--c-text-1);
     }
 
-    .iconify {
+    .collapseBtn {
       margin-left: auto;
+    }
 
-      &.collapsed {
-        display: none;
+    // 触发折叠
+    &[aria-expanded='true'] {
+      & + .items {
+        overflow: hidden;
+        max-height: 0;
       }
-    }
-  }
-
-  &.collapsed {
-    .groupTitle .iconify.expend {
-      display: block;
-    }
-
-    .groupTitle .iconify.collapsed {
-      display: none;
     }
   }
 

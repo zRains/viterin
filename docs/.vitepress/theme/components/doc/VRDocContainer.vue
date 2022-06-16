@@ -11,7 +11,7 @@ import VRPageContainer from '../page/VRPageContainer.vue'
 
 .VRPageContainer {
   padding-left: $sidebar-width + 20px;
-  transition: padding-left $u-duration;
+  transition: padding-left $u-duration * 1.5;
 }
 
 // 移动端适配

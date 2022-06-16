@@ -39,7 +39,6 @@ import VRNavBarHamburger from './VRNavBarHamburger.vue'
   height: $nav-height-mobile;
   background-color: var(--c-bg);
   border-bottom: 1px solid var(--c-divider-light);
-  box-shadow: none;
   transition: background-color $u-duration ease;
 
   .VRNavContent {
@@ -56,7 +55,6 @@ import VRNavBarHamburger from './VRNavBarHamburger.vue'
     padding: 0 24px;
     height: $nav-height-desktop;
     border-bottom: none;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
   }
 }
 </style>
