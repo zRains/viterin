@@ -64,7 +64,6 @@ export default defineConfigWithTheme<VRThemeConfig>({
         {
           text: 'Easy',
           collapsible: true,
-          isCollapsed: true,
           items: [
             { text: 'Item A', link: '/item-a' },
             { text: 'Item B', link: '/item-b' }
@@ -73,6 +72,7 @@ export default defineConfigWithTheme<VRThemeConfig>({
         {
           text: 'Medium',
           collapsible: true,
+          isCollapsed: true,
           items: [
             { text: 'Item C', link: '/item-c' },
             { text: 'Item D', link: '/item-d' }

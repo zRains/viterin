@@ -39,7 +39,7 @@ $content-full-width: $sidebar-width + $max-content-width + $aside-width + 60px;
   opacity: 0;
   transform: translateX(-100%);
   transition: background-color $u-duration ease, opacity $u-duration ease, transform $u-duration * 1.5 ease;
-  overflow-y: scroll;
+  overflow-y: auto;
 
   .VRSidebarNav {
     .group {

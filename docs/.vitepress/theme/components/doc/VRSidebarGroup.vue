@@ -1,6 +1,6 @@
 <template>
   <section class="VRSidebarGroup" :class="{ collapsible }">
-    <div v-if="text" class="groupTitle" :role="collapsible ? 'button' : undefined" :aria-expanded="isCollapsed" @click="toggle">
+    <div v-if="text" class="groupTitle" :role="collapsible ? 'button' : undefined" :aria-expanded="!isCollapsed" @click="toggle">
       <h2 class="title">{{ text }}</h2>
       <Icon class="collapseBtn" :icon="isCollapsed ? 'iconoir:add-square' : 'iconoir:minus-square'" height="18" />
     </div>
@@ -23,8 +23,6 @@ const props = defineProps<{
   isCollapsed?: boolean
 }>()
 
-console.log(props.collapsible, props.isCollapsed)
-
 const isCollapsed = ref(props.collapsible && props.isCollapsed)
 
 function toggle() {
@@ -40,10 +38,12 @@ function toggle() {
 .VRSidebarGroup {
   .groupTitle {
     display: flex;
+    justify-content: space-between;
     align-items: center;
     z-index: 2;
     cursor: pointer;
-    transition: color $u-duration ease;
+    background-color: var(--c-bg);
+    transition: color $u-duration ease, background-color $u-duration ease;
 
     .title {
       margin: 0;
@@ -54,17 +54,25 @@ function toggle() {
       font-weight: 700;
       color: var(--c-text-1);
     }
+  }
 
-    .collapseBtn {
-      margin-left: auto;
+  &.collapsible {
+    .groupTitle {
+      // 触发展开
+      &[aria-expanded='true'] + .items {
+        transform: translateY(0);
+        opacity: 1;
+        max-height: unset;
+      }
     }
 
-    // 触发折叠
-    &[aria-expanded='true'] {
-      & + .items {
-        overflow: hidden;
-        max-height: 0;
-      }
+    .items {
+      transform: translateY(-10%);
+      opacity: 0;
+      overflow: hidden;
+      max-height: 0;
+      transition: transform $u-duration ease, opacity $u-duration ease;
+      transition-delay: 0.08s;
     }
   }
 

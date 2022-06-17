@@ -27,4 +27,10 @@ const { frontmatter } = useData<VRThemeConfig>()
 const route = useRoute()
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import '../styles/vars.scss';
+
+.VRContent{
+  padding-top: $nav-height-desktop - $tool-nav-height;
+}
+</style>

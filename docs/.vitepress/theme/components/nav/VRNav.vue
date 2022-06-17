@@ -9,8 +9,6 @@
 
 <script setup lang="ts">
 import VRNavBar from './VRNavBar.vue'
-import VRNavScreen from './VRNavScreen.vue'
-import { isScreenOpen } from '../../composables/nav'
 </script>
 
 <style lang="scss">
@@ -22,5 +20,12 @@ import { isScreenOpen } from '../../composables/nav'
   left: 0;
   z-index: $z-index-nav;
   width: 100%;
+}
+
+// 固定导航栏
+@media only screen and (min-width: $b-md) {
+  .VRNav {
+    position: fixed;
+  }
 }
 </style>

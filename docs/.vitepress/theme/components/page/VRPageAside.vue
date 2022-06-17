@@ -24,4 +24,17 @@ import VRPageToc from './VRPageToc.vue'
 const { page } = useData<VRThemeConfig>()
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import  '../../styles/vars.scss';
+
+.VRPageAside{
+  position: sticky;
+  top: 0;
+  margin-top: calc(#{$nav-height-desktop} * -1 - 30px);
+  padding-top: calc(#{$nav-height-desktop} + 30px);
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  scrollbar-width: none;
+}
+</style>

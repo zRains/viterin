@@ -1,5 +1,5 @@
 <template>
-  <VRPageContainer :class="{ VRPageContainer: true }" />
+  <VRPageContainer :class="{ VRDocContainer: true }" />
 </template>
 
 <script setup lang="ts">
@@ -9,14 +9,14 @@ import VRPageContainer from '../page/VRPageContainer.vue'
 <style lang="scss">
 @import '../../styles/vars.scss';
 
-.VRPageContainer {
+.VRDocContainer {
   padding-left: $sidebar-width + 20px;
   transition: padding-left $u-duration * 1.5;
 }
 
 // 移动端适配
 @media only screen and (max-width: calc(#{$max-content-width + $aside-width + $sidebar-width} + 60px)) {
-  .VRPageContainer {
+  .VRDocContainer {
     .aside {
       display: none;
     }
@@ -25,7 +25,7 @@ import VRPageContainer from '../page/VRPageContainer.vue'
 
 // 取消侧边栏左边距
 @media only screen and (max-width: $b-md) {
-  .VRPageContainer {
+  .VRDocContainer {
     padding-left: 20px;
   }
 }

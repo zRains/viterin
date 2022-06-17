@@ -31,9 +31,6 @@ import VRNavBarHamburger from './VRNavBarHamburger.vue'
 
 .VRNavBar {
   position: relative;
-  top: 0;
-  left: 0;
-  width: 100%;
   display: flex;
   padding: 0 10px 0 24px;
   height: $nav-height-mobile;
@@ -51,7 +48,6 @@ import VRNavBarHamburger from './VRNavBarHamburger.vue'
 // 适配移动端
 @media only screen and (min-width: $b-md) {
   .VRNavBar {
-    position: fixed;
     padding: 0 24px;
     height: $nav-height-desktop;
     border-bottom: none;
