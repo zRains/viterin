@@ -2,6 +2,7 @@
 title: 'Hi 👋'
 layout: home
 toc: false
+toolNav: false
 hero:
   title: Hi 👋, I'm zRain
   subTitle: 一个以前端为兴趣的学生党。路漫漫其修远兮，吾将上下而求索。
@@ -37,3 +38,9 @@ hero:
         - vscode-icons:file-type-light-circleci
         - logos:concourse
 ---
+
+👨‍💻 所有开源项目均在 [Github](https://github.com/zRains)。
+
+🌱 当前正在 **React & Rust** 中摸鱼。
+
+💬 略知一二： [Vue](https://vuejs.org/)、ECMAScript、Rust。
