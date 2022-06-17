@@ -19,62 +19,42 @@ export default defineConfigWithTheme<VRThemeConfig>({
     logo: 'https://zrain.fun/images/avatar.png',
     nav: [
       { text: 'Post', link: '/post' },
-      { text: 'Wrap', link: '/wrap' },
       { text: 'Note', link: '/note' },
       {
-        text: 'Tool',
+        text: 'Wrap',
         items: [
           {
-            text: 'web',
             items: [
               {
-                text: '渐变色调制',
-                link: '...'
-              },
-              {
-                text: 'Ascii',
-                link: '...'
+                text: 'type_challenge',
+                link: '/wrap/type_challenge/index'
               }
             ]
-          },
-          {
-            text: 'fun',
-            items: [
-              {
-                text: 'Game',
-                link: '...'
-              },
-              {
-                text: 'Videos',
-                link: '...'
-              },
-              {
-                text: 'Song',
-                link: '...'
-              }
-            ]
-          },
-          { text: 'AA', link: '...' },
-          { text: 'BB', link: '...' }
+          }
         ]
-      }
+      },
     ],
     sidebar: {
       '/wrap/type_challenge': [
         {
+          text: 'Type Challenge',
+          collapsible: false,
+          items: [{ text: 'Introduction', link: '/wrap/type_challenge/' }]
+        },
+        {
           text: 'Easy',
           collapsible: true,
+          isCollapsed: true,
           items: [
-            { text: 'Item A', link: '/item-a' },
+            { text: 'TC-7 Readonly', link: '/wrap/type_challenge/7_easy_readonly' },
             { text: 'Item B', link: '/item-b' }
           ]
         },
         {
           text: 'Medium',
           collapsible: true,
-          isCollapsed: true,
           items: [
-            { text: 'Item C', link: '/item-c' },
+            { text: 'TC-2 Omit', link: '/wrap/type_challenge/2_medium_omit' },
             { text: 'Item D', link: '/item-d' }
           ]
         },

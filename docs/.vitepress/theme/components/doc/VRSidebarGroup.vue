@@ -2,7 +2,7 @@
   <section class="VRSidebarGroup" :class="{ collapsible }">
     <div v-if="text" class="groupTitle" :role="collapsible ? 'button' : undefined" :aria-expanded="!isCollapsed" @click="toggle">
       <h2 class="title">{{ text }}</h2>
-      <Icon class="collapseBtn" :icon="isCollapsed ? 'iconoir:add-square' : 'iconoir:minus-square'" height="18" />
+      <Icon class="collapseBtn" v-if="collapsible" :icon="isCollapsed ? 'iconoir:add-square' : 'iconoir:minus-square'" height="18" />
     </div>
 
     <div class="items">

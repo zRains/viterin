@@ -32,8 +32,10 @@ import VRNavBarHamburger from './VRNavBarHamburger.vue'
 .VRNavBar {
   position: relative;
   display: flex;
+  margin: 0 auto;
   padding: 0 10px 0 24px;
   height: $nav-height-mobile;
+  max-width: $max-content-width + $sidebar-width + $aside-width + 80px;
   background-color: var(--c-bg);
   border-bottom: 1px solid var(--c-divider-light);
   transition: background-color $u-duration ease;

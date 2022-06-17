@@ -47,7 +47,7 @@ export function isActive(currentPath: string, matchPath?: string, asRegex: boole
   if (matchPath === undefined) {
     return false
   }
-
+  
   currentPath = normalize(`/${currentPath}`)
 
   if (asRegex) {

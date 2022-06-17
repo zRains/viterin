@@ -8,11 +8,9 @@
       <VRIMore :class="{ icon: true }" v-else />
     </div>
 
-    <div class="menuPop">
-      <VRMenuPop :items="items">
-        <slot />
-      </VRMenuPop>
-    </div>
+    <VRMenuPop :items="items" @click="isActivated = !isActivated">
+      <slot />
+    </VRMenuPop>
   </div>
 </template>
 
@@ -61,14 +59,13 @@ $icon-width: 22px;
       }
     }
 
-    &:hover,
     &[aria-expanded='true'] {
       color: var(--c-brand);
       .icon {
         fill: var(--c-brand);
       }
 
-      & + .menuPop {
+      & + .VRMenuPop {
         opacity: 1;
         visibility: visible;
         transform: translateY(0);
@@ -76,7 +73,7 @@ $icon-width: 22px;
     }
   }
 
-  .menuPop {
+  .VRMenuPop {
     position: absolute;
     top: math.div($nav-height-desktop, 2) + 20px;
     right: 0;
