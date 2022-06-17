@@ -33,7 +33,9 @@ export function normalizeLink(url: string): string {
 
   const { pathname, search, hash } = new URL(url, 'https://zrain.fun')
   const normalizedPath =
-    pathname.endsWith('/') || pathname.endsWith('.html') ? url : `${pathname.replace(/(\.md)?$/, '.html')}${search}${hash}`
+    pathname.endsWith('/') || pathname.endsWith('.html')
+      ? url
+      : `${pathname.replace(/(\.md)?$/, '.html')}${search}${decodeURIComponent(hash)}`
 
   return withBase(normalizedPath)
 }
@@ -80,4 +82,27 @@ export function getSidebar(sidebar: Sidebar, path: string): SidebarGroup[] {
   }
 
   return []
+}
+
+/**
+ * 防抖
+ */
+export function debounce(fn: (...args: any[]) => void, delay = 300) {
+  let timer: any = 0
+  return function (..._args: any[]) {
+    if (timer) clearTimeout(timer)
+    timer = setTimeout(() => fn.apply(null, _args), delay)
+  }
+}
+
+/**
+ * 节流
+ */
+export function throttle(fn: (...args: any[]) => void, delay = 300) {
+  let timer: any = 0
+  return function (..._args: any[]) {
+    if (!timer) {
+      timer = setTimeout(() => fn.apply(null, _args), delay)
+    }
+  }
 }
