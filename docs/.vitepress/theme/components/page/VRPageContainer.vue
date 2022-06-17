@@ -36,7 +36,7 @@ const { page } = useData<VRThemeConfig>()
 .VRPageContainer {
   display: flex;
   justify-content: center;
-  padding: 30px 15px 0 15px;
+  padding: 0 15px 0 15px;
   width: 100%;
 
   .content {
@@ -53,9 +53,9 @@ const { page } = useData<VRThemeConfig>()
 }
 
 // 移动端适配
-@media only screen and (min-width: $b-sm) {
+@media only screen and (min-width: $b-md) {
   .VRPageContainer {
-    padding: 30px 20px 0 20px;
+    padding: 40px 20px 0 20px;
   }
 }
 

@@ -35,9 +35,8 @@ import VRNavBarHamburger from './VRNavBarHamburger.vue'
   margin: 0 auto;
   padding: 0 10px 0 24px;
   height: $nav-height-mobile;
-  // max-width: $max-content-width + $sidebar-width;
+  max-width: $max-content-width + $sidebar-width + $aside-width + 100px;
   border-bottom: 1px solid var(--c-divider-light);
-
 
   .VRNavContent {
     display: flex;

@@ -3,6 +3,7 @@ import { Theme } from 'vitepress'
 // Global Components
 import { Icon } from '@iconify/vue'
 import CenterImg from './components/global/CenterImg.vue'
+import VRFriends from './components/VRFriends.vue'
 
 // Layout
 import Layout from './Layout.vue'
@@ -18,6 +19,7 @@ const theme: Theme = {
   enhanceApp({ app }) {
     app.component('Icon', Icon)
     app.component('CenterImg', CenterImg)
+    app.component('VRFriends', VRFriends)
   }
 }
 
