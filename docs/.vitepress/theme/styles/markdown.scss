@@ -103,7 +103,7 @@ html[data-theme='dark'] {
 
 .VRMarkdown blockquote {
   margin: 0 0 16px 0;
-  border-left: 2px solid var(--c-divider);
+  border-left: 0.25em solid var(--c-divider);
   padding-left: 16px;
   transition: border-color $u-duration ease;
 }

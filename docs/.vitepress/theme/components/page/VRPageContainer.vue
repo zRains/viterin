@@ -56,6 +56,34 @@ const { page, frontmatter } = useData<VRThemeConfig>()
   }
 }
 
+[data-theme='light'] .VRPageContainer .content {
+  background-image: linear-gradient(
+      0deg,
+      transparent 24%,
+      rgba(201, 195, 195, 0.329) 25%,
+      hsla(0deg, 8%, 80.4%, 0.05) 26%,
+      transparent 27%,
+      transparent 74%,
+      hsla(0deg, 5.2%, 81%, 0.185) 75%,
+      rgba(180, 176, 176, 0.05) 76%,
+      transparent 77%,
+      transparent
+    ),
+    linear-gradient(
+      90deg,
+      transparent 24%,
+      rgba(204, 196, 196, 0.226) 25%,
+      hsla(0deg, 4%, 66.1%, 0.05) 26%,
+      transparent 27%,
+      transparent 74%,
+      hsla(0deg, 5.2%, 81%, 0.185) 75%,
+      rgba(180, 176, 176, 0.05) 76%,
+      transparent 77%,
+      transparent
+    );
+  background-size: 50px 50px;
+}
+
 // 移动端适配
 @media only screen and (min-width: $b-md) {
   .VRPageContainer {
