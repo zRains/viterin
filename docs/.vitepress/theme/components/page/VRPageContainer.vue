@@ -7,7 +7,7 @@
     </div>
 
     <!-- 侧边栏 -->
-    <div class="aside">
+    <div class="aside" v-if="page.frontmatter.toc === undefined ? true : false">
       <VRPageAside>
         <template #aside-top><slot name="aside-top" /></template>
         <template #aside-bottom><slot name="aside-bottom" /></template>
@@ -21,9 +21,13 @@
 </template>
 
 <script setup lang="ts">
+import type { VRThemeConfig } from '../../types/theme'
 import VRPageAside from '../page/VRPageAside.vue'
 import VRPage from '../page/VRPage.vue'
 import VRPageFooter from '../page/VRPageFooter.vue'
+import { useData } from 'vitepress'
+
+const { page } = useData<VRThemeConfig>()
 </script>
 
 <style lang="scss">

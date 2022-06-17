@@ -119,6 +119,10 @@ html[data-theme='dark'] {
   font-weight: 600;
   color: var(--c-brand);
   transition: color 0.25s;
+
+  .iconify {
+    color: var(--c-text-1);
+  }
 }
 
 .VRMarkdown a:hover {

@@ -1,5 +1,6 @@
 ---
-title: 'Home / 主页'
+title: 'Hi 👋'
+toc: false
 ---
 
 # Hi 👋, I'm zRain
@@ -12,7 +13,7 @@ title: 'Home / 主页'
 
 🌱 当前正在 **React and Rust** 中摸鱼
 
-💬 略知一二： [**Vue**](https://vuejs.org/)、**ECMAScript**
+💬 略知一二： [**Vue**](https://vuejs.org/)、**ECMAScript**、**Rust**
 
 #### 常在这些地方混:
 
@@ -35,7 +36,7 @@ title: 'Home / 主页'
 
 <a href="https://reactjs.org/" target="_blank" rel="noreferrer" title="react.js" ><Icon icon="vscode-icons:file-type-reactts" height="30" width="40"/></a>
 <a href="https://vuejs.org/" target="_blank" rel="noreferrer" title="vue.js" ><Icon icon="vscode-icons:file-type-vue" height="30" width="40"/></a>
-<a href="https://alpinejs.dev/" target="_blank" rel="noreferrer" title="alpinejs" ><img src="https://alpinejs.dev/alpine_long.svg" alt="AlpineJS" width="120" height="30"/></a>
+<a href="https://alpinejs.dev/" target="_blank" rel="noreferrer" title="alpinejs" ><Icon icon="logos:alpinejs-icon" height="30" width="40"/></a>
 
 #### 数据库 & 持续集成 & 工具:
 

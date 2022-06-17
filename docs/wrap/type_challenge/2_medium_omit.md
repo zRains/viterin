@@ -1,5 +1,6 @@
 ---
 title: 'TC-2: Omit'
+layout: doc
 ---
 
 Refer: [Medium - Omit](https://github.com/type-challenges/type-challenges/blob/master/questions/3-medium-omit/README.md)

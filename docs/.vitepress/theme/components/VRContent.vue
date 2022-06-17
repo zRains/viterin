@@ -2,8 +2,6 @@
   <div class="VRContent">
     <NotFound v-if="route.component === NotFound" />
 
-    <VRPageContainer v-else-if="frontmatter.layout === 'page'" />
-
     <VRHome v-else-if="frontmatter.layout === 'home'">
       <template #home-hero-before><slot name="home-hero-before" /></template>
       <template #home-hero-after><slot name="home-hero-after" /></template>
@@ -11,7 +9,9 @@
       <template #home-features-after><slot name="home-features-after" /></template>
     </VRHome>
 
-    <VRDocContainer v-else />
+    <VRDocContainer v-else-if="frontmatter.layout === 'doc'" />
+
+    <VRPageContainer v-else />
   </div>
 </template>
 
@@ -30,7 +30,7 @@ const route = useRoute()
 <style lang="scss">
 @import '../styles/vars.scss';
 
-.VRContent{
+.VRContent {
   padding-top: $nav-height-desktop - $tool-nav-height;
 }
 </style>
