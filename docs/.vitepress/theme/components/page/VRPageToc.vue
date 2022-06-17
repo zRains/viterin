@@ -1,6 +1,5 @@
 <template>
   <div class="VRPageToc">
-    <div class="title">页面目录</div>
     <ul>
       <li
         v-for="header in headers"
@@ -74,14 +73,9 @@ onUnmounted(() => window.removeEventListener('scroll', activeAnchor))
 .VRPageToc {
   font-size: 15px;
   transition: color $u-duration ease;
-
-  .title {
-    font-size: 1.1em;
-    font-weight: 600;
-  }
-
+  
   ul {
-    margin: 20px 0 0 0;
+    margin: 0;
     padding: 0;
 
     li {

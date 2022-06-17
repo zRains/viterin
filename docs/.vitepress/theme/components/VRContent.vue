@@ -2,12 +2,7 @@
   <div class="VRContent">
     <NotFound v-if="route.component === NotFound" />
 
-    <VRHome v-else-if="frontmatter.layout === 'home'">
-      <template #home-hero-before><slot name="home-hero-before" /></template>
-      <template #home-hero-after><slot name="home-hero-after" /></template>
-      <template #home-features-before><slot name="home-features-before" /></template>
-      <template #home-features-after><slot name="home-features-after" /></template>
-    </VRHome>
+    <VRHome v-else-if="frontmatter.layout === 'home'" />
 
     <VRDocContainer v-else-if="frontmatter.layout === 'doc'" />
 

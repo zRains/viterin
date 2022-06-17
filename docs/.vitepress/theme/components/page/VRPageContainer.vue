@@ -1,7 +1,7 @@
 <template>
   <div class="VRPageContainer">
     <!-- 文章主要内容 -->
-    <div class="content">
+    <div :class="{ content: true, notToc: frontmatter.toc !== undefined && frontmatter.toc === false }">
       <VRPage />
       <VRPageFooter />
     </div>
@@ -27,7 +27,7 @@ import VRPage from '../page/VRPage.vue'
 import VRPageFooter from '../page/VRPageFooter.vue'
 import { useData } from 'vitepress'
 
-const { page } = useData<VRThemeConfig>()
+const { page, frontmatter } = useData<VRThemeConfig>()
 </script>
 
 <style lang="scss">
@@ -43,6 +43,10 @@ const { page } = useData<VRThemeConfig>()
     width: 100%;
     max-width: $max-content-width;
     padding-bottom: 80px;
+
+    &.notToc {
+      max-width: $max-not-toc-content-width;
+    }
   }
 
   .aside {

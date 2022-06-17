@@ -30,8 +30,8 @@ const { page } = useData<VRThemeConfig>()
 .VRPageAside{
   position: sticky;
   top: 0;
-  margin-top: calc(#{$nav-height-desktop} * -1 - 30px);
-  padding-top: calc(#{$nav-height-desktop} + 30px);
+  margin-top: calc(#{$nav-height-desktop} * -1 - 40px);
+  padding-top: calc(#{$nav-height-desktop} + 40px);
   height: 100vh;
   overflow-x: hidden;
   overflow-y: auto;
