@@ -76,6 +76,7 @@ onUnmounted(() => window.removeEventListener('scroll', activeAnchor))
   transition: color $u-duration ease;
 
   .title {
+    font-size: 1.1em;
     font-weight: 600;
   }
 

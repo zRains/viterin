@@ -36,7 +36,7 @@ const { page } = useData<VRThemeConfig>()
 .VRPageContainer {
   display: flex;
   justify-content: center;
-  padding: 20px 15px 0 15px;
+  padding: 30px 15px 0 15px;
   width: 100%;
 
   .content {
@@ -48,7 +48,7 @@ const { page } = useData<VRThemeConfig>()
   .aside {
     flex-shrink: 0;
     width: $aside-width;
-    margin-left: 20px;
+    margin-left: 50px;
   }
 }
 

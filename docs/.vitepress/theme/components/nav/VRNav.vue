@@ -20,6 +20,8 @@ import VRNavBar from './VRNavBar.vue'
   left: 0;
   z-index: $z-index-nav;
   width: 100%;
+  background-color: var(--c-bg);
+  transition: background-color $u-duration ease;
 }
 
 // 固定导航栏

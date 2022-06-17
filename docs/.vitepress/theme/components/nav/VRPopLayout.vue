@@ -8,7 +8,7 @@
       <VRIMore :class="{ icon: true }" v-else />
     </div>
 
-    <VRMenuPop :items="items" @click="isActivated = !isActivated">
+    <VRMenuPop :items="items" @click="() => clickToClose && (isActivated = !isActivated)">
       <slot />
     </VRMenuPop>
   </div>
@@ -26,6 +26,7 @@ defineProps<{
   button?: string
   label?: string
   items?: (NavItemChildren | NavItemWithLink)[]
+  clickToClose?: boolean
 }>()
 
 const isActivated = ref(false)

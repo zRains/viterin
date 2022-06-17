@@ -1,5 +1,5 @@
 <template>
-  <VRPopLayout :class="{ VRNavBarMenuGroup: true }" :button="item.text" :items="item.items" />
+  <VRPopLayout :class="{ VRNavBarMenuGroup: true }" :button="item.text" :items="item.items" :click-to-close="true" />
 </template>
 
 <script setup lang="ts">

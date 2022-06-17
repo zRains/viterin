@@ -15,7 +15,7 @@ import VRPageContainer from '../page/VRPageContainer.vue'
 }
 
 // 移动端适配
-@media only screen and (max-width: calc(#{$max-content-width + $aside-width + $sidebar-width} + 60px)) {
+@media only screen and (max-width: calc(#{$max-content-width + $aside-width + $sidebar-width} + 80px)) {
   .VRDocContainer {
     .aside {
       display: none;
