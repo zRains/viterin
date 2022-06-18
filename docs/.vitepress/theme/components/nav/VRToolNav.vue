@@ -3,7 +3,7 @@
     <div class="menuBtn operationBtn" @click="toggle">
       <Icon icon="heroicons-solid:menu-alt-3" height="20" width="20" /><span>Menu</span>
     </div>
-    <div class="backToTopBtn operationBtn"><span>Return to top</span></div>
+    <div class="backToTopBtn operationBtn" @click="scrollToTop"><span>Return to top</span></div>
   </div>
 </template>
 
@@ -11,6 +11,10 @@
 import useSidebar from '../../composables/sidebar'
 
 const { toggle } = useSidebar()
+
+function scrollToTop() {
+  window.scrollTo({ top: 0, left: 0, behavior: 'smooth' })
+}
 </script>
 
 <style lang="scss">

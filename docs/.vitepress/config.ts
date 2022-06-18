@@ -34,6 +34,10 @@ export default defineConfigWithTheme<VRThemeConfig>({
         link: 'http://www.zlight.club/',
         desc: 'Nothing...'
       }
-    ]
+    ],
+    footer: {
+      message: 'Released under the MIT License.',
+      copyright: 'CC-BY-NC-SA-4.0 @zrain'
+    }
   }
 })

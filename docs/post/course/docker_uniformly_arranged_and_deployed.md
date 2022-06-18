@@ -3,6 +3,8 @@ title: Docker容器统一编排部署
 layout: page
 ---
 
+![cover_docker_uniformly_arranged_and_deployed](https://res.zrain.fun/images/2022/06/cover_docker_uniformly_arranged_and_deployed-4d4321d385b06fc7d7a3bcd14fd684b6.png)
+
 本次工程实践课题为 Docker 容器统一编排部署。借此机会了解一下容器编排技术。
 
 ## 课题方向
@@ -19,7 +21,7 @@ layout: page
 
 4. 掌握 Docker 的图形化管理工具 Portainer 或其他工具。
 
-5. 部署一个 httpd 服务作为应用验证编排服务或其他 K8S 等管理的统一编排技术。
+5. 部署一个 httpd 服务作为应用验证编排服务或其他 K8s 等管理的统一编排技术。
 
 ## 准备
 

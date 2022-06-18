@@ -8,7 +8,6 @@ export default {
     {
       text: 'Easy',
       collapsible: true,
-      isCollapsed: true,
       items: [
         { text: 'TC-7 Readonly', link: '/wrap/type_challenge/7_easy_readonly' },
         { text: 'Item B', link: '/item-b' }

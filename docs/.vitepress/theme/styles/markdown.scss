@@ -11,15 +11,18 @@
   --code-block-color: var(--c-text-dark-1);
   --code-block-bg: #f6f8fa;
 
-  --code-line-highlight-color: rgba(0, 0, 0, 0.5);
+  --code-line-highlight-color: rgba(0, 0, 0, 0.2);
   --code-line-number-color: var(--c-text-dark-3);
 
   --code-copy-code-hover-bg: rgba(255, 255, 255, 0.05);
   --code-copy-code-active-text: var(--c-text-dark-2);
+  --icon-copy: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"%3E%3Cg fill="none" stroke="grey" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"%3E%3Cpath d="M5.75 1.75h4.5v3.5h-4.5z"%2F%3E%3Cpath d="M5.25 2.75h-2.5v11.5h10.5V2.75h-2.5"%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E');
+  --icon-copied: url('data:image/svg+xml,%3Csvg xmlns="http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg" width="1em" height="1em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 16 16"%3E%3Cpath fill="none" stroke="grey" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M5.75 1.75h4.5v3.5h-4.5zm4 11.05l1.5 1.5l3-2.5m-9-9h-2.5v11.5h4.5m6-5V2.8h-2.5"%2F%3E%3C%2Fsvg%3E');
 }
 
 html[data-theme='dark'] {
   --code-block-bg: var(--c-bg-alt);
+  --code-line-highlight-color: rgba(0, 0, 0, 0.4);
 }
 
 .VRMarkdown {
@@ -292,10 +295,9 @@ html[data-theme='dark'] {
 .VRMarkdown div[class*='language-'] {
   position: relative;
   margin-bottom: 16px;
-  padding: 16px;
   background-color: var(--code-block-bg);
-  overflow-x: auto;
   transition: background-color $u-duration ease;
+  overflow-x: auto;
 }
 
 .VRMarkdown div[class*='language-'] + div[class*='language-'],
@@ -305,16 +307,20 @@ html[data-theme='dark'] {
 }
 
 .VRMarkdown [class*='language-'] pre {
-  position: relative;
   margin: 0;
+  padding: 16px 0;
+  overflow-x: auto;
   background: transparent;
 }
 
 .VRMarkdown [class*='language-'] code {
+  display: block;
+  width: fit-content;
   line-height: var(--code-line-height);
   font-family: $font-family-mono;
   font-size: var(--code-font-size);
   color: var(--code-block-color);
+  padding: 0 16px;
   transition: color $u-duration ease;
 }
 
@@ -330,6 +336,7 @@ html[data-theme='dark'] {
   font-size: var(--code-font-size);
   user-select: none;
   overflow: hidden;
+  pointer-events: none;
 }
 
 .VRMarkdown .highlight-lines .highlighted {
@@ -372,7 +379,6 @@ html[data-theme='dark'] {
   align-items: center;
   width: 40px;
   height: 40px;
-  background-color: var(--code-block-bg);
   opacity: 0;
   cursor: pointer;
   background-image: var(--icon-copy);
