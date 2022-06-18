@@ -33,7 +33,7 @@ $content-full-width: $sidebar-width + $max-content-width + $aside-width + 60px;
   bottom: 0;
   left: 0;
   z-index: $z-index-sidebar;
-  padding: $nav-height-desktop 20px 80px 20px;
+  padding: $nav-height-desktop + 30px 20px 80px 20px;
   width: $sidebar-width;
   background-color: var(--c-bg);
   opacity: 0;
@@ -70,7 +70,7 @@ $content-full-width: $sidebar-width + $max-content-width + $aside-width + 60px;
 @media only screen and (min-width: $b-md) {
   .VRSidebar {
     z-index: 1;
-    margin-top: $nav-height-desktop;
+    margin-top: $nav-height-desktop + 30px;
     padding-top: 0;
     opacity: 1;
     transform: translateX(0);

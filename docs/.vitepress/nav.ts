@@ -7,7 +7,7 @@ export default [
         {
           items: [
             {
-              text: 'type_challenge',
+              text: 'Type Challenge',
               link: '/wrap/type_challenge/index'
             }
           ]

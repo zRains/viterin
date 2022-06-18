@@ -92,10 +92,7 @@ export interface LocaleLinks {
   items: LocaleLink[]
 }
 
-export interface LocaleLink {
-  text: string
-  link: string
-}
+export interface LocaleLink extends SidebarItem {}
 
 // carbon ads ----------------------------------------------------------------
 
