@@ -1,6 +1,14 @@
 ---
-title: Docker容器统一编排部署
-layout: page
+date: 1650466212678
+title: 'Docker容器统一编排部署'
+link: '/post/course/docker_uniformly_arranged_and_deployed'
+file: 'docker_uniformly_arranged_and_deployed'
+scope: ['Docker']
+buckets: ['post', 'course']
+draft: false
+visible: true
+lang: 'zh'
+layout: 'page'
 ---
 
 ![cover_docker_uniformly_arranged_and_deployed](https://res.zrain.fun/images/2022/06/cover_docker_uniformly_arranged_and_deployed-4d4321d385b06fc7d7a3bcd14fd684b6.png)
