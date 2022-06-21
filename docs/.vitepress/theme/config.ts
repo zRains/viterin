@@ -12,6 +12,18 @@ export const post = {
       visible: true,
       lang: 'zh',
       layout: 'page'
+    },
+    {
+      date: 1652872376408,
+      title: 'V8垃圾回收',
+      link: '/post/browser/V8_garbage_collection',
+      file: 'V8_garbage_collection',
+      scope: ['browser', 'V8'],
+      buckets: ['post', 'browser'],
+      draft: false,
+      visible: true,
+      lang: 'zh',
+      layout: 'page'
     }
   ],
   course: [
