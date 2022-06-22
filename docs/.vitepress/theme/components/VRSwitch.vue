@@ -10,5 +10,3 @@ defineProps<{
   onToggle: () => void
 }>()
 </script>
-
-<style lang="scss"></style>
