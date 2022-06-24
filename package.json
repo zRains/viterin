@@ -18,20 +18,20 @@
   "author": "zrain",
   "license": "MIT",
   "dependencies": {
-    "vitepress": "^1.0.0-alpha.2"
+    "vitepress": "^1.0.0-alpha.4"
   },
   "devDependencies": {
     "@iconify/vue": "^3.2.1",
-    "@types/node": "^17.0.42",
-    "@typescript-eslint/eslint-plugin": "^5.28.0",
-    "@typescript-eslint/parser": "^5.28.0",
-    "eslint": "^8.17.0",
+    "@types/node": "^18.0.0",
+    "@typescript-eslint/eslint-plugin": "^5.29.0",
+    "@typescript-eslint/parser": "^5.29.0",
+    "eslint": "^8.18.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.0.0",
     "eslint-plugin-vue": "^9.1.1",
-    "prettier": "^2.7.0",
-    "sass": "^1.52.3"
+    "prettier": "^2.7.1",
+    "sass": "^1.53.0"
   }
 }
