@@ -16,8 +16,8 @@ export const post = {
     {
       date: 1652872376408,
       title: '初探V8垃圾回收',
-      link: '/post/browser/V8_garbage_collection',
-      file: 'V8_garbage_collection',
+      link: '/post/browser/v8_garbage_collection',
+      file: 'v8_garbage_collection',
       scope: ['browser', 'V8'],
       buckets: ['post', 'browser'],
       draft: false,
@@ -42,6 +42,18 @@ export const post = {
       title: '危险的target="_blank"',
       link: '/post/browser/problem_of_target_blank.',
       file: 'problem_of_target_blank.',
+      scope: ['browser'],
+      buckets: ['post', 'browser'],
+      draft: false,
+      visible: true,
+      lang: 'zh',
+      layout: 'page'
+    },
+    {
+      date: 1649942694482,
+      title: '简单了解一下Shadow DOM',
+      link: '/post/browser/simply_shadow_dom',
+      file: 'simply_shadow_dom',
       scope: ['browser'],
       buckets: ['post', 'browser'],
       draft: false,
@@ -88,5 +100,80 @@ export const post = {
       layout: 'page'
     }
   ],
-  learning: []
+  learning: [
+    {
+      date: 1649942694482,
+      title: '实现一个具有时效性的LocalStorage',
+      link: '/post/learning/implement_localStorage_with_timeliness',
+      file: 'implement_localStorage_with_timeliness',
+      scope: ['JS'],
+      buckets: ['post', 'learning'],
+      draft: false,
+      visible: true,
+      lang: 'zh',
+      layout: 'page'
+    },
+    {
+      date: 1649942694483,
+      title: 'JS连续赋值执行分析',
+      link: '/post/learning/js_continuous_assignment',
+      file: 'js_continuous_assignment',
+      scope: ['JS'],
+      buckets: ['post', 'learning'],
+      draft: false,
+      visible: true,
+      lang: 'zh',
+      layout: 'page'
+    },
+    {
+      date: 1650034956594,
+      title: '关于NodeJS中的流',
+      link: '/post/learning/about_node_stream',
+      file: 'about_node_stream',
+      scope: ['Node'],
+      buckets: ['post', 'learning'],
+      draft: false,
+      visible: true,
+      lang: 'zh',
+      layout: 'page'
+    },
+    {
+      date: 1649942694483,
+      title: 'Vue3位运算的巧妙之处',
+      link: '/post/learning/bit_operation_in_shapeFlags',
+      file: 'bit_operation_in_shapeFlags',
+      scope: ['Vue'],
+      buckets: ['post', 'learning'],
+      draft: false,
+      visible: true,
+      lang: 'zh',
+      layout: 'page'
+    },
+    {
+      date: 1650808533377,
+      title: 'Canvas从零开始实现2048',
+      link: '/post/learning/build_2048/index',
+      file: 'index',
+      scope: ['browser', 'canvas'],
+      buckets: ['post', 'learning'],
+      draft: false,
+      visible: true,
+      lang: 'zh',
+      layout: 'page',
+      advanced: true
+    },
+    {
+      date: 1649942694484,
+      title: 'Canvas为什么变得这么模糊？',
+      link: '/post/learning/why_canvas_blur/index',
+      file: 'index',
+      scope: ['browser', 'canvas'],
+      buckets: ['post', 'learning'],
+      draft: false,
+      visible: true,
+      lang: 'zh',
+      layout: 'page',
+      advanced: true
+    }
+  ]
 }
