@@ -23,7 +23,11 @@ import { computed } from 'vue'
 import { getRelativeTime } from '../../utils/helper'
 import { post } from '../../config'
 
-const postPages = computed(() => Object.values(post).flat())
+const postPages = computed(() =>
+  Object.values(post)
+    .flat()
+    .sort((a, b) => b.date - a.date)
+)
 </script>
 
 <style lang="scss" scoped>
@@ -51,6 +55,7 @@ const postPages = computed(() => Object.values(post).flat())
       font-size: 1.1rem;
       line-height: 30px;
       color: var(--c-text-1);
+      transition: color $u-duration ease;
     }
 
     .utils {
