@@ -1,9 +1,10 @@
 ---
-title: 'TC-2: Omit'
-layout: doc
+date: 1648397724000
+title: 'TC-3: Omit'
+layout: 'doc'
 ---
 
-Refer: [Medium - Omit](https://github.com/type-challenges/type-challenges/blob/master/questions/3-medium-omit/README.md)
+Refer: [Medium - Omit](https://github.com/type-challenges/type-challenges/blob/main/questions/00003-medium-omit/README.md)
 
 ### Describe
 

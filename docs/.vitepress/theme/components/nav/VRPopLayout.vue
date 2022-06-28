@@ -47,15 +47,6 @@ const isActivated = ref(false)
     user-select: none;
     transition: color $u-duration ease;
 
-    // .iconify {
-    //   width: $icon-width;
-    //   fill: var(--c-text-1);
-    //   transition: fill $u-duration ease;
-    //   &.textIcon {
-    //     width: $icon-width - 4px;
-    //   }
-    // }
-
     &[aria-expanded='true'] {
       color: var(--c-brand);
       .icon {

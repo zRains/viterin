@@ -10,12 +10,12 @@ import VRPageContainer from '../page/VRPageContainer.vue'
 @import '../../styles/vars.scss';
 
 .VRDocContainer {
-  padding-left: $sidebar-width + 20px;
+  padding-left: $sidebar-width + 60px;
   transition: padding-left $u-duration * 1.5;
 }
 
 // 移动端适配
-@media only screen and (max-width: calc(#{$max-content-width + $aside-width + $sidebar-width} + 80px)) {
+@media only screen and (max-width: calc(#{$max-content-width + $aside-width + $sidebar-width} + 100px)) {
   .VRDocContainer {
     .aside {
       display: none;

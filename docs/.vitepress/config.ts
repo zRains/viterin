@@ -19,8 +19,8 @@ export default defineConfigWithTheme<VRThemeConfig>({
   themeConfig: {
     siteTitle: false,
     logo: 'https://zrain.fun/images/avatar.png',
-    nav,
-    sidebar,
+    nav: nav(),
+    sidebar: sidebar(),
     friendLinks: [
       {
         name: 'deelter',

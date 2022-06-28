@@ -1,32 +1,60 @@
-export default {
-  '/wrap/type_challenge': [
-    {
-      text: 'Type Challenge',
-      collapsible: false,
-      items: [{ text: 'Introduction', link: '/wrap/type_challenge/' }]
-    },
-    {
-      text: 'Easy',
-      collapsible: true,
-      items: [
-        { text: 'TC-7 Readonly', link: '/wrap/type_challenge/7_easy_readonly' },
-        { text: 'Item B', link: '/item-b' }
-      ]
-    },
-    {
-      text: 'Medium',
-      collapsible: true,
-      items: [
-        { text: 'TC-2 Omit', link: '/wrap/type_challenge/2_medium_omit' },
-        { text: 'Item D', link: '/item-d' }
-      ]
-    },
-    {
-      text: 'Hard',
-      items: [
-        { text: 'Item C', link: '/item-c' },
-        { text: 'Item D', link: '/item-d' }
-      ]
-    }
-  ]
+export default function () {
+  return {
+    '/wrap/type_challenge': [
+      {
+        text: 'Type Challenge',
+        collapsible: false,
+        items: [{ text: 'Introduction', link: '/wrap/type_challenge/' }]
+      },
+      {
+        text: 'Easy',
+        collapsible: true,
+        items: [
+          { text: 'TC-4: Pick', link: '/wrap/type_challenge/4_easy_pick' },
+          { text: 'TC-7 Readonly', link: '/wrap/type_challenge/7_easy_readonly' },
+          { text: 'TC-11: Tuple to Object', link: '/wrap/type_challenge/11_easy_tuple_to_object' },
+          { text: 'TC-14: First of Array', link: '/wrap/type_challenge/14_easy_first_of_array' },
+          { text: 'TC-18: Length of Tuple', link: '/wrap/type_challenge/18_easy_length_of_tuple' },
+          { text: 'TC-43: Exclude', link: '/wrap/type_challenge/43_easy_exclude' },
+          { text: 'TC-189: Awaited', link: '/wrap/type_challenge/189_easy_awaited' },
+          { text: 'TC-268: If', link: '/wrap/type_challenge/268_easy_if' },
+          { text: 'TC-533: Concat', link: '/wrap/type_challenge/533_easy_concat' },
+          { text: 'TC-898: Includes', link: '/wrap/type_challenge/898_easy_includes' },
+          { text: 'TC-3057: Push', link: '/wrap/type_challenge/3057_easy_push' },
+          { text: 'TC-3060: Unshift', link: '/wrap/type_challenge/3060_easy_unshift' },
+          { text: 'TC-3312: Parameters', link: '/wrap/type_challenge/3312_easy_parameters' }
+        ]
+      },
+      {
+        text: 'Medium',
+        collapsible: true,
+        items: [
+          { text: 'TC-2: Get Return Type', link: '/wrap/type_challenge/2_medium_get_return_type' },
+          { text: 'TC-3 Omit', link: '/wrap/type_challenge/3_medium_omit' },
+          { text: 'TC-8: Readonly-2', link: '/wrap/type_challenge/8_medium_readonly_2' },
+          { text: 'TC-9: Deep Readonly', link: '/wrap/type_challenge/9_medium_deep_readonly' },
+          { text: 'TC-10: Tuple to Union', link: '/wrap/type_challenge/10_medium_tuple_to_union' },
+          { text: 'TC-12: Chainable Options', link: '/wrap/type_challenge/12_medium_chainable_options' },
+          { text: 'TC-15: Last of Array', link: '/wrap/type_challenge/15_medium_last_of_array' },
+          { text: 'TC-16: Pop', link: '/wrap/type_challenge/16_medium_pop_shift_unshift' },
+          { text: 'TC-20: Promise.all', link: '/wrap/type_challenge/20_medium_promise_all' },
+          { text: 'TC-62: Type Lookup', link: '/wrap/type_challenge/62_medium_type_lookup' },
+          { text: 'TC-106: Trim Left', link: '/wrap/type_challenge/106_medium_trim_left' },
+          { text: 'TC-108: Trim', link: '/wrap/type_challenge/108_medium_trim' },
+          { text: 'TC-110: Capitalize', link: '/wrap/type_challenge/110_medium_capitalize' },
+          { text: 'TC-116: Replace', link: '/wrap/type_challenge/116_medium_replace' },
+          { text: 'TC-119: Replace All', link: '/wrap/type_challenge/119_medium_replace_all' },
+          { text: 'TC-191: Append Argument', link: '/wrap/type_challenge/191_medium_append_argument' },
+          { text: 'TC-298: Length of String', link: '/wrap/type_challenge/298_medium_length_of_string' },
+          { text: 'TC-459: Flatten', link: '/wrap/type_challenge/459_medium_fatten' },
+          { text: 'TC-527: Append to object', link: '/wrap/type_challenge/527_medium_append_to_object' },
+          { text: 'TC-529: Absolute', link: '/wrap/type_challenge/529_medium_absolute' },
+          { text: 'TC-531: String to Union', link: '/wrap/type_challenge/531_medium_string_to_union' },
+          { text: 'TC-599: Merge', link: '/wrap/type_challenge/599_medium_merge' },
+          { text: 'TC-610: CamelCase', link: '/wrap/type_challenge/610_medium_camelcase' }
+        ]
+      }
+    ],
+    '/wrap/sword_to_offer': []
+  }
 }

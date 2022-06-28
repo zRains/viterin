@@ -24,7 +24,7 @@ defineProps<{
 @import '../../styles/vars.scss';
 
 .VRMenuPop {
-  min-width: 150px;
+  min-width: 180px;
   border: 1px solid var(--c-divider-light);
   background-color: var(--c-bg);
   box-shadow: $shadow-3;

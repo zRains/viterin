@@ -1,4 +1,5 @@
-export default [
+export default function () {
+  return [
     { text: 'Post', link: '/post/' },
     { text: 'Note', link: '/note' },
     {
@@ -7,11 +8,16 @@ export default [
         {
           items: [
             {
-              text: 'Type Challenge',
+              text: 'Type Challenge 挑战',
               link: '/wrap/type_challenge/index'
+            },
+            {
+              text: 'LeetCode 剑指offer',
+              link: '/wrap/sword_to_offer/index'
             }
           ]
         }
       ]
     }
   ]
+}

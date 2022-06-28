@@ -1,11 +1,12 @@
 ---
+date: 1648397724000
 title: 'TC-7: Readonly'
-layout: doc
+layout: 'doc'
 ---
 
-Refer: [Easy - Readonly](https://github.com/type-challenges/type-challenges/blob/master/questions/7-easy-readonly/README.md)
+Refer: [Easy - Readonly](https://github.com/type-challenges/type-challenges/blob/main/questions/00007-easy-readonly/README.md)
 
-Relation: [Medium - Readonly-2](/wrap/type_challenge/8_readonly_2)
+Relation: [Medium - Readonly-2](/wrap/type_challenge/8_medium_readonly_2)
 
 ### Describe
 
