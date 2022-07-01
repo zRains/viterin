@@ -372,7 +372,7 @@ html[data-theme='dark'] {
 .VRMarkdown [class*='language-'] > span.copy {
   position: absolute;
   top: 8px;
-  right: 8px;
+  right: 0;
   z-index: 2;
   display: block;
   justify-content: center;
@@ -417,108 +417,6 @@ html[data-theme='dark'] {
   color: var(--code-copy-code-active-text);
   background-color: var(--code-copy-code-hover-bg);
   white-space: nowrap;
-}
-
-.VRMarkdown [class*='language-']:before {
-  position: absolute;
-  top: 12px;
-  right: 12px;
-  z-index: 2;
-  font-size: 0.9em;
-  color: var(--c-text-1);
-  transition: color $u-duration ease, opacity $u-duration ease;
-}
-
-.VRMarkdown [class*='language-']:hover:before {
-  opacity: 0;
-}
-
-.VRMarkdown [class~='language-c']:before {
-  content: 'c';
-}
-.VRMarkdown [class~='language-css']:before {
-  content: 'css';
-}
-.VRMarkdown [class~='language-go']:before {
-  content: 'go';
-}
-.VRMarkdown [class~='language-html']:before {
-  content: 'html';
-}
-.VRMarkdown [class~='language-java']:before {
-  content: 'java';
-}
-.VRMarkdown [class~='language-javascript']:before {
-  content: 'js';
-}
-.VRMarkdown [class~='language-js']:before {
-  content: 'js';
-}
-.VRMarkdown [class~='language-json']:before {
-  content: 'json';
-}
-.VRMarkdown [class~='language-jsx']:before {
-  content: 'jsx';
-}
-.VRMarkdown [class~='language-less']:before {
-  content: 'less';
-}
-.VRMarkdown [class~='language-markdown']:before {
-  content: 'md';
-}
-.VRMarkdown [class~='language-md']:before {
-  content: 'md';
-}
-.VRMarkdown [class~='language-php']:before {
-  content: 'php';
-}
-.VRMarkdown [class~='language-python']:before {
-  content: 'py';
-}
-.VRMarkdown [class~='language-py']:before {
-  content: 'py';
-}
-.VRMarkdown [class~='language-rb']:before {
-  content: 'rb';
-}
-.VRMarkdown [class~='language-ruby']:before {
-  content: 'rb';
-}
-.VRMarkdown [class~='language-rust']:before {
-  content: 'rust';
-}
-.VRMarkdown [class~='language-sass']:before {
-  content: 'sass';
-}
-.VRMarkdown [class~='language-scss']:before {
-  content: 'scss';
-}
-.VRMarkdown [class~='language-sh']:before {
-  content: 'sh';
-}
-.VRMarkdown [class~='language-bash']:before {
-  content: 'sh';
-}
-.VRMarkdown [class~='language-stylus']:before {
-  content: 'styl';
-}
-.VRMarkdown [class~='language-vue-html']:before {
-  content: 'template';
-}
-.VRMarkdown [class~='language-typescript']:before {
-  content: 'ts';
-}
-.VRMarkdown [class~='language-ts']:before {
-  content: 'ts';
-}
-.VRMarkdown [class~='language-tsx']:before {
-  content: 'tsx';
-}
-.VRMarkdown [class~='language-vue']:before {
-  content: 'vue';
-}
-.VRMarkdown [class~='language-yaml']:before {
-  content: 'yaml';
 }
 
 // 移动端适配

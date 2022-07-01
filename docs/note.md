@@ -323,7 +323,7 @@ throttle(fn, time) {
 
 ### 正确使用 TypeScript 检查对象
 
-体现于：[TC-9: Deep Readonly](/wrap/type_challenge/9_deep_readonly)
+体现于：[TC-9: Deep Readonly](/wrap/type_challenge/9_medium_deep_readonly)
 
 ```typescript
 // Note: Record<string, any> accept all types:

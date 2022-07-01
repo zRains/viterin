@@ -55,6 +55,37 @@ export default function () {
         ]
       }
     ],
-    '/wrap/sword_to_offer': []
+    '/wrap/sword_to_offer': [
+      {
+        text: '剑指offer',
+        collapsible: false,
+        items: [{ text: '介绍', link: '/wrap/sword_to_offer/' }]
+      },
+      {
+        text: '题目集',
+        collapsible: true,
+        items: [
+          { text: '第1天 - 栈与队列（简单）', link: '/wrap/sword_to_offer/day1_stack_and_queue' },
+          { text: '第2天 - 链表（简单）', link: '/wrap/sword_to_offer/day2_list_node' },
+          { text: '第3天 - 字符串（简单）', link: '/wrap/sword_to_offer/day3_string' },
+          { text: '第4天 - 查找算法（简单）', link: '/wrap/sword_to_offer/day4_search_easy' },
+          { text: '第5天 - 查找算法（中等）', link: '/wrap/sword_to_offer/day5_search_medium' },
+          { text: '第6天 - 搜索与回溯算法1（简单）', link: '/wrap/sword_to_offer/day6_search_and_trackBack_easy_1' },
+          { text: '第7天 - 搜索与回溯算法3（简单）', link: '/wrap/sword_to_offer/day7_search_and_trackBack_easy_2' },
+          { text: '第8天 - 动态规划（简单）', link: '/wrap/sword_to_offer/day8_dp_easy' },
+          { text: '第9天 - 动态规划1（中等）', link: '/wrap/sword_to_offer/day9_dp_medium_1' },
+          { text: '第10天 - 动态规划2（中等）', link: '/wrap/sword_to_offer/day10_dp_medium_2' },
+          { text: '第11天 - 双指针1（简单）', link: '/wrap/sword_to_offer/day11_two_noders_1' },
+          { text: '第12天 - 双指针2（简单）', link: '/wrap/sword_to_offer/day12_two_noders_2' },
+          { text: '第13天 - 双指针3（简单）', link: '/wrap/sword_to_offer/day13_two_noders_3' },
+          { text: '第14天 - 搜索与回溯算法1（中等）', link: '/wrap/sword_to_offer/day14_search_and_trackBack_medium_1' },
+          { text: '第15天 - 搜索与回溯算法2（中等）', link: '/wrap/sword_to_offer/day15_search_and_trackBack_medium_2' },
+          { text: '第16天 - 排序（简单）', link: '/wrap/sword_to_offer/day16_sort_easy' },
+          { text: '第17天 - 排序（中等）', link: '/wrap/sword_to_offer/day17_sort_medium' },
+          { text: '第18天 - 搜索与回溯算法3（中等）', link: '/wrap/sword_to_offer/day18_search_and_trackBack_meduim_3' },
+          { text: '第19天 - 搜索与回溯算法4（中等）', link: '/wrap/sword_to_offer/day19_search_and_trackBack_medium_4' }
+        ]
+      }
+    ]
   }
 }
