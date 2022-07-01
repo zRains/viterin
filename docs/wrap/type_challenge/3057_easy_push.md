@@ -43,4 +43,4 @@ type Push<T extends any[], U> = T['length'] extends 0 ? [U] : T extends [...infe
 type Push<T extends any[], U> = [U] extends [T[number]] ? T : [...T, U]
 ```
 
-The reason of wrapped `U` and `T[number]` is refer to [here](/post/learning/distributive_conditional_types).
+The reason of wrapped `U` and `T[number]` is refer to [here](/post/learning/distributive_conditional_type).

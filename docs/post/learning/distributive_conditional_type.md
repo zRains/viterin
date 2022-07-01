@@ -40,6 +40,6 @@ type WrappedUsage<T> = [T] extends [boolean] ? 'YES' : 'NO' // wrapped in a tupl
 
 如果`T`为联合类型（union）且属于裸类型，则会产生上述的类型分配。因此，想要避免分配可以将`T`包装为一个 tuple。
 
-关于为什么这样设计，在文档中有提到过，这种方式可以方便的过滤联合类型，示例：[TC-43 Exclude](/wrap/type_challenge/43_exclude)。
+关于为什么这样设计，在文档中有提到过，这种方式可以方便的过滤联合类型，示例：[TC-43 Exclude](/wrap/type_challenge/43_easy_exclude)。
 
-同时与`mapped types`结合可以方便处理每个属性，示例：[TC-11 Tuple To Object](/wrap/type_challenge/11_tuple_to_object)。假设没有分配操作，那么对于一个联合类型来说，conditional types 要满足 true 的话就只能与自身 extends。conditional types 的出现可能单纯是为了更方便处理联合类型中的每个成员。
+同时与`mapped types`结合可以方便处理每个属性，示例：[TC-11 Tuple To Object](/wrap/type_challenge/11_easy_tuple_to_object)。假设没有分配操作，那么对于一个联合类型来说，conditional types 要满足 true 的话就只能与自身 extends。conditional types 的出现可能单纯是为了更方便处理联合类型中的每个成员。
