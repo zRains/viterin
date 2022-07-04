@@ -7,6 +7,23 @@ toc: false
 
 > 简短的笔记，也许是我不想写这么多罢了 📝
 
+### 常见的时间复杂度
+
+| 大 O 表示           | 名称       |
+| ------------------- | ---------- |
+| O(1)                | 常数阶     |
+| O(n)                | 线性阶     |
+| O(n<sup>2</sup>)    | 平方阶     |
+| O(log(n))  | 对数阶     |
+| O(nlog(n)) | 线性对数阶 |
+| O(n<sup>3</sup>)    | 立方阶     |
+| O(2<sup>n</sup>)    | 指数阶     |
+| O(n!)               | 阶乘阶     |
+
+复杂度排序：
+
+O(1) < O(log(n)) < O(n) < O(nlog(n)) < O(n<sup>2</sup>) < O(n<sup>3</sup>) < O(2<sup>n</sup>) < O(n!) < O(n<sup>n</sup>)
+
 ### OSI 七层模型基本理解
 
 <CenterImg src="https://res.zrain.fun/images/2022/05/OSI_process-5d8b0d87dab735ef5d7c95bb71352da3.png" alt="OSI_process" zoom="45%" />
