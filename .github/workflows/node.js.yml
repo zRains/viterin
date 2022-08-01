@@ -33,7 +33,8 @@ jobs:
       with:
         username: ${{ secrets.FTP_USERNAME }}
         server: ${{ secrets.FTP_SERVER }}
-        local_path: './docs/.vitepress/dist/**/*'
+        local_path: './docs/.vitepress/dist/*'
         remote_path: '/home/viterin'
-        sftp_only: false
+        delete_remote_files: true
         password: ${{ secrets.FTP_PASSWORD }}
+        sftpArgs: '-o ConnectTimeout=5'
