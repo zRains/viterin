@@ -35,4 +35,5 @@ jobs:
         server: ${{ secrets.FTP_SERVER }}
         local_path: './docs/.vitepress/dist/**/*'
         remote_path: '/home/viterin'
+        sftp_only: false
         password: ${{ secrets.FTP_PASSWORD }}
