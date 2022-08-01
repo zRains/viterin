@@ -1,13 +1,11 @@
 <template>
-  <ClientOnly>
-    <div class="BlobViewImg">
-      <img ref="imgRef" src="https://zrain.fun/images/avatar.png" alt="blobViewImg" />
-      <label for="uploadImg">
-        <span>{{ uploadBanner }}</span>
-        <input id="uploadImg" ref="imgInput" type="file" />
-      </label>
-    </div>
-  </ClientOnly>
+  <div class="BlobViewImg">
+    <img ref="imgRef" src="https://zrain.fun/images/avatar.png" alt="blobViewImg" />
+    <label for="uploadImg">
+      <span>{{ uploadBanner }}</span>
+      <input id="uploadImg" ref="imgInput" type="file" />
+    </label>
+  </div>
 </template>
 
 <script lang="ts" setup>

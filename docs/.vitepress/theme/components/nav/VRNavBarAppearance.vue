@@ -1,6 +1,6 @@
 <template>
   <div v-if="site.appearance" class="VRNavBarAppearance">
-    <VRSwitchAppearance />
+    <ClientOnly><VRSwitchAppearance /></ClientOnly>
   </div>
 </template>
 

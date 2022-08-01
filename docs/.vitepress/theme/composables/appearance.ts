@@ -2,7 +2,6 @@
 import { ref } from 'vue'
 
 const APPEARANCE_KEY = 'VR_APPEARANCE_KEY'
-const query = window.matchMedia('(prefers-color-scheme: dark)')
 let isDark = ref(false)
 
 function setDark(isDark: boolean) {
@@ -10,6 +9,7 @@ function setDark(isDark: boolean) {
 }
 
 export default function () {
+  const query = window.matchMedia('(prefers-color-scheme: dark)')
   let userPreference = localStorage?.getItem(APPEARANCE_KEY) || 'auto'
   isDark.value = userPreference === 'auto' ? query.matches : userPreference === 'dark'
 

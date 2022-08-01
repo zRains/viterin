@@ -33,7 +33,7 @@ import DevicePixelRatio from './DevicePixelRatio.vue'
 
 ## 设备像素比，DPR
 
-你当前设备的 DPR: <DevicePixelRatio />。
+你当前设备的 DPR: <ClientOnly><DevicePixelRatio /></ClientOnly>。
 
 什么是设备像素比（devicePixelRatio, DPR）？举个简单的例子，在 iPhone3G 时代，屏幕宽度是 320px，其宽度上的物理像素也是 320px；而到了 4s 时代，屏幕宽度依然是 320px，但是宽度上的物理像素却变成了 640px，是宽度的两倍。屏幕宽度没变，物理像素却增加了，所以为了屏幕显示的内容不改变，原先需要一个像素绘制的点，现在会用两个像素来绘制。
 

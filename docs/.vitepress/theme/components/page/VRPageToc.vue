@@ -73,7 +73,7 @@ onUnmounted(() => window.removeEventListener('scroll', activeAnchor))
 .VRPageToc {
   font-size: 15px;
   transition: color $u-duration ease;
-  
+
   ul {
     margin: 0;
     padding: 0;

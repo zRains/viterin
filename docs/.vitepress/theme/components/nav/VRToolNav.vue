@@ -1,10 +1,10 @@
 <template>
-  <div class="VRToolNav">
-    <div class="menuBtn operationBtn" @click="toggle">
-      <Icon icon="heroicons-solid:menu-alt-3" height="20" width="20" /><span>Menu</span>
+    <div class="VRToolNav">
+      <div class="menuBtn operationBtn" @click="toggle">
+        <Icon icon="heroicons-solid:menu-alt-3" height="20" width="20" /><span>Menu</span>
+      </div>
+      <div class="backToTopBtn operationBtn" @click="scrollToTop"><span>Return to top</span></div>
     </div>
-    <div class="backToTopBtn operationBtn" @click="scrollToTop"><span>Return to top</span></div>
-  </div>
 </template>
 
 <script setup lang="ts">

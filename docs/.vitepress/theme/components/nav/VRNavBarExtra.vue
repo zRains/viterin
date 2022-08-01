@@ -2,7 +2,7 @@
   <VRPopLayout :class="{ VRNavBarExtra: true }" label="extra navigation">
     <div v-if="site.appearance" class="appearance group">
       <div class="label">Theme</div>
-      <VRSwitchAppearance />
+      <ClientOnly><VRSwitchAppearance /></ClientOnly>
     </div>
   </VRPopLayout>
 </template>
@@ -27,7 +27,7 @@ const { site } = useData()
     display: flex;
     align-items: center;
     padding: 10px 15px;
-    
+
     .label {
       margin-right: auto;
       font-size: 13px;

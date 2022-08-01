@@ -1,9 +1,7 @@
 <template>
-  <ClientOnly>
-    <div ref="CANVASBOX" class="ArctoCanvas">
-      <canvas class="arcToCanvas"></canvas>
-    </div>
-  </ClientOnly>
+  <div ref="CANVASBOX" class="ArctoCanvas">
+    <canvas class="arcToCanvas"></canvas>
+  </div>
 </template>
 
 <script lang="ts" setup>

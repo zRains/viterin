@@ -1,6 +1,4 @@
-<template>
-  <ClientOnly>{{ devicePixelRatio }}</ClientOnly>
-</template>
+<template>{{ devicePixelRatio }}</template>
 
 <script setup lang="ts">
 const devicePixelRatio = window.devicePixelRatio || 1

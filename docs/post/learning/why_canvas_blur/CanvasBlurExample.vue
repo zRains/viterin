@@ -1,9 +1,7 @@
 <template>
-  <ClientOnly>
-    <div class="CanvasBlurExample">
-      <canvas ref="CANVAS"></canvas>
-    </div>
-  </ClientOnly>
+  <div class="CanvasBlurExample">
+    <canvas ref="CANVAS"></canvas>
+  </div>
 </template>
 
 <script lang="ts" setup>
