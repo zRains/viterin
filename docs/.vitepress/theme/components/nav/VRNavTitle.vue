@@ -1,7 +1,7 @@
 <template>
   <div class="VRNavTitle">
     <a class="title" :href="site.base">
-      <img v-if="theme.logo" class="logo" :src="theme.logo" />
+      <img v-if="theme.logo" class="logo" :src="theme.logo || '/favicon.ico'" />
       <template v-if="theme.siteTitle">{{ theme.siteTitle }}</template>
       <template v-else-if="theme.siteTitle === undefined">{{ site.title }}</template>
     </a>

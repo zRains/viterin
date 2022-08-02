@@ -18,7 +18,7 @@ export default defineConfigWithTheme<VRThemeConfig>({
 
   themeConfig: {
     siteTitle: false,
-    logo: 'https://zrain.fun/images/avatar.png',
+    logo: '/favicon.ico',
     nav: nav(),
     sidebar: sidebar(),
     friendLinks: [
