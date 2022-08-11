@@ -270,6 +270,18 @@ export const post = {
       visible: true,
       lang: 'zh',
       layout: 'page'
+    },
+    {
+      date: 1660200428044,
+      title: '力扣100题',
+      link: '/post/learning/leetcode_100',
+      file: 'leetcode_100',
+      scope: ['algorithm'],
+      buckets: ['post', 'learning'],
+      draft: false,
+      visible: true,
+      lang: 'zh',
+      layout: 'page'
     }
   ]
 }
