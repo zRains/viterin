@@ -212,3 +212,37 @@ impl Solution {
 ```
 
 当两个数组遍历完时，rustlt 就是我们想要的结果。但此方法声明了一个新数组，空间复杂度为$O(n)$，其实也可以不用申请额外空间：
+
+```rust
+impl Solution {
+    pub fn merge(nums1: &mut Vec<i32>, m: i32, nums2: &mut Vec<i32>, n: i32) {
+        if n == 0 {
+            return;
+        }
+
+        if m == 0 {
+            *nums1 = nums2.clone();
+            return;
+        }
+
+        let total = m + n;
+        let mut m1 = m - 1;
+        let mut n1 = n - 1;
+
+        for idx in 0..total {
+            if m1 < 0 {
+                nums1[(total - 1 - idx) as usize] = nums2[n1 as usize];
+                n1 -= 1;
+            } else if n1 < 0 {
+                break;
+            } else if nums2[n1 as usize] >= nums1[m1 as usize] {
+                nums1[(total - 1 - idx) as usize] = nums2[n1 as usize];
+                n1 -= 1;
+            } else {
+                nums1[(total - 1 - idx) as usize] = nums1[m1 as usize];
+                m1 -= 1;
+            }
+        }
+    }
+}
+```
