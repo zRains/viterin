@@ -12,31 +12,27 @@ head:
 
 > 简短的笔记，也许是我不想写这么多罢了 📝
 
+### 关于 appendChild
+
+Node.appendChild() 方法将一个节点附加到指定父节点的子节点列表的末尾处。如果将被插入的节点已经存在于当前文档的文档树中，那么 appendChild() 只会将它从原先的位置移动到新的位置（不需要事先移除要移动的节点）。
+
+这意味着，一个节点不可能同时出现在文档的不同位置。所以，如果某个节点已经拥有父节点，在被传递给此方法后，<strong><u>它首先会被移除</u></strong>，再被插入到新的位置。
+
+<small>* 摘自[MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/appendChild)</small>
+
 ### zsh 环境变量的加载
 
-#### .zshenv
+**.zshenv** - 它存放的环境变量配置项在任何场景下都能被读取，这里通常把$PATH 等变量写在这里，这样无论是在交互 shell，或者运行程序都会读取此文件。
 
-它存放的环境变量配置项在任何场景下都能被读取，这里通常把$PATH 等变量写在这里，这样无论是在交互 shell，或者运行程序都会读取此文件
+**.zshrc** - 它主要用在交互 shell。对终端交互 shell 有用。
 
-#### .zshrc
+**.zlogin** - 在 login shell 的时候读取，比如系统启动的时候会读取此文件。
 
-它主要用在交互 shell，上篇文章中就是对这个文件进行修改。对终端交互 shell 有用。
+**.zprofile** - 是.zlogin 的替代品，如果使用了.zlogin 就不必再关心此文件。
 
-#### .zlogin
+**.zlogout** - 退出终端的时候读取，用于做一些清理工作。
 
-在 login shell 的时候读取，比如系统启动的时候会读取此文件
-
-#### .zprofile
-
-是.zlogin 的替代品，如果使用了.zlogin 就不必再关心此文件
-
-#### .zlogout
-
-退出终端的时候读取，用于做一些清理工作
-
-#### 读取顺序
-
-.zshenv → [.zprofile if login] → [.zshrc if interactive] → [.zlogin if login] → [.zlogout sometimes].
+读取顺序：.zshenv → [.zprofile if login] → [.zshrc if interactive] → [.zlogin if login] → [.zlogout sometimes]。
 
 ### 常见的时间复杂度
 
