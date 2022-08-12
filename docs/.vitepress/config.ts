@@ -99,6 +99,10 @@ export default defineConfigWithTheme<VRThemeConfig>({
   lastUpdated: true,
 
   markdown: {
+    theme: {
+      light: 'github-light',
+      dark: 'github-dark'
+    },
     config: (md) => {
       md.use(markdownItKatex, { throwOnError: false, errorColor: ' #cc0000' })
     }

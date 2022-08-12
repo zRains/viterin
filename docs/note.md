@@ -1,6 +1,11 @@
 ---
 title: '笔记'
 toc: false
+
+head:
+  - - link
+    - rel: stylesheet
+      href: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css
 ---
 
 <h1>笔记</h1>
@@ -35,20 +40,22 @@ toc: false
 
 ### 常见的时间复杂度
 
-| 大 O 表示        | 名称       |
-| ---------------- | ---------- |
-| O(1)             | 常数阶     |
-| O(n)             | 线性阶     |
-| O(n<sup>2</sup>) | 平方阶     |
-| O(log(n))        | 对数阶     |
-| O(nlog(n))       | 线性对数阶 |
-| O(n<sup>3</sup>) | 立方阶     |
-| O(2<sup>n</sup>) | 指数阶     |
-| O(n!)            | 阶乘阶     |
+| 表示          | 名称       |
+| ------------- | ---------- |
+| $O(1)$        | 常数阶     |
+| $O(n)$        | 线性阶     |
+| $O(n^2)$      | 平方阶     |
+| $O(\log{n})$  | 对数阶     |
+| $O(n\log{n})$ | 线性对数阶 |
+| $O(n^3)$      | 立方阶     |
+| $O(2^n)$      | 指数阶     |
+| $O(n!)$       | 阶乘阶     |
 
 复杂度排序：
 
-O(1) < O(log(n)) < O(n) < O(nlog(n)) < O(n<sup>2</sup>) < O(n<sup>3</sup>) < O(2<sup>n</sup>) < O(n!) < O(n<sup>n</sup>)
+$$
+O(1) < O(\log{n}) < O(n) < O(n\log{n}) < O(n^2) < O(n^3) < O(2^n) < O(n!) < O(n^n)
+$$
 
 ### OSI 七层模型基本理解
 
