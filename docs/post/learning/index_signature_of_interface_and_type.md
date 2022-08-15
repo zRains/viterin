@@ -2,8 +2,6 @@
 toc: false
 date: 1649942694485
 title: 'interface和type索引签名之问'
-link: '/post/learning/index_signature_of_interface_and_type'
-file: 'index_signature_of_interface_and_type'
 scope: ['TS']
 buckets: ['post', 'learning']
 draft: false

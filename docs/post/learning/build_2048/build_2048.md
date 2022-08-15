@@ -1,8 +1,6 @@
 ---
 date: 1650808533377
 title: 'Canvas从零开始实现2048'
-link: '/post/learning/build_2048/index'
-file: 'index'
 scope: ['browser', 'canvas']
 buckets: ['post', 'learning']
 draft: false

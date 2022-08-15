@@ -1,8 +1,6 @@
 ---
 date: 1650601098818
 title: '简单实现Virtual DOM'
-link: '/post/learning/virtual_dom'
-file: 'virtual_dom'
 scope: ['JS', 'browser']
 buckets: ['post', 'learning']
 draft: false

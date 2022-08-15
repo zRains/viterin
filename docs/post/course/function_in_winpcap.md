@@ -2,8 +2,6 @@
 toc: false
 date: 1651667675800
 title: 'WinPcap中常用函数'
-link: '/post/course/function_in_winpcap'
-file: 'function_in_winpcap'
 scope: ['WinPcap']
 buckets: ['post', 'course']
 draft: false

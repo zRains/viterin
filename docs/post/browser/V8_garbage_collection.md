@@ -1,8 +1,6 @@
 ---
 date: 1652872376408
 title: '初探V8垃圾回收'
-link: '/post/browser/v8_garbage_collection'
-file: 'v8_garbage_collection'
 scope: ['browser', 'V8']
 buckets: ['post', 'browser']
 draft: false

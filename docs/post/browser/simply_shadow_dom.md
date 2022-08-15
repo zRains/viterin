@@ -2,8 +2,6 @@
 toc: false
 date: 1649942694482
 title: '简单了解一下Shadow DOM'
-link: '/post/browser/simply_shadow_dom'
-file: 'simply_shadow_dom'
 scope: ['browser']
 buckets: ['post', 'browser']
 draft: false

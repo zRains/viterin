@@ -1,8 +1,6 @@
 ---
 date: 1650034956594
 title: '关于NodeJS中的流'
-link: '/post/learning/about_node_stream'
-file: 'about_node_stream'
 scope: ['Node']
 buckets: ['post', 'learning']
 draft: false

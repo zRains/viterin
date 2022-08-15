@@ -1,8 +1,6 @@
 ---
 date: 1650466212678
 title: 'Docker容器统一编排部署'
-link: '/post/course/docker_uniformly_arranged_and_deployed'
-file: 'docker_uniformly_arranged_and_deployed'
 scope: ['Docker']
 buckets: ['post', 'course']
 draft: false

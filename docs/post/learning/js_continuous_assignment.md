@@ -2,8 +2,6 @@
 toc: false
 date: 1649942694483
 title: 'JS连续赋值执行分析'
-link: '/post/learning/js_continuous_assignment'
-file: 'js_continuous_assignment'
 scope: ['JS']
 buckets: ['post', 'learning']
 draft: false

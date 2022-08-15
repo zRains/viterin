@@ -2,8 +2,6 @@
 toc: false
 date: 1652872376408
 title: '关于DNS'
-link: '/post/browser/about_DNS'
-file: 'about_DNS'
 scope: ['browser']
 buckets: ['post', 'browser']
 draft: false

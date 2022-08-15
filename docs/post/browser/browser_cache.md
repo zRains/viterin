@@ -2,8 +2,6 @@
 toc: false
 date: 1649942694481
 title: '比较好理解的浏览器缓存'
-link: '/post/browser/browser_cache'
-file: 'browser_cache'
 scope: ['browser']
 buckets: ['post', 'browser']
 draft: false

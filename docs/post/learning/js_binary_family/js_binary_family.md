@@ -1,8 +1,6 @@
 ---
 date: 1650208113000
 title: 'JS的二进制家族'
-link: '/post/learning/js_binary_family/index'
-file: 'index'
 scope: ['JS']
 buckets: ['post', 'learning']
 draft: false

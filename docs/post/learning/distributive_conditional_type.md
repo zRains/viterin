@@ -2,8 +2,6 @@
 toc: false
 date: 1649942694484
 title: 'TypeScript中的条件分布类型为什么要这么设计？'
-link: '/post/learning/distributive_conditional_type'
-file: 'distributive_conditional_type'
 scope: ['TS']
 buckets: ['post', 'learning']
 draft: false
