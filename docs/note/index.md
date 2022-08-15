@@ -8,9 +8,17 @@ head:
       href: https://cdnjs.cloudflare.com/ajax/libs/KaTeX/0.5.1/katex.min.css
 ---
 
+<script setup>
+import BetterInvertColors from './BetterInvertColors.vue'
+</script>
+
 <h1>笔记</h1>
 
 > 简短的笔记，也许是我不想写这么多罢了 📝
+
+### 不错的正色与反色
+
+<BetterInvertColors />
 
 ### 关于 appendChild
 
@@ -18,7 +26,7 @@ Node.appendChild() 方法将一个节点附加到指定父节点的子节点列�
 
 这意味着，一个节点不可能同时出现在文档的不同位置。所以，如果某个节点已经拥有父节点，在被传递给此方法后，<strong><u>它首先会被移除</u></strong>，再被插入到新的位置。
 
-<small>* 摘自[MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/appendChild)</small>
+<small>\* 摘自[MDN](https://developer.mozilla.org/zh-CN/docs/Web/API/Node/appendChild)</small>
 
 ### zsh 环境变量的加载
 

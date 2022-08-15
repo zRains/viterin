@@ -18,7 +18,9 @@ import VRPageContainer from './page/VRPageContainer.vue'
 import VRHome from './VRHome.vue'
 import VRDocContainer from './doc/VRDocContainer.vue'
 
-const { frontmatter } = useData<VRThemeConfig>()
+const { frontmatter, site } = useData<VRThemeConfig>()
+console.log(site)
+
 const route = useRoute()
 </script>
 

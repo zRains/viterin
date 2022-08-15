@@ -1,7 +1,7 @@
 export default function () {
   return [
     { text: 'Post', link: '/post/' },
-    { text: 'Note', link: '/note' },
+    { text: 'Note', link: '/note/' },
     {
       text: 'Wrap',
       items: [
