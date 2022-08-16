@@ -1,6 +1,10 @@
 ---
 date: 1648397724000
-title: 'TC-268: If'
+title: 'If'
+order: 268
+difficulty: 'easy'
+visible: true
+lang: 'en'
 layout: 'doc'
 ---
 

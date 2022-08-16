@@ -1,6 +1,10 @@
 ---
 date: 1648397724000
-title: 'TC-11: Tuple to Object'
+title: 'Tuple to Object'
+order: 11
+difficulty: 'easy'
+visible: true
+lang: 'en'
 layout: 'doc'
 ---
 

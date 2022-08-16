@@ -1,6 +1,9 @@
 ---
 date: 1649693724000
-title: '第15天 - 搜索与回溯算法2（中等）'
+title: 'D15 - 搜索与回溯算法2（中等）'
+order: 15
+visible: true
+lang: 'zh'
 layout: 'doc'
 ---
 

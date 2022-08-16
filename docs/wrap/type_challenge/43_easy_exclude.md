@@ -1,6 +1,10 @@
 ---
 date: 1648397724000
-title: 'TC-43: Exclude'
+title: 'Exclude'
+order: 43
+difficulty: 'easy'
+visible: true
+lang: 'en'
 layout: 'doc'
 ---
 

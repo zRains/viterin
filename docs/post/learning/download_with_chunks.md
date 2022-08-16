@@ -1,10 +1,7 @@
 ---
 date: 1653321855437
 title: '探索分块（chunk）传输'
-link: '/post/learning/download_with_chunks'
-file: 'download_with_chunks'
 scope: ['Node', 'ES6']
-buckets: ['post', 'learning']
 draft: false
 visible: true
 lang: 'zh'

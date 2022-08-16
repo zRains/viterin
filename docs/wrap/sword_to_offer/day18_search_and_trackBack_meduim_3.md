@@ -1,6 +1,9 @@
 ---
 date: 1649952924000
-title: '第18天 - 搜索与回溯算法3（中等）'
+title: 'D18 - 搜索与回溯算法3（中等）'
+order: 18
+visible: true
+lang: 'zh'
 layout: 'doc'
 ---
 

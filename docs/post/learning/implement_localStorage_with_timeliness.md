@@ -2,10 +2,7 @@
 toc: false
 date: 1649942694482
 title: '实现一个具有时效性的LocalStorage'
-link: '/post/learning/implement_localStorage_with_timeliness'
-file: 'implement_localStorage_with_timeliness'
 scope: ['JS']
-buckets: ['post', 'learning']
 draft: false
 visible: true
 lang: 'zh'

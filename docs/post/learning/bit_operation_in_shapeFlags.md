@@ -2,10 +2,7 @@
 toc: false
 date: 1649942694483
 title: 'Vue3位运算的巧妙之处'
-link: '/post/learning/bit_operation_in_shapeFlags'
-file: 'bit_operation_in_shapeFlags'
 scope: ['Vue']
-buckets: ['post', 'learning']
 draft: false
 visible: true
 lang: 'zh'

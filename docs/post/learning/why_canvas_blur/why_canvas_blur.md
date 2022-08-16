@@ -2,10 +2,7 @@
 toc: false
 date: 1649942694484
 title: 'Canvas为什么变得这么模糊？'
-link: '/post/learning/why_canvas_blur/index'
-file: 'index'
 scope: ['browser', 'canvas']
-buckets: ['post', 'learning']
 draft: false
 visible: true
 lang: 'zh'

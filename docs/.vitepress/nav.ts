@@ -8,11 +8,11 @@ export default function () {
         {
           items: [
             {
-              text: 'Type Challenge 挑战',
+              text: 'TS体操',
               link: '/wrap/type_challenge/index'
             },
             {
-              text: 'LeetCode 剑指offer',
+              text: '剑指offer',
               link: '/wrap/sword_to_offer/index'
             }
           ]

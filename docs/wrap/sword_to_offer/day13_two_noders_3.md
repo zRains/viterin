@@ -1,6 +1,9 @@
 ---
 date: 1649520924000
-title: '第13天 - 双指针3（简单）'
+title: 'D13 - 双指针3（简单）'
+order: 13
+visible: true
+lang: 'zh'
 layout: 'doc'
 ---
 

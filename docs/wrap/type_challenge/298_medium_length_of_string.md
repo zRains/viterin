@@ -1,6 +1,10 @@
 ---
 date: 1648397724000
-title: 'TC-298: Length of String'
+title: 'Length of String'
+order: 298
+difficulty: 'medium'
+visible: true
+lang: 'en'
 layout: 'doc'
 ---
 

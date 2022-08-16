@@ -1,6 +1,10 @@
 ---
 date: 1648397724000
-title: 'TC-106: Trim Left'
+title: 'Trim Left'
+order: 106
+difficulty: 'medium'
+visible: true
+lang: 'en'
 layout: 'doc'
 ---
 

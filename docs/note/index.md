@@ -57,9 +57,13 @@ Node.appendChild() 方法将一个节点附加到指定父节点的子节点列�
 
 复杂度排序：
 
+<div style="overflow: auto">
+
 $$
 O(1) < O(\log{n}) < O(n) < O(n\log{n}) < O(n^2) < O(n^3) < O(2^n) < O(n!) < O(n^n)
 $$
+
+</div>
 
 ### OSI 七层模型基本理解
 

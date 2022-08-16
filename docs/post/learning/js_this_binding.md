@@ -2,10 +2,7 @@
 toc: false
 date: 1649942694485
 title: 'JS中this的绑定'
-link: '/post/learning/js_this_binding'
-file: 'js_this_binding'
 scope: ['JS']
-buckets: ['post', 'learning']
 draft: false
 visible: true
 lang: 'zh'

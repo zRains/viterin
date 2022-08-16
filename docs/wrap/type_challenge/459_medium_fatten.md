@@ -1,6 +1,10 @@
 ---
 date: 1648397724000
-title: 'TC-459: Flatten'
+title: 'Flatten'
+order: 459
+difficulty: 'medium'
+visible: true
+lang: 'en'
 layout: 'doc'
 ---
 

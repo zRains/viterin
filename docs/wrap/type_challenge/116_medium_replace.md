@@ -1,6 +1,10 @@
 ---
 date: 1648397724000
-title: 'TC-116: Replace'
+title: 'Replace'
+order: 116
+difficulty: 'medium'
+visible: true
+lang: 'en'
 layout: 'doc'
 ---
 

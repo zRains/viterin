@@ -2,10 +2,7 @@
 toc: false
 date: 1651841050000
 title: '使用VScode尝试为C添加额外的库'
-link: '/post/course/add_c_lib_use_vscode'
-file: 'add_c_lib_use_vscode'
 scope: ['tools', 'vscode']
-buckets: ['post', 'course']
 draft: false
 visible: true
 lang: 'zh'

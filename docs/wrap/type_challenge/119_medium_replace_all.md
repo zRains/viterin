@@ -1,6 +1,10 @@
 ---
 date: 1648397724000
-title: 'TC-119: Replace All'
+title: 'Replace All'
+order: 119
+difficulty: 'medium'
+visible: true
+lang: 'en'
 layout: 'doc'
 ---
 

@@ -1,10 +1,7 @@
 ---
 date: 1650808533377
 title: 'Canvas从零开始实现2048'
-link: '/post/learning/build_2048/index'
-file: 'index'
 scope: ['browser', 'canvas']
-buckets: ['post', 'learning']
 draft: false
 visible: true
 lang: 'zh'
@@ -30,7 +27,7 @@ import ArcToCanvas from './ArctoCanvas.vue'
 
 > 工欲善其事，必先利其器。 --- 《论语》
 
-为了防止出现绘制模糊的问题，参考了[Canvas 为什么变得这么模糊？](/post/learning/why_canvas_blur/)里的代码。新建 Canvas 代码如下：
+为了防止出现绘制模糊的问题，参考了[Canvas 为什么变得这么模糊？](/post/learning/why_canvas_blur/why_canvas_blur.html)里的代码。新建 Canvas 代码如下：
 
 ```javascript
 /**

@@ -2,10 +2,7 @@
 toc: false
 date: 1649942694482
 title: '危险的target="_blank"'
-link: '/post/browser/problem_of_target_blank.'
-file: 'problem_of_target_blank.'
 scope: ['browser']
-buckets: ['post', 'browser']
 draft: false
 visible: true
 lang: 'zh'

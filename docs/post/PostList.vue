@@ -1,12 +1,12 @@
 <template>
   <ul class="PostList">
-    <li v-for="page in postPages" :key="page.link">
+    <li v-for="page in postFiles" :key="page.link">
       <a class="post" :href="page.link">
         <div class="title">{{ page.title || '无标题' }}</div>
         <div class="utils">
-          <div class="ctime">{{ getRelativeTime(page.date) }}</div>
+          <RelativeTime class="ctime" :time="page.date" />
           <div class="scope">
-            {{ page.scope.join(' / ') }}
+            {{ page.scope?.join(' / ') }}
           </div>
           <div class="tags">
             <div v-if="+new Date() - page.date <= 8e7" class="tag isCurrentUpdate"><Icon icon="dashicons:update-alt" />更改</div>
@@ -19,20 +19,12 @@
 </template>
 
 <script lang="ts" setup>
-import { computed } from 'vue'
-import { getRelativeTime } from '../../utils/helper'
-import { post } from '../../config'
+import files from '../.vitepress/fileData.json'
 
-const postPages = computed(() =>
-  Object.values(post)
-    .flat()
-    .sort((a, b) => b.date - a.date)
-)
+const postFiles = files.filter((file) => file.link.startsWith('/post')).sort((f1, f2) => f2.date - f1.date)
 </script>
 
 <style lang="scss" scoped>
-@import '../../styles/vars.scss';
-
 .PostList {
   margin: 0;
   padding: 0;
@@ -55,7 +47,7 @@ const postPages = computed(() =>
       font-size: 1.1rem;
       line-height: 30px;
       color: var(--c-text-1);
-      transition: color $u-duration ease;
+      transition: color 0.2s ease;
     }
 
     .utils {
@@ -64,7 +56,7 @@ const postPages = computed(() =>
       font-size: 0.9rem;
       line-height: 20px;
       color: var(--c-text-2);
-      transition: color $u-duration ease;
+      transition: color 0.2s ease;
 
       .tags {
         user-select: none;
@@ -77,7 +69,7 @@ const postPages = computed(() =>
           padding: 0 5px;
           font-size: inherit;
           color: var(--c-text-2);
-          transition: background-color $u-duration ease;
+          transition: background-color 0.2s ease;
         }
 
         .isCurrentUpdate {
