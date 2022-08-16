@@ -37,7 +37,7 @@ NodeJS 中所有的流都有缓冲池，缓冲池存在的目的是增加流的�
 
 <CenterImg src="https://res.zrain.fun/images/2022/04/stream%E7%9A%84%E7%90%86%E8%A7%A3%20-1--9705a903c100c0aa68cc36f9916630dc.png" alt="stream的缓冲池" zoom="40%" />
 
-> 缓冲池其实就是利用 Buffer 缓冲区实现，具体文章见[JS 的二进制家族](/post/learning/js_binary_family/index.html#buffer)
+> 缓冲池其实就是利用 Buffer 缓冲区实现，具体文章见[JS 的二进制家族](/post/learning/js_binary_family/js_binary_family.html#buffer)
 
 ### 缓冲池背压
 
