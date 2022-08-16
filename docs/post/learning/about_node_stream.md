@@ -2,7 +2,6 @@
 date: 1650034956594
 title: '关于NodeJS中的流'
 scope: ['Node']
-buckets: ['post', 'learning']
 draft: false
 visible: true
 lang: 'zh'

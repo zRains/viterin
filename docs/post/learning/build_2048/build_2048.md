@@ -2,7 +2,6 @@
 date: 1650808533377
 title: 'Canvas从零开始实现2048'
 scope: ['browser', 'canvas']
-buckets: ['post', 'learning']
 draft: false
 visible: true
 lang: 'zh'

@@ -2,7 +2,6 @@
 date: 1652872376408
 title: '初探V8垃圾回收'
 scope: ['browser', 'V8']
-buckets: ['post', 'browser']
 draft: false
 visible: true
 lang: 'zh'

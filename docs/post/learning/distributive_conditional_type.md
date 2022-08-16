@@ -3,7 +3,6 @@ toc: false
 date: 1649942694484
 title: 'TypeScript中的条件分布类型为什么要这么设计？'
 scope: ['TS']
-buckets: ['post', 'learning']
 draft: false
 visible: true
 lang: 'zh'

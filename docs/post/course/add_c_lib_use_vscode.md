@@ -3,7 +3,6 @@ toc: false
 date: 1651841050000
 title: '使用VScode尝试为C添加额外的库'
 scope: ['tools', 'vscode']
-buckets: ['post', 'course']
 draft: false
 visible: true
 lang: 'zh'

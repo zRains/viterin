@@ -2,7 +2,6 @@
 date: 1650466212678
 title: 'Docker容器统一编排部署'
 scope: ['Docker']
-buckets: ['post', 'course']
 draft: false
 visible: true
 lang: 'zh'

@@ -2,7 +2,6 @@
 date: 1650208113000
 title: 'JS的二进制家族'
 scope: ['JS']
-buckets: ['post', 'learning']
 draft: false
 visible: true
 lang: 'zh'

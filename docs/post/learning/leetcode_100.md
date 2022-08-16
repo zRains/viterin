@@ -3,7 +3,6 @@ toc: false
 date: 1660200428044
 title: '力扣100题'
 scope: ['algorithm']
-buckets: ['post', 'learning']
 draft: false
 visible: true
 lang: 'zh'
