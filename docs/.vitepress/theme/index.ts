@@ -1,4 +1,3 @@
-import Theme from 'vitepress-theme-viterin'
+import VRTheme from 'vitepress-theme-viterin'
 
-export default Theme
-
+export default VRTheme

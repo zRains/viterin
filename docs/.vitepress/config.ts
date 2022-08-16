@@ -1,5 +1,5 @@
+import type { VRThemeConfig } from 'vitepress-theme-viterin'
 import { defineConfigWithTheme } from 'vitepress'
-import type { VRThemeConfig } from './theme/types/theme'
 import nav from './nav'
 import sidebar from './sidebar'
 import markdownItKatex from 'markdown-it-katex'

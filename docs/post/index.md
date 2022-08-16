@@ -7,8 +7,8 @@ toc: false
 
 > 听过很多道理，可依然记不住 🤣
 
-<script setup>
-import PostList from '../.vitepress/theme/components/global/PostList.vue'
+<script lang="ts" setup>
+import PostList from './PostList.vue'
 </script>
 
 <PostList/>
