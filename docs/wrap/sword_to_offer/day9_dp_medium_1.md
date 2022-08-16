@@ -1,6 +1,8 @@
 ---
 date: 1649175324000
 title: '第9天 - 动态规划1（中等）'
+visible: true
+lang: 'zh'
 layout: 'doc'
 ---
 

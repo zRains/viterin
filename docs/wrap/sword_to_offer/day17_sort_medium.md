@@ -1,6 +1,8 @@
 ---
 date: 1649866524000
 title: '第17天 - 排序（中等）'
+visible: true
+lang: 'zh'
 layout: 'doc'
 ---
 

@@ -1,6 +1,9 @@
 ---
 date: 1648397724000
 title: 'TC-527: Append to object'
+difficulty: 'medium'
+visible: true
+lang: 'en'
 layout: 'doc'
 ---
 

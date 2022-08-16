@@ -1,6 +1,9 @@
 ---
 date: 1648397724000
 title: 'TC-898: Includes'
+difficulty: 'easy'
+visible: true
+lang: 'en'
 layout: 'doc'
 ---
 

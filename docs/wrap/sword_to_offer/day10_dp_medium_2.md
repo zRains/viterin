@@ -1,6 +1,8 @@
 ---
 date: 1649261724000
 title: '第10天 - 动态规划2（中等）'
+visible: true
+lang: 'zh'
 layout: 'doc'
 ---
 

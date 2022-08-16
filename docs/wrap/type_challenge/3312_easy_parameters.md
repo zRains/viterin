@@ -1,6 +1,9 @@
 ---
 date: 1648397724000
 title: 'TC-3312: Parameters'
+difficulty: 'easy'
+visible: true
+lang: 'en'
 layout: 'doc'
 ---
 

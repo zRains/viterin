@@ -1,6 +1,9 @@
 ---
 date: 1648397724000
 title: 'TC-599: Merge'
+difficulty: 'medium'
+visible: true
+lang: 'en'
 layout: 'doc'
 ---
 

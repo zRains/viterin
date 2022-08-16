@@ -1,6 +1,8 @@
 ---
 date: 1649088924000
 title: '第8天 - 动态规划（简单）'
+visible: true
+lang: 'zh'
 layout: 'doc'
 ---
 

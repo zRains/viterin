@@ -1,6 +1,8 @@
 ---
 date: 1649607324000
 title: '第14天 - 搜索与回溯算法1（中等）'
+visible: true
+lang: 'zh'
 layout: 'doc'
 ---
 

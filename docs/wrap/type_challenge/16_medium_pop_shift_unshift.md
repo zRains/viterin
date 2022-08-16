@@ -1,6 +1,9 @@
 ---
 date: 1648397724000
 title: 'TC-16: Pop'
+difficulty: 'medium'
+visible: true
+lang: 'en'
 layout: 'doc'
 ---
 

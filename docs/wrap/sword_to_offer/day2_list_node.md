@@ -1,6 +1,8 @@
 ---
 date: 1648570524000
 title: '第2天 - 链表（简单）'
+visible: true
+lang: 'zh'
 layout: 'doc'
 ---
 

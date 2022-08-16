@@ -1,6 +1,8 @@
 ---
 date: 1648916124000
 title: '第6天 - 搜索与回溯算法1（简单）'
+visible: true
+lang: 'zh'
 layout: 'doc'
 ---
 

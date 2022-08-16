@@ -1,6 +1,8 @@
 ---
 date: 1649348124000
 title: '第11天 - 双指针1（简单）'
+visible: true
+lang: 'zh'
 layout: 'doc'
 ---
 

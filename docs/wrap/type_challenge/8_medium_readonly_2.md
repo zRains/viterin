@@ -1,6 +1,9 @@
 ---
 date: 1648397724000
 title: 'TC-8: Readonly-2'
+difficulty: 'medium'
+visible: true
+lang: 'en'
 layout: 'doc'
 ---
 

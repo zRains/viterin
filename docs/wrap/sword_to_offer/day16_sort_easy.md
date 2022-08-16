@@ -1,6 +1,8 @@
 ---
 date: 1649780124000
 title: '第16天 - 排序（简单）'
+visible: true
+lang: 'zh'
 layout: 'doc'
 ---
 

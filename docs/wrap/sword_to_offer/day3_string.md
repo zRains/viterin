@@ -1,6 +1,8 @@
 ---
 date: 1648656924000
 title: '第3天 - 字符串（简单）'
+visible: true
+lang: 'zh'
 layout: 'doc'
 ---
 

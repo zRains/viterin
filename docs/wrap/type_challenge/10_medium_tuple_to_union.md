@@ -1,6 +1,9 @@
 ---
 date: 1648397724000
 title: 'TC-10: Tuple to Union'
+difficulty: 'medium'
+visible: true
+lang: 'en'
 layout: 'doc'
 ---
 
