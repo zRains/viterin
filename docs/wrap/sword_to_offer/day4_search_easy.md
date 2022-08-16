@@ -1,6 +1,7 @@
 ---
 date: 1648743324000
-title: '第4天 - 查找算法（简单）'
+title: 'D4 - 查找算法（简单）'
+order: 4
 visible: true
 lang: 'zh'
 layout: 'doc'

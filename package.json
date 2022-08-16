@@ -4,6 +4,7 @@
   "description": "personal blog",
   "main": "index.js",
   "scripts": {
+    "data": "node ./docs/.vitepress/resolveData.js",
     "dev": "vitepress dev docs --host",
     "build": "vitepress build docs",
     "serve": "vitepress serve docs",

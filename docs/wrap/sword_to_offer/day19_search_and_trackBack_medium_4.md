@@ -1,6 +1,7 @@
 ---
 date: 1650039324000
-title: '第19天 - 搜索与回溯算法4（中等）'
+title: 'D19 - 搜索与回溯算法4（中等）'
+order: 19
 visible: true
 lang: 'zh'
 layout: 'doc'

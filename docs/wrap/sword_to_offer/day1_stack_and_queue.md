@@ -1,6 +1,7 @@
 ---
 date: 1648484124000
-title: '第1天 - 栈与队列（简单）'
+title: 'D1 - 栈与队列（简单）'
+order: 1
 visible: true
 lang: 'zh'
 layout: 'doc'

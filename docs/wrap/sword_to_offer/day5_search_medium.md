@@ -1,6 +1,7 @@
 ---
 date: 1648829724000
-title: '第5天 - 查找算法（中等）'
+title: 'D5 - 查找算法（中等）'
+order: 5
 visible: true
 lang: 'zh'
 layout: 'doc'

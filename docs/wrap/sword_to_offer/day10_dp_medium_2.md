@@ -1,6 +1,7 @@
 ---
 date: 1649261724000
-title: '第10天 - 动态规划2（中等）'
+title: 'D10 - 动态规划2（中等）'
+order: 10
 visible: true
 lang: 'zh'
 layout: 'doc'
