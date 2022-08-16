@@ -36,4 +36,3 @@ jobs:
         local_path: './docs/.vitepress/dist/*'
         remote_path: '/home/viterin'
         password: ${{ secrets.FTP_PASSWORD }}
-        sftpArgs: '-o ConnectTimeout=5'
