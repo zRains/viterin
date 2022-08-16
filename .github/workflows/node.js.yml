@@ -33,6 +33,7 @@ jobs:
       with:
         username: ${{ secrets.FTP_USERNAME }}
         server: ${{ secrets.FTP_SERVER }}
+        ssh_private_key: ${{ secrets.SSH_PRIVATE_KEY }}
         local_path: './docs/.vitepress/dist/*'
         remote_path: '/home/viterin'
-        password: ${{ secrets.FTP_PASSWORD }}
+        delete_remote_files: true
