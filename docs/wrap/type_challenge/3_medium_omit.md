@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-3: Omit'
+title: 'Omit'
+order: 3
 difficulty: 'medium'
 visible: true
 lang: 'en'

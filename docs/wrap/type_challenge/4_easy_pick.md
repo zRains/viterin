@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-4: Pick'
+title: 'Pick'
+order: 4
 difficulty: 'easy'
 visible: true
 lang: 'en'

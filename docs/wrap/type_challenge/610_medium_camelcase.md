@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-610: CamelCase'
+title: 'CamelCase'
+order: 610
 difficulty: 'medium'
 visible: true
 lang: 'en'

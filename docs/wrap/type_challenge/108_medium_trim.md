@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-108: Trim'
+title: 'Trim'
+order: 108
 difficulty: 'medium'
 visible: true
 lang: 'en'

@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-15: Last of Array'
+title: 'Last of Array'
+order: 15
 difficulty: 'medium'
 visible: true
 lang: 'en'

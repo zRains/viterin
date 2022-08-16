@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-110: Capitalize'
+title: 'Capitalize'
+order: 110
 difficulty: 'medium'
 visible: true
 lang: 'en'

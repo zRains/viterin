@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-189: Awaited'
+title: 'Awaited'
+order: 189
 difficulty: 'easy'
 visible: true
 lang: 'en'

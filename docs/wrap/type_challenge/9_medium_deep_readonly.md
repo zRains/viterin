@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-9: Deep Readonly'
+title: 'Deep Readonly'
+order: 9
 difficulty: 'medium'
 visible: true
 lang: 'en'

@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-16: Pop'
+title: 'Pop'
+order: 16
 difficulty: 'medium'
 visible: true
 lang: 'en'

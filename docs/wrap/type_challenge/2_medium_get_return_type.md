@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-2: Get Return Type'
+title: 'Get Return Type'
+order: 2
 difficulty: 'medium'
 visible: true
 lang: 'en'

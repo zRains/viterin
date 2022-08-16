@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-14: First of Array'
+title: 'First of Array'
+order: 14
 difficulty: 'easy'
 visible: true
 lang: 'en'

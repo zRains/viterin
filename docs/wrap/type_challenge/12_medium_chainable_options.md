@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-12: Chainable Options'
+title: 'Chainable Options'
+order: 12
 difficulty: 'medium'
 visible: true
 lang: 'en'

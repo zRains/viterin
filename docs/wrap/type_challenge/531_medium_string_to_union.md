@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-531: String to Union'
+title: 'String to Union'
+order: 531
 difficulty: 'medium'
 visible: true
 lang: 'en'

@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-3060: Unshift'
+title: 'Unshift'
+order: 3060
 difficulty: 'easy'
 visible: true
 lang: 'en'

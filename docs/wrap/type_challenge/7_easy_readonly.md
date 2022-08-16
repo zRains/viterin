@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-7: Readonly'
+title: 'Readonly'
+order: 7
 difficulty: 'easy'
 visible: true
 lang: 'en'

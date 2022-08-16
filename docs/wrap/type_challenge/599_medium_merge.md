@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-599: Merge'
+title: 'Merge'
+order: 599
 difficulty: 'medium'
 visible: true
 lang: 'en'

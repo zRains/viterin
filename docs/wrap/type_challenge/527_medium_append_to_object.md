@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-527: Append to object'
+title: 'Append to object'
+order: 257
 difficulty: 'medium'
 visible: true
 lang: 'en'

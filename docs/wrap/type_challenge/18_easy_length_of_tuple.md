@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-18: Length of Tuple'
+title: 'Length of Tuple'
+order: 18
 difficulty: 'easy'
 visible: true
 lang: 'en'

@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-3057: Push'
+title: 'Push'
+order: 3057
 difficulty: 'easy'
 visible: true
 lang: 'en'

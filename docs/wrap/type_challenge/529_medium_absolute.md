@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-529: Absolute'
+title: 'Absolute'
+order: 529
 difficulty: 'medium'
 visible: true
 lang: 'en'

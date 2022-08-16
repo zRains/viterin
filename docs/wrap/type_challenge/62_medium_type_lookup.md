@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-62: Type Lookup'
+title: 'Type Lookup'
+order: 62
 difficulty: 'medium'
 visible: true
 lang: 'en'

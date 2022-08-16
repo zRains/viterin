@@ -1,6 +1,7 @@
 ---
 date: 1648397724000
-title: 'TC-20: Promise.all'
+title: 'Promise.all'
+order: 20
 difficulty: 'medium'
 visible: true
 lang: 'en'
