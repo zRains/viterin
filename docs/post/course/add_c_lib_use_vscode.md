@@ -43,11 +43,11 @@ C:.
     └─x64 // 适合X86架构
 ```
 
-### c\_cpp\_properties.json
+### c_cpp_properties.json
 
 可以手动创建，也可以借助**C/C++**扩展自动生成，使用 `Ctrl+Shift+P` 打开命令面板，键入 `c++` 通常第一项就是：
 
-<CenterImg src="https://res.zrain.fun/images/2022/05/vscode%E5%91%BD%E4%BB%A4%E9%9D%A2%E6%9D%BF-cea8cff109471b6f91520d9549747fb5.png" alt="vscode命令面板" zoom="60%" />
+<CenterImg src="https://res.zrain.fun/images/2022/05/vscode%E5%91%BD%E4%BB%A4%E9%9D%A2%E6%9D%BF-cea8cff109471b6f91520d9549747fb5.png" alt="vscode命令面板" zoom="60%" invert="0" />
 
 配置如下：
 
