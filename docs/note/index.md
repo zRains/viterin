@@ -346,48 +346,6 @@ int    strncasecmp(const char *, const char *, size_t);
 
 ---
 
-### 实现最简单的防抖和节流
-
-参考于掘金（具体网址忘了），修复了其中一个 BUG。
-
-```javascript
-/**
- * 防抖
- * @param {Function} fn
- * @param {number} time 防抖时间
- * @returns
- */
-debounce(fn, time) {
-  let task = null
-  return (...args) => {
-    if (task) {
-      clearTimeout(task)
-    }
-    task = setTimeout(() => fn.apply(this, args), time)
-  }
-}
-
-/**
- * 节流
- * @param {Function} fn
- * @param {number} time 节流时间
- * @returns
- */
-throttle(fn, time) {
-  let task = null
-  return (...args) => {
-    if (!task) {
-      task = setTimeout(() => {
-        task = null
-        fn.apply(this, args)
-      }, time)
-    }
-  }
-}
-```
-
----
-
 ### 正确使用 TypeScript 检查对象
 
 体现于：[TC-9: Deep Readonly](/wrap/type_challenge/9_medium_deep_readonly)
