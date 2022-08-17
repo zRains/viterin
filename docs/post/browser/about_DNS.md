@@ -9,8 +9,6 @@ lang: 'zh'
 layout: 'page'
 ---
 
-![about_dns_cover](https://res.zrain.fun/images/2022/06/about_dns_cover-6f8b7b362329a58fb794adacff781fe7.png)
-
 ## 什么是 DNS
 
 在了解 DNS 之前，需要了解一个概念：域名（Domain），它是一个在互联网上标识主机或主机组的名称，相当于 IP 地址的别名，相对于晦涩难记的 IP 地址，域名更显得易于记忆。而 IP 于域名之间的转换就需要借助 DNS（Domain Name System）域名系统了。它是将域名解析 IP 地址的一项互联网基础服务，提供该服务的服务器称为 域名服务器（Domain Name Server）。
