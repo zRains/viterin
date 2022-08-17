@@ -17,7 +17,7 @@
 import { ref } from 'vue'
 
 const isInvert = ref(false)
-const colors = ['#603DC5', '#d63031']
+const colors = ['#D94810', '#704FCA']
 </script>
 
 <style lang="scss">

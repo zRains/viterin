@@ -26,7 +26,7 @@ head:
 
 可以理解为当爬到第 n 个台阶时的方法个数为$f(n) = f(n - 1) + f(n - 2)$，即爬 1 阶到 n-1 阶与爬 2 阶到 n-1 阶方法数的总和：
 
-<CenterImg src="https://res.zrain.fun/images/2022/08/leetcode_100_climb%20stairs.png" alt="leetcode_100_climb_stairs" zoom="50%"/>
+<CenterImg src="https://res.zrain.fun/images/2022/08/leetcode_100_climb%20stairs.png" alt="leetcode_100_climb_stairs" zoom="60%"/>
 
 从上图看出$f(3) = f(2) + f(1)$，可以进一步得出下面的递归公式：
 
@@ -58,7 +58,7 @@ impl Solution {
 
 但提交时会发现超时，最后发现以上递归出现了大量重复计算，以$f(6)$为例：
 
-<CenterImg src="https://res.zrain.fun/images/2022/08/leetcode_100_climb%20stairs_2.png" alt="leetcode_100_climb_stairs_2" zoom="60%"/>
+<CenterImg src="https://res.zrain.fun/images/2022/08/leetcode_100_climb%20stairs_2.png" alt="leetcode_100_climb_stairs_2" zoom="60%" />
 
 其中$f(4)f(3)$进行了重复的求值，可以使用 `HashMap` 进行优化：
 
@@ -129,7 +129,7 @@ Ref: [剑指 Offer 10- I. 斐波那契数列](/wrap/sword_to_offer/day8_dp_easy.
 
 首先想到的是暴力解法，用两层循环检查每两数之和。显而易见这种解法效率不高，时间复杂度为$O(n^2)$，🐶 见了都摇头。另一种较为高效的解法是找当前数字的差值，如果没有则将此数和其索引保存以供后续数字查找：
 
-![two_sum_example](https://res.zrain.fun/images/2022/08/two_sum_example.png)
+<CenterImg src="https://res.zrain.fun/images/2022/08/two_sum_example.png" alt="two_sum_example" zoom="60%"/>
 
 以待查找数组 `[2, 7, 11, 5]` 为例来查找目标数字 13：
 
