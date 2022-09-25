@@ -360,6 +360,20 @@
     "file": "simple _impl _vue2_binding.md"
   },
   {
+    "toc": "false,",
+    "date": 1664031831364,
+    "title": "理解Promise.then的执行顺序",
+    "scope": [
+      "JS"
+    ],
+    "draft": false,
+    "visible": true,
+    "lang": "zh",
+    "layout": "page",
+    "link": "/post/learning/understand_the_execution_order_of_promise_then.html",
+    "file": "understand_the_execution_order_of_promise_then.md"
+  },
+  {
     "date": 1650601098818,
     "title": "简单实现Virtual DOM",
     "scope": [
