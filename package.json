@@ -20,15 +20,15 @@
   "license": "MIT",
   "dependencies": {
     "markdown-it-katex": "^2.0.3",
-    "vitepress": "^1.0.0-alpha.15",
+    "vitepress": "^1.0.0-alpha.18",
     "vitepress-theme-viterin": "github:zrains/vitepress-theme-viterin"
   },
   "devDependencies": {
     "@iconify/vue": "^4.0.0",
-    "@types/node": "^18.7.18",
-    "@typescript-eslint/eslint-plugin": "^5.37.0",
-    "@typescript-eslint/parser": "^5.37.0",
-    "eslint": "^8.23.1",
+    "@types/node": "^18.7.23",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "eslint": "^8.24.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
@@ -36,6 +36,6 @@
     "eslint-plugin-vue": "^9.5.1",
     "gray-matter": "^4.0.3",
     "prettier": "^2.7.1",
-    "sass": "^1.54.9"
+    "sass": "^1.55.0"
   }
 }
