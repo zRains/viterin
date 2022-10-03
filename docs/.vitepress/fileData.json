@@ -295,6 +295,20 @@
   },
   {
     "toc": false,
+    "date": 1664786919794,
+    "title": "JS属性设置和屏蔽",
+    "scope": [
+      "JS"
+    ],
+    "draft": false,
+    "visible": true,
+    "lang": "zh",
+    "layout": "page",
+    "link": "/post/learning/js_property_settings_and_masking.html",
+    "file": "js_property_settings_and_masking.md"
+  },
+  {
+    "toc": false,
     "date": 1649942694486,
     "title": "JS排序",
     "scope": [
