@@ -16,6 +16,33 @@ import BetterInvertColors from './BetterInvertColors.vue'
 
 > 简短的笔记，也许是我不想写这么多罢了 📝
 
+### 可枚举属性与遍历
+
+可枚举可以理解为是否可以被遍历被列举出来。js 中基本包装类型的原型属性是不可枚举的（Boolean、String、Number）。
+
+- in: 此操作符会检查属性是否在对象及其原型链中。不受 `enumerable` 影响。
+- hasOwnProperty: 只会检查属性是否在对象中，并不会去搜索原型链。不受 `enumerable` 影响。
+- for...in...: 如 in 操作符。受 `enumerable` 影响。
+- Object.keys(): 如 hasOwnProperty。受 `enumerable` 影响。
+
+需要说明的一点是，使用 hasOwnProperty 方法要确保对象是通过 Object 构造函数构造的，否则使用会报错（比如通过 `Object.create(null)` 产生的对象），如果确实需要调用，可以直接调用原方法：
+
+```javascript
+Object.prototype.hasOwnProperty.call(obj, 'property_name')
+```
+
+### display、visibility、opacity 的区别
+
+| 隐藏元素属性       | display: none | visibility: hidden | opacity: 0 |
+| ------------------ | ------------- | ------------------ | ---------- |
+| 页面中             | 不存在        | 存在               | 存在       |
+| 重绘               | 会            | 会                 | 不一定     |
+| 重排               | 会            | 不会               | 不会       |
+| 自身绑定事件       | 不触发        | 不触发             | 触发       |
+| 过渡               | 不支持        | 支持               | 支持       |
+| 子元素复原         | 不能          | 能                 | 不能       |
+| 被遮挡元素事件触发 | 不影响        | 不影响             | 影响       |
+
 ### parseFloat 转换规则
 
 1. 如果 parseFloat 在解析过程中遇到了正号（+）、负号（- U+002D HYPHEN-MINUS）、数字（0-9）、小数点（.）、或者科学记数法中的指数（e 或 E）以外的字符，则它会忽略该字符以及之后的所有字符，返回当前已经解析到的浮点数。
